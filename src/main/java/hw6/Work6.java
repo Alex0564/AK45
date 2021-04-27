@@ -89,6 +89,7 @@ public class Work6 {
         {
             System.out.println("You are not and adult =)");
         }
+        //interesting format for condition,
         String res =  age>18 ? "You are an adult!": "You are NOT an adult!";
         System.out.println(res);
 
