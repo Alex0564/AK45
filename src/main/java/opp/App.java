@@ -1,6 +1,6 @@
 package opp;
 
-public class Lesson8 {
+public class App {
     public static void main(String[] args) {
         Person iuliia = new Person();
         iuliia.name = "Iuliia";
