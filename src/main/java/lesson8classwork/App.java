@@ -21,5 +21,7 @@ public class App {
        String a = Anna.info();
         System.out.println(a);
         System.out.println(david.info());
+
+
     }
 }
