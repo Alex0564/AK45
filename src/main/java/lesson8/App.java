@@ -13,7 +13,7 @@ public class App {
         anna.lastName = "Wilson";
         anna.year = 1999;
 
-        System.out.println(david.lastName);
+//        System.out.println(david.lastName);
 
         Vehicle myCar = new Vehicle();
         myCar.color = "Pink";
@@ -26,11 +26,28 @@ public class App {
         myFriendsCar.color = "Silver";
         myFriendsCar.year = 2007;
 
-        System.out.println(myFriendsCar.year);
+//        System.out.println(myFriendsCar.year);
         myFriendsCar.year = 2008;
-        System.out.println(myFriendsCar.year);
+//        System.out.println(myFriendsCar.year);
 
+        Fruit apple = new Fruit();
+        apple.name = "Apple";
+        Fruit peach = new Fruit();
+        peach.name = "Peach";
 
+//        System.out.println(apple.name);
 
+//        myCar.start();
+//        myFriendsCar.start();
+//
+//        myCar.beep();
+//        myFriendsCar.beep();
+
+        Vehicle yourCar = new Vehicle();
+//        yourCar.beep();
+
+        anna.printInfo();
+        david.printInfo();
+//        System.out.println(myCar.getInfo());
     }
 }
