@@ -22,5 +22,13 @@ public class Work {
         myTeam.Founded = 1886;
 
         System.out.println("Team name: "+myTeam.name+"\nTeam Country: "+myTeam.Country+"\nTeam City: "+myTeam.City+"\nTeam Founded: "+myTeam.Founded);
+
+        Animal pet=new Animal();
+        pet.type="Cat";
+        pet.name="Asti";
+        pet.breed="Scottish fold";
+        pet.age=1;
+
+        System.out.println(pet.type+"\n"+pet.name+"\n"+pet.breed+"\n"+pet.age+" year");
     }
 }
