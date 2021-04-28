@@ -1,6 +1,5 @@
 package hw8vk77;
 
-import java.sql.SQLOutput;
 
 public class HomeWork8vk {
     public static void main(String[] args) {
