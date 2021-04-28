@@ -13,7 +13,7 @@ public class App {
         anna.lastName = "Wilson";
         anna.year = 1999;
 
-//        System.out.println(david.lastName);
+        System.out.println(david.lastName);
 
         Vehicle myCar = new Vehicle();
         myCar.color = "Pink";
