@@ -6,6 +6,7 @@ public class Book {
     public String cover;
 
     public void sold(){
+
         System.out.println( editor + " "+" was sold");
     }
 }

@@ -59,7 +59,7 @@ public class App {
         GoldenBook.sold();
         SilverBook.sold();
 
-
+        System.out.println(sample1);
 
 
    }
