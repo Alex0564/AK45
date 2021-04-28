@@ -19,6 +19,10 @@ public class App {
         me.Help();
         myWife.HelpformyWife();
 
+        me.printinfo();
+        myWife.printinfo();
+
+
 
          House myHouse= new House();
          myHouse.Streetname="345 Street";

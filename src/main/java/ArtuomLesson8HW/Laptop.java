@@ -6,6 +6,10 @@ public class Laptop {
     public String Operationsystem;
     public String Browsername;
 
+    public void printinfo(){
+        System.out.println("Model= "+Laptopmodel+" "+"\nProcessormodel= "+Processormodel+"\nOperationsystem= "+Operationsystem+"\nBrowsername= "+Browsername);
+    }
+
     public  void  Help() {
         System.out.println(Laptopmodel + " " + Processormodel + " " + Operationsystem + " Let me opportunity to install modern programs!");
 
@@ -15,4 +19,5 @@ public class Laptop {
         System.out.println("My wife like her laptop because "+a+" "+Processormodel+" "+Operationsystem+" "+" All of this give  opportunity to do her work!");
 
     }
+
 }
