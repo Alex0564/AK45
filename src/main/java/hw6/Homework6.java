@@ -4,7 +4,7 @@ public class Homework6 {
 
     public static void main(String[] args) {
 
-        // Homework for Lesson 6 Functions 2 Problem 1 Finding sum of integers in array
+        // Homework for Lesson 6 Functions 2 Problem 1 Sum of integers in array
 
         // sum of integers in array
         // version 1 using 'foreach' loop
