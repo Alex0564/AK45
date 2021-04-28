@@ -106,7 +106,7 @@ public class Work6 {
                 max=v;
             }
         }
-        System.out.println("Maximus is = "+max);
+        System.out.println("Maximum is = "+max);
     }
 
     ////function var #2 - Min()
@@ -128,7 +128,7 @@ public class Work6 {
                 max=v;
             }
         }
-        System.out.println("Maximus is = "+max);
+        System.out.println("Maximum is = "+max);
 
         int min=ar[0];
         for(int v:ar){
