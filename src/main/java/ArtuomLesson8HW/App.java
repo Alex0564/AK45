@@ -20,7 +20,7 @@ public class App {
         myWife.HelpformyWife();
 
         me.printinfo();
-        myWife.printinfo();
+        myWife.printinfo2();
 
 
 

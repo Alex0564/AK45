@@ -7,7 +7,10 @@ public class Laptop {
     public String Browsername;
 
     public void printinfo(){
-        System.out.println("Model= "+Laptopmodel+" "+"\nProcessormodel= "+Processormodel+"\nOperationsystem= "+Operationsystem+"\nBrowsername= "+Browsername);
+        System.out.println("My Loptop:" +"\nModel= "+Laptopmodel+" "+"\nProcessormodel= "+Processormodel+"\nOperationsystem= "+Operationsystem+"\nBrowsername= "+Browsername);
+    }
+    public void printinfo2(){
+        System.out.println("Her Loptop:" +"\nModel= "+Laptopmodel+" "+"\nProcessormodel= "+Processormodel+"\nOperationsystem= "+Operationsystem+"\nBrowsername= "+Browsername);
     }
 
     public  void  Help() {
