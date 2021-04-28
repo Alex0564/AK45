@@ -8,6 +8,7 @@ public class App {
         mama.year = 1995;
 
 
+
         Person dad= new Person();
         dad.name= "Adam";
         dad.lastName = "Adams";
@@ -59,7 +60,12 @@ public class App {
         GoldenBook.sold();
         SilverBook.sold();
 
-        System.out.println(sample1);
+Milli.owner();
+Tom.owner();
+sample1.test();
+sample2.test();
+dad.study();
+mama.study();
 
 
    }
