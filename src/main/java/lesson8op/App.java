@@ -18,7 +18,52 @@ public class App {
         merfy.year = 2021;
         System.out.println(merfy.name);
 
-        System.out.println(attila.name+" "+"and"+" "+merfy.name+" like to play together");
+//        System.out.println(attila.name+" "+"and"+" "+merfy.name+" like to play together");
+
+        Groceries bread = new Groceries();
+        bread.name = "Bread";
+        bread.type = "Potato";
+        bread.from = "Big Y";
+        bread.NET = 3;
+
+        Groceries cereal = new Groceries();
+        cereal.name = "Cereal";
+        cereal.type = "Cheerios";
+        cereal.from = "Walmart";
+
+
+//        System.out.println(bread.type+" "+bread.name+" "+bread.from);
+
+        Person marry = new Person();
+        marry.name = "Marry";
+        marry.lastname = "Dove";
+        marry.from = "Springfield";
+        marry.year = 1962;
+
+        Person john = new Person();
+        john.name = "John";
+        john.lastname = "Simpson";
+        john.from = "Winsdor";
+        john.year = 1955;
+
+//        System.out.println(john.name+" "+"and"+" "+marry.name+" "+"are friends.");
+
+        Vehicle car = new Vehicle();
+        car.make = "Jeep";
+        car.model = "Compass";
+        car.color = "Red";
+        car.year = 2020;
+
+        Vehicle myFriendsCar = new Vehicle();
+        myFriendsCar.make = "Nissan";
+        myFriendsCar.model = "Rouge";
+        myFriendsCar.color = "Blue";
+        myFriendsCar.year = 2019;
+
+//        System.out.println(car.make+" "+car.model+" "+car.color);
+
+        myFriendsCar.speed();
+        cereal.halthy();
 
 
     }

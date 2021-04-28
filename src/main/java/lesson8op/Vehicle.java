@@ -9,6 +9,9 @@ public class Vehicle {
     public  void start(){
         System.out.println(make +" "+model+"started engine");
     }
+    public void speed(){
+        System.out.println(make+" "+model+' '+"is very fast.");
+    }
 
 
 }
