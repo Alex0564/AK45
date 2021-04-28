@@ -9,15 +9,22 @@ public class Clss {
         coding.pagenumbers=345;
         coding.rating=5;
 
-//        System.out.println(coding.name+" and the rating is "+coding.rating);
+        System.out.println(coding.name+" and the rating is "+coding.rating);
         coding.Descr();
 
         Parfume baccarat = new Parfume ();
         baccarat.Name="Baccarat Rouge 540";
-        baccarat.topnotes="Wood and musk";
+        baccarat.topnotes="wood and musk";
         baccarat.price=540;
 
         baccarat.Features();
+
+        Country Ukraine = new Country();
+        Ukraine.name="Ukraine";
+        Ukraine.amountpeople=40;
+        Ukraine.continent="Europe";
+
+        Ukraine.D();
 
     }
 

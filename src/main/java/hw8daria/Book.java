@@ -8,7 +8,7 @@ public class Book {
     public int rating;
 
     public void Descr() {
-        System.out.println("Book name is " + this.name + " " + this.Author + " ");
+        System.out.println("Book name is " + this.name + " and the Author is " + this.Author + ". ");
     }
 }
 

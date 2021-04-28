@@ -7,7 +7,7 @@ public class Parfume {
     public int price;
 
     public void Features() {
-        System.out.println("The name of the parfume is "+this.Name+" and "+"the topnotes are"+this.topnotes);
+        System.out.println("The name of the parfume is "+this.Name+" and "+"the topnotes are "+this.topnotes+".");
     }
 
 }
