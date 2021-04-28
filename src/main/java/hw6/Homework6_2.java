@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Homework6_2 {
     public static void main(String[] args) {
 
-        // Homework for Lesson 6 Functions 2 Problem 3 Sorting integers in array
+        // Homework for Lesson 6 Functions 2  Problem 3 Sorting integers in array
 
         int[] arr2 = {3, 9, 1, 8, 4, 8, 5};
         Arrays.sort(arr2);

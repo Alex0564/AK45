@@ -4,7 +4,7 @@ public class Homework6_3 {
 
     public static void main(String[] args) {
 
-        // Homework for Lesson Functions 2 Problem 3 Finding Min & Max numbers
+        // Homework for Lesson 6 Functions 2 Problem 3 Finding Min & Max numbers
 
         int[] arr = {3, 9, 1, 8, 4, 8, 5, -16};
         int res = min(arr);
