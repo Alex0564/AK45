@@ -22,6 +22,7 @@ public class Work {
         myTeam.Founded = 1886;
 
         System.out.println("Team name: "+myTeam.name+"\nTeam Country: "+myTeam.Country+"\nTeam City: "+myTeam.City+"\nTeam Founded: "+myTeam.Founded);
+        System.out.println("\n");
 
         Animal pet=new Animal();
         pet.type="Cat";
@@ -30,5 +31,13 @@ public class Work {
         pet.age=1;
 
         System.out.println(pet.type+"\n"+pet.name+"\n"+pet.breed+"\n"+pet.age+" year");
+        System.out.println("\n");
+
+        Musician singer= new Musician();
+        singer.nickname = "The Weeknd";
+        singer.genre = "POP";
+        singer.dob = "02.16.1990";
+
+        System.out.println("Singer - "+singer.nickname+"\nGenre - "+singer.genre+"\nDOB - "+singer.dob);
     }
 }
