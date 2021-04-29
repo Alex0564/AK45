@@ -12,4 +12,14 @@ public class Student {
         this.year = yaer;
         this.major = major;
     }
+    public Student(String name, String lastname, int yaer){
+        this.name = name;
+        this.lastname = lastname;
+        this.year = yaer;
+    }
+    public Student(){}
+
+    public void setMajor(String major){
+        this.major = major;
+    }
 }
