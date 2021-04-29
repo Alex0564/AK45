@@ -15,6 +15,12 @@ public class App1 {
 
         Color car = Color.RED;
 
+        School newDorpHighSchool = new School();
+        newDorpHighSchool.address = "12 Dorp Street Springfield";
+        newDorpHighSchool.name = "New Dorp High School";
+        newDorpHighSchool.type = SchoolType.PUBLIC;
+
+
 
 
     }
