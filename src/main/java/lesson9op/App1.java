@@ -13,6 +13,9 @@ public class App1 {
         System.out.println(apple.getName());
         System.out.println(peach.getName());
 
+        Color car = Color.RED;
+
+
 
     }
 
