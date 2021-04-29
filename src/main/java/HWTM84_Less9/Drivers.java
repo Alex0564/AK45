@@ -12,6 +12,9 @@ public class Drivers {
         this.id = id;
         this.phone = phone;
     }
+    public String getName(){
+        return name;
+    }
     public void printInfo(){
         System.out.println("Name= "+name+", Lastname= "+lastName+", ID= "+id+", Phone= "+phone);
     }
