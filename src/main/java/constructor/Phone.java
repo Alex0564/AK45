@@ -1,9 +1,9 @@
 package constructor;
 
 public class Phone {
-    public String brandPhone;
-    public int modelPhone;
-    public int yearPhone;
+    private String brandPhone;
+    private int modelPhone;
+    private int yearPhone;
 
     public Phone(String brandPhone, int modelPhone, int yearPhone){
         this.brandPhone = brandPhone;

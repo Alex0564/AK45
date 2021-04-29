@@ -1,9 +1,9 @@
 package constructor;
 
 public class Plant {
-    public String namePlant;
-    public String colorPlant;
-    public int agePlant;
+    private String namePlant;
+    private String colorPlant;
+    private int agePlant;
 
     public Plant(String namePlant, String colorPlant, int agePlant){
         this.namePlant = namePlant;

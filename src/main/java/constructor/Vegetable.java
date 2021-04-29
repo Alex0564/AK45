@@ -1,9 +1,9 @@
 package constructor;
 
 public class Vegetable {
-    public String nameVegetable;
-    public String colorVegetable;
-    public String flavorVegetable;
+    private String nameVegetable;
+    private String colorVegetable;
+    private String flavorVegetable;
 
     public Vegetable(String nameVegetable, String colorVegetable, String flavorVegetable){
         this.nameVegetable = nameVegetable;

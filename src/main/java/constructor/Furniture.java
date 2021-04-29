@@ -1,9 +1,9 @@
 package constructor;
 
 public class Furniture {
-    public String typeFurniture;
-    public String conditionFurniture;
-    public String colorFurniture;
+    private String typeFurniture;
+    private String conditionFurniture;
+    private String colorFurniture;
 
     public Furniture(String typeFurniture, String conditionFurniture, String colorFurniture){
         this.typeFurniture = typeFurniture;
