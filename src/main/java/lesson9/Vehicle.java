@@ -6,12 +6,15 @@ public class Vehicle {
     private int year;
 
     public void setYear(int year){
+
         this.year = year;
     }
     public void setMake(String make){
+
         this.make = make;
     }
     public void setBrand(String brand){
+
         this.brand = brand;
     }
 
