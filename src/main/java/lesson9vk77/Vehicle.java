@@ -16,8 +16,12 @@ public class Vehicle {
     }
 
 
-    public void printInfo(){
-        //
+    public void printInfo() {
+        System.out.println("Vehicle{" +
+                "make='" + make + '\'' +
+                ", brand='" + brand + '\'' +
+                ", year=" + year +
+                '}');
     }
 
 }

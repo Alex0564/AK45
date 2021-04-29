@@ -20,11 +20,13 @@ public class Student {
         this.year=year;
 
     }
+    public Student(){}
+
     public void setMajor(String major){
         this.major=major;
     }
 
-    public Student(){}
+
     public void setLastname(String lastname){
         this.lastname=lastname;
     }
