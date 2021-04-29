@@ -25,6 +25,7 @@ public class App {
 
 
         trucks02.printInfo();
+        System.out.println(trucks01.getMake()+" License PL -"+trucks01.getLicense()+" Driver is "+trucks01.driver);
         driver02.printInfo();
     }
 }
