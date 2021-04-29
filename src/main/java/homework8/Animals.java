@@ -1,6 +1,6 @@
 package homework8;
 
-public class animals {
+public class Animals {
     public String name;
     public int sleepInDay;
     public int daysNoFood;

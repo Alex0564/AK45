@@ -1,6 +1,6 @@
 package homework8;
 
-public class flowers {
+public class Flowers {
     public String name;
     public String color;
     public String person;

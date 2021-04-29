@@ -1,13 +1,13 @@
 package homework8;
 
-public class app {
+public class App {
     public static void main(String[] args) {
-        animals cat = new animals();
+        Animals cat = new Animals();
         cat.name = "Cat";
         cat.sleepInDay = 16;
         cat.daysNoFood = 20;
 
-        animals giraffe = new animals();
+        Animals giraffe = new Animals();
         giraffe.name = "Giraffe";
         giraffe.sleepInDay = 2;
         giraffe.daysNoFood = 7;
@@ -15,12 +15,12 @@ public class app {
         cat.printInfo();
         giraffe.printInfo();
 
-        beer corona = new beer();
+        Beer corona = new Beer();
         corona.name = "Corona";
         corona.country = "Mexico";
         corona.volume = 4.5;
 
-        beer heineken = new beer();
+        Beer heineken = new Beer();
         heineken.name = "Heineken";
         heineken.country = "Netherlands";
         heineken.volume = 5;
@@ -28,12 +28,12 @@ public class app {
         corona.getInfo();
         heineken.getInfo();
 
-        mountains mount1 = new mountains();
+        Mountains mount1 = new Mountains();
         mount1.name = "Kilimanjaro";
         mount1.height = 5895;
         mount1.continent = "Africa";
 
-        mountains mount2 = new mountains();
+        Mountains mount2 = new Mountains();
         mount2.name = "Denali";
         mount2.height = 6190;
         mount2.continent = "North America";
@@ -41,12 +41,12 @@ public class app {
         mount1.getInfo();
         mount2.getInfo();
 
-        flowers flower1 = new flowers();
+        Flowers flower1 = new Flowers();
         flower1.name = "roses";
         flower1.color = "red";
         flower1.person = "My sister";
 
-        flowers flower2 = new flowers();
+        Flowers flower2 = new Flowers();
         flower2.name = "chamomiles";
         flower2.color = "white";
         flower2.person = "Sidney";

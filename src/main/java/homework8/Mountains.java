@@ -1,6 +1,6 @@
 package homework8;
 
-public class mountains {
+public class Mountains {
     public String name;
     public String continent;
     public int height;

@@ -1,6 +1,6 @@
 package homework8;
 
-public class beer {
+public class Beer {
     public String name;
     public String country;
     public double volume;
