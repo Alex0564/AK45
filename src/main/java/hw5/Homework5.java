@@ -32,13 +32,9 @@ public class Homework5 {
     }
 
     // version 1 for function isEven:
-    public static String isEven(int x) {
-        if (x % 2 == 0) {
-            return "true";
-        } else {
-            return "false";
+    public static boolean isEven(int x) {
+        return (x % 2) == 0;
         }
-    }
 
     // version 2 for function is_even:
     public static boolean is_even(int x) {
