@@ -15,6 +15,8 @@ public class App1 {
 
         Color car = Color.RED;
 
+        Student xx = new Student("xx", "yy", 333);
+
         School newDorpHighSchool = new School();
         newDorpHighSchool.address = "12 Dorp Street Springfield";
         newDorpHighSchool.name = "New Dorp High School";
