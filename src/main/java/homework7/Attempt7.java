@@ -1,4 +1,4 @@
-package hw1;
+package homework7;
 
 public class Attempt7 {
     public static void main(String[] args) {
