@@ -1,6 +1,4 @@
-package lesson8a;
-
-import java.sql.SQLOutput;
+package hw8;
 
 public class Fish {
     public String name;

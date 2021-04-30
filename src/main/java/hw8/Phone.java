@@ -1,4 +1,4 @@
-package lesson8a;
+package hw8;
 
 public class Phone {
     public String make;
