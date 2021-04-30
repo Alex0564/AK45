@@ -1,4 +1,4 @@
-package lesson10;
+package lesson10vk77;
 
 public class Teacher extends Person{
     private Subjects subject;
