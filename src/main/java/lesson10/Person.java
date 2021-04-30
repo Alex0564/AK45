@@ -4,8 +4,24 @@ public class Person {
     protected String name;
     protected String lastName;
     protected int year;
+    protected Gender gender;
 
     public Person() {
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public Person(String name, String lastName, int year, Gender gender) {
+        this.name = name;
+        this.lastName = lastName;
+        this.year = year;
+        this.gender = gender;
     }
 
     public Person(String name, String lastName, int year) {

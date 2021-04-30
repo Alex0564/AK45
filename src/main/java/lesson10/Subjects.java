@@ -6,5 +6,5 @@ public enum Subjects {
     CS,
     BIOLOGY,
     FINANCE,
-    BIO
+    ACCOUNTING
 }
