@@ -3,7 +3,7 @@ package lesson9;
 public class App {
     public static void main(String[] args) {
         Person david = new Person();
-        david.setName("");
+        david.setName("David");
 
         System.out.println(david.getName());
         david.setYear(1995);
