@@ -10,6 +10,17 @@ public class beverage {
         this.volume = volume;
         this.bottle = bottle;
     }
+    public void setName(String name){this.name = name;}
+    public void setVolume(Double volume){this.volume = volume;}
+    public void setBottle(String bottle){this.bottle = bottle;}
+    public String getName(){return name;}
+    public Double getVolume(){return volume;}
+    public String getBottle(){return bottle;}
+
+
+
+
+
 
 
 }

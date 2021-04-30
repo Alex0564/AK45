@@ -13,6 +13,10 @@ public class apartment {
     public void setApt(int apt) {this.apt = apt;}
     public void setHouse(int house){this.house = house;}
     public void setStreet(String street){this.street = street;}
+    public String getStreet(){return street;}
+    public int getHouse(){return house;}
+    public int getApt(){return apt;}
+
 
 
 }
