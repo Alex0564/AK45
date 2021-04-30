@@ -23,7 +23,12 @@ public class App {
         car.printInfo();
         Toyota.printInfo();
 
+        Paint Behr=new Paint();
+        Behr.PaintColor = Color.BLACK;
+        Behr.PaintColor2=Color.RED;
+        Behr.PaintColor3=Color.WHITE;
 
+        System.out.println(Behr.PaintColor);
 
 
     }
