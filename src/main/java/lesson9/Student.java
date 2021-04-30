@@ -9,13 +9,13 @@ public class Student {
     public Student(String name, String lastName, int year, String major){
         this.name = name;
         this.lastName = lastName;
-        this.year = year;
+        setYear(year);
         this.major = major;
     }
     public Student(String name, String lastName, int year){
         this.name = name;
         this.lastName = lastName;
-        this.year = year;
+        setYear(year);
     }
     public Student(){}
 
@@ -31,6 +31,9 @@ public class Student {
     }
 
     public void setYear(int year) {
+        if(year>2013 || year<1970){
+            throw new IllegalArgumentException("Wrong year");
+        }
         this.year = year;
     }
 }
