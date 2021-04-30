@@ -5,7 +5,7 @@ public class Vehicle {
     private String make;
     private String model;
     private int year;
-    private String color;
+    private VehicleColor color;
 
     // Setters:
 
@@ -23,8 +23,9 @@ public class Vehicle {
         }
         this.year = year;
     }
+    // using enum in setter:
 
-    public void setColor(String color) {
+    public void setColor(VehicleColor color) {
         this.color = color;
     }
     // Getters:
@@ -41,7 +42,9 @@ public class Vehicle {
         return year;
     }
 
-    public String getColor() {
+    // using enum in getter:
+
+    public VehicleColor getColor() {
         return color;
     }
 
@@ -54,8 +57,9 @@ public class Vehicle {
                         ", year = " + year);
     }
 
-    // constructor:
-    public Vehicle(String make, String model, int year, String color) {
+    // constructor using enum:
+
+    public Vehicle(String make, String model, int year, VehicleColor color) {
         this.make = make;
         this.model = model;
         setYear(year);

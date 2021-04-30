@@ -97,7 +97,7 @@ public class App {
         VehicleColor c = VehicleColor.WHITE;
         System.out.println("Using enum: " + c);
 
-        Vehicle myCar = new Vehicle("Mazda", "CX-30", 2020, "Grey");
+        Vehicle myCar = new Vehicle("Mazda", "CX-30", 2020, VehicleColor.GREY);
         System.out.println("Info regarding my car: ");
         System.out.println("Make: " + myCar.getMake());
         System.out.println("Model: " + myCar.getModel());
@@ -109,7 +109,7 @@ public class App {
         friendscar.setMake("Nissan");
         friendscar.setModel("Rogue");
         friendscar.setYear(2018);
-        friendscar.setColor("Silver");
+        friendscar.setColor(VehicleColor.SILVER);
 
         System.out.println("My friend's car is a " + friendscar.getColor() + " " + friendscar.getMake() + " "
                 + friendscar.getModel());
