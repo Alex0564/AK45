@@ -15,4 +15,7 @@ public class Motorcycle extends Vehicle{
     public int getNumberOfWheels() {
         return numberOfWheels;
     }
+
+    public Motorcycle() {
+    }
 }

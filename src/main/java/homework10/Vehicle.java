@@ -1,8 +1,8 @@
 package homework10;
 
 public class Vehicle {
-    private Brand brand;
-    private FuelType[] fuelType;
+    protected Brand brand;
+    protected FuelType[] fuelType;
 
     public void setBrand(Brand brand) {
         this.brand = brand;
