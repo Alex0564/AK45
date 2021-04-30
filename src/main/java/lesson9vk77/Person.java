@@ -21,7 +21,7 @@ public class Person {
             this.year = year;
         }
         public int getYear(){
-            return this.year;
+            return year;
         }
 
         public void setLastName(String lastName){
