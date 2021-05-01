@@ -23,12 +23,13 @@ public class App {
         Sunflower wildsunflower = new Sunflower("Wild Sunflower", "yellow", 11, DeliverTo.CHICAGO);
         System.out.println(wildsunflower.getInfo());
         System.out.println(wildsunflower.prinCity());
-        Sunflower bluesunflower = new Sunflower("Blue Sunflower", "blue", 17,DeliverTo.BOSTON);
+        Sunflower bluesunflower = new Sunflower("Blue Sunflower", "blue", 17,DeliverTo.LA);
         System.out.println(bluesunflower.getInfo());
 
 
-        DeliverTo[]bluesunflowerCities = {DeliverTo.LA,DeliverTo.CHICAGO,DeliverTo.SF};
-        bluesunflower.setDeliverTos(bluesunflowerCities);
+        DeliverTo[]bluesunflowerdeliverTos = {DeliverTo.LA,DeliverTo.CHICAGO,DeliverTo.SF};
+        bluesunflower.setDeliverTos(bluesunflowerdeliverTos);
+
         // не понимаю как этот массив распечатать со всем остальным
 
 
