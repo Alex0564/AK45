@@ -8,16 +8,11 @@ public class Person {
     private int year;
 
 
-    public Person() {
+    public Person(String name) {
+        this.name = name;
+    }
 
-        public Person(String name, String lastName, int year){
-            this.name = name;
-            this.lastName= lastName;
-            this.year = year;
-
-        }
-
-        public void setName(String name) {
+    public void setName(String name) {
             this.name = name;
 
         }
@@ -25,4 +20,4 @@ public class Person {
             return name.toUpperCase();
         }
     }
-}
+

@@ -5,17 +5,35 @@ public class Person {
     public String lastName;
     public int year;
 
-    public void start() {
-        System.out.println(name+" "+lastName+" "+year+" go to work");
-        System.out.println(name+" "+lastName+" "+year+" return from work");
+  public Person(String name, String lastName, int Year) {
+
+
+
     }
 
-    public String getName(){
+    public Person() { }
+
+    public String getName() {
         return name;
     }
-    public int getYear(){
-        return year;
 
+    public String getLastName() {
+        return lastName;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 }

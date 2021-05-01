@@ -1,22 +1,21 @@
 package HW10;
 
 public class Teacher {
-    private String name;
-    private String lastName;
-    private int year;
-    private Subjects subject;
+    public String name;
+    public String lastName;
+    public String year;
+    public String subject;
 
-    public Teacher(String name; String lastName; int year; Subjects subject){
+    public Teacher() {
         this.name = name;
-        this.lastName = lastName;
+    }
+
+    public Teacher(String year) {
         this.year = year;
+    }
+
+    public void Teacher1(String subject) {
         this.subject = subject;
     }
-    public void setName(String name);{
-this.name= name;
-}
-public void setlastName(String lastName);
-this.lastName = lastName;
 
-}
 }
