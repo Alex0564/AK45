@@ -103,6 +103,6 @@ public class App {
         CPUbrand = computerDell.getSystemBlock().getMotherBoard().getCpu().getBrand().toString();
         CPUmodel = computerDell.getSystemBlock().getMotherBoard().getCpu().getModel().name();
         System.out.println("COMPUTER #2: "+CPUbrand+" "+CPUmodel);
-        
+        //
     }
 }
