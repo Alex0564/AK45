@@ -6,3 +6,8 @@ public class School {
     public SchoolType type;
 
 }
+
+
+
+
+
