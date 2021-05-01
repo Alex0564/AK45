@@ -1,4 +1,4 @@
-package TMLes9;
+package TMLess9;
 
 public class Student {
     private String name;
