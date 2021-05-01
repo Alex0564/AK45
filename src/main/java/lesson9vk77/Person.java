@@ -24,7 +24,9 @@ public class Person {
             return year;
         }
 
-        public void setLastName(String lastName){
-            this.lastName = lastName;
-        }
+        //public void setLastName(String lastName){
+
+       //     this.lastName = lastName;
+       // }
+
     }
