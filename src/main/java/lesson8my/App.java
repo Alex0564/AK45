@@ -1,4 +1,4 @@
-package lesson8classwork;
+package lesson8my;
 
 public class App {
     public static void main(String[] args) {

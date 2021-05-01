@@ -1,4 +1,4 @@
-package lesson8classwork;
+package lesson8my;
 
 public class Person {
     public String name;
