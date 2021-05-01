@@ -26,6 +26,7 @@ stiven.work();
         System.out.println(middle.getName());
 
 
+        System.out.println(middle.getGroup());
 
 
 

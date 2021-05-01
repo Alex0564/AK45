@@ -16,7 +16,9 @@ public class Kid {
     public String getName() {
         return name = name;
     }
+    public Kid() {
 
+    }
     public String getGroup() {
         return group = group;
     }
