@@ -1,5 +1,7 @@
 package homework10;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
         Peony peony  = new Peony ("Peony", "pink", 15, AmountAvailableForSale.FIVE);
@@ -30,9 +32,8 @@ public class App {
         DeliverTo[]bluesunflowerdeliverTos = {DeliverTo.LA,DeliverTo.CHICAGO,DeliverTo.SF};
         bluesunflower.setDeliverTos(bluesunflowerdeliverTos);
 
-        // не понимаю как этот массив распечатать со всем остальным
-
-
+//        System.out.println(Arrays.toString(bluesunflowerdeliverTos));
+        System.out.println("Avaliable for delivery in "+Arrays.toString(bluesunflowerdeliverTos));
 
 
     }

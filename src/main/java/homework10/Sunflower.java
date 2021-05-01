@@ -23,5 +23,4 @@ public class Sunflower extends Flower{
     public String prinCity(){
         return "Avaliable for delivery in "+this.city;
     }
-    public DeliverTo[] printCities(){ return this.deliverTos; }
 }
