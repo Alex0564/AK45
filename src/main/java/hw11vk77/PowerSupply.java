@@ -1,5 +1,6 @@
 package hw11vk77;
 
 public class PowerSupply {
-    //private
+    private String brand;
+    private String model;
 }
