@@ -19,6 +19,10 @@ public class App {
         rr.printInfo();
         System.out.println(rr.getName());
         System.out.println(rr.getColor());
+        System.out.println();
+
+        Tulip tt = new Tulip("Tulip", 7, "Pink", 20);
+        tt.printInfo();
 
     }
 
