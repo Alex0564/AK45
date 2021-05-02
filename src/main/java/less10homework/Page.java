@@ -11,10 +11,14 @@ public class Page {
         this.type = type;
         this.size = size;
     }
+    public Page (String size){this.size = size;}
     public Page (String type, String size, Double interval){
         this.type = type;
         this.size = size;
         this.interval = interval;
+    }
+    public void printInfo (){
+        System.out.println("Page " + getType() + ", size "+ getSize()+ " has " + getInterval() + " interval");
     }
 
     public void setType (String type){ this.type = type;}
