@@ -67,7 +67,8 @@ public class App {
         SystemBlock systemblock = new SystemBlock(powersupply,disk,graphadapter,mb);//done
 
         //8 Monitors
-        Monitor monitor = new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI);//done
+        //Monitor monitor = new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI);//done
+        Monitor [] allmonitors ={ new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI)};//done
 
         //9 Keyboard
         Keyboard keyboard = new Keyboard(Brands.LOGITECH,KeyboardModel.MECHANIC,Connectiontypes.USB);//done
@@ -76,7 +77,7 @@ public class App {
         Mouse mouse=new Mouse(Brands.LOGITECH,MouseType.LASER,Connectiontypes.BLUETOOTH);//done
 
         //11 COMPUTER - COMPOSE -CREATE COMPUTER 1
-        Computer computer = new Computer(mouse,keyboard,systemblock,monitor);//done
+        Computer computer = new Computer(mouse,keyboard,systemblock,allmonitors);//done
         //getInfo of COMPUTER 1
         System.out.println("\nTASK #1 - CREATE 2 COMPUTERs \n ");
         System.out.println(" Brand name of Computer #1 : "+computer.getSystemBlock().getMotherBoard().getBrand().toString());
@@ -87,7 +88,8 @@ public class App {
         // SystemBlock DELL compose
         MotherBoard dellmb = new MotherBoard(Brands.DELL,MBmodel.iB560,new CPU(Brands.INTEL,CPUmodel.COREi5),ram);//done
         SystemBlock systemblockdell = new SystemBlock(powersupply,disk,graphadapter,dellmb);//done
-        Computer computerDell = new Computer(mouse,keyboard,systemblockdell,monitor);
+        Monitor [] allmonitors2 ={ new Monitor(Brands.DELL,MonitorModel.FHDWIDE,28,Connectiontypes.HDMI),new Monitor(Brands.DELL,MonitorModel.FHDWIDE,28,Connectiontypes.HDMI)};
+        Computer computerDell = new Computer(mouse,keyboard,systemblockdell,allmonitors2);
 
         System.out.println(" Brand name of Computer #2 : "+computerDell.getSystemBlock().getMotherBoard().getBrand().toString());
         //invoke method getInfo

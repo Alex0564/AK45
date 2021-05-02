@@ -9,6 +9,10 @@ public class Human {
         this.year = year;
     }
 
+    public Human(int year) {
+        this.year = year;
+    }
+
     public Human() {
     }
 

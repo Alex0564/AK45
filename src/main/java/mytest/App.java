@@ -8,7 +8,7 @@ public class App {
         Human h=new Human(25,1999);
 
         //object of child class Child
-        Child ch=new Child(12,2015,"hello");
+        Child ch=new Child(2015,"hello");
         /*
         HUMAN class
             private int age;
