@@ -1,5 +1,7 @@
 package hw11vk77two;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
         // Create 2 computers
@@ -45,6 +47,7 @@ public class App {
 
         Computer mypc = new Computer(mousebluetooth,keyb,mysystemblock,mymonitors);
         Computer bropc = new Computer(mouseusb,keyb,brosystemblock,davemonitors);
+
 
         System.out.println("CPU brand:");
         //3 ways to get CPU brand from mypc object

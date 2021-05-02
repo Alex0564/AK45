@@ -1,16 +1,16 @@
 package hw10vk77;
 // using as a fields Enum class
 public class Weekclass {
-    private Enum weekdays;
+    private Weekdays weekdays;
 
     public Weekclass() {
     }
 
-    public Weekclass(Enum weekdays) {
+    public Weekclass(Weekdays weekdays) {
         this.weekdays = weekdays;
     }
 
-    public Enum getWeekdays() {
+    public Weekdays getWeekdays() {
         return weekdays;
     }
 
