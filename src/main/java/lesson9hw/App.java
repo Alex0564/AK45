@@ -12,6 +12,9 @@ public class App {
 
         julian.printInfo();
         robert.printInfo();
+        System.out.println(rafael.getPosition());
+
+        FlightTime miaEYW = new FlightTime("Miami-MIA","Key West-EYW",0.45);
 
         FlightTime myFlight = new FlightTime();
         myFlight.setDeparture("New York,NY - JFK");
@@ -19,6 +22,9 @@ public class App {
         myFlight.setFlightTime(3.05);
 
         myFlight.printInfo();
+        System.out.println(myFlight.getDeparture());
+        System.out.println(miaEYW.getFlightTime());
+
 
         Vegetable tomato = new Vegetable("Tomato");
         tomato.printInfo();

@@ -32,6 +32,9 @@ public class Student {
         this.lastName = lastName;
     }
     public void setYear(int year){
+        if(year>2011 || year<1970){
+            throw new IllegalArgumentException("Wrong year");
+        }
         this.year = year;
     }
 }

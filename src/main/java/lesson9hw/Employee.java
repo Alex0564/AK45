@@ -25,17 +25,29 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
+    public String getName(){
+        return name;
+    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    public String getLastName(){
+        return lastName;
     }
 
     public void setPosition(String position) {
         this.position = position;
     }
+    public String getPosition(){
+        return position;
+    }
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+    public int getExperience(){
+        return experience;
     }
 
     public void printInfo() {
