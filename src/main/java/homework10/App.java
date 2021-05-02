@@ -32,6 +32,10 @@ public class App {
         DeliverTo[]bluesunflowerdeliverTos = {DeliverTo.LA,DeliverTo.CHICAGO,DeliverTo.SF};
         bluesunflower.setDeliverTos(bluesunflowerdeliverTos);
 
+//        for (DeliverTo i:bluesunflowerdeliverTos){
+//            System.out.println(i);
+//        }
+
 //        System.out.println(Arrays.toString(bluesunflowerdeliverTos));
         System.out.println("Avaliable for delivery in "+Arrays.toString(bluesunflowerdeliverTos));
 
