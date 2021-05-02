@@ -1,5 +1,7 @@
 package hw11;
 
+import javax.sound.midi.Soundbank;
+
 public class App {
     public static void main(String[] args) {
         // Create 2 computers
@@ -27,7 +29,9 @@ public class App {
         MotherBoard wifeMotherboard = new MotherBoard("ASUS", "B250-A", intel, corsair);
         SystemBlock wifeSystemBlock = new SystemBlock(aresgame, seagate, asus, wifeMotherboard);
         Computer wifeComputer = new Computer(wifeSystemBlock, samsung, redragon, razer);
+
+        String myCpu = myMotherBoard.getCpu().getBrand();
+        System.out.println("Brand CPU in my computer: " + myCpu);
+
     }
-
-
 }
