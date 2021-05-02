@@ -1,9 +1,9 @@
 package less10homework;
 
 public class Page {
-    private String type;
-    private String size;
-    private Double interval;
+    protected String type;
+    protected String size;
+    protected Double interval;
     
     public Page (){}
     
