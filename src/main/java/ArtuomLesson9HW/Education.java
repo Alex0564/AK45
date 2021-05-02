@@ -34,7 +34,8 @@ public class Education {
     }
 
     public void setTeacher(String teacher) {
-        this.teacher = teacher;
+
+            this.teacher = teacher;
     }
 
     public String getTeacher() {
