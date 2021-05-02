@@ -8,5 +8,10 @@ public class App {
 
         david.setYear(1995);
         System.out.println(david.getYear());
+
+        Vehicle myCar = new Vehicle();
+        myCar.setBrand("Accent");
+        myCar.setMake("Honda");
+        myCar.setYear(1999);
     }
 }

@@ -5,19 +5,19 @@ public class Person {
     private String lastname;
     private int year;
 
-    public  void setName(String n){
-        name =n;
+    public  void setName(String name){
+        this.name =name;
 
     }
     public String getName(){
         return name;
 
     }
-    public void setYear(int y){
-        if(y>2021||y<1900){
+    public void setYear(int year){
+        if(year>2021||year<1900){
             throw new IllegalArgumentException("Wrong year");
         }
-        year=y;
+        this.year=year;
 
 
     }
