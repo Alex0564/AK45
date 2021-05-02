@@ -68,7 +68,10 @@ public class App {
 
         //8 Monitors
         //Monitor monitor = new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI);//done
-        Monitor [] allmonitors ={ new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI)};//done
+        //       Monitor [] allmonitors ={ new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI),new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI)};//done
+        Monitor monit1 = new Monitor(Brands.LG,MonitorModel.UHD4K,32,Connectiontypes.HDMI);
+        Monitor monit2 = new Monitor(Brands.SAMSUNG,MonitorModel.UHD4K,32,Connectiontypes.HDMI);
+        Monitor[] allmonitors={monit1,monit2,monit2};
 
         //9 Keyboard
         Keyboard keyboard = new Keyboard(Brands.LOGITECH,KeyboardModel.MECHANIC,Connectiontypes.USB);//done
@@ -88,7 +91,8 @@ public class App {
         // SystemBlock DELL compose
         MotherBoard dellmb = new MotherBoard(Brands.DELL,MBmodel.iB560,new CPU(Brands.INTEL,CPUmodel.COREi5),ram);//done
         SystemBlock systemblockdell = new SystemBlock(powersupply,disk,graphadapter,dellmb);//done
-        Monitor [] allmonitors2 ={ new Monitor(Brands.DELL,MonitorModel.FHDWIDE,28,Connectiontypes.HDMI),new Monitor(Brands.DELL,MonitorModel.FHDWIDE,28,Connectiontypes.HDMI)};
+        Monitor monit  = new Monitor(Brands.DELL,MonitorModel.FHDWIDE,28,Connectiontypes.HDMI);
+        Monitor [] allmonitors2 ={monit,monit,monit2,monit2};
         Computer computerDell = new Computer(mouse,keyboard,systemblockdell,allmonitors2);
 
         System.out.println(" Brand name of Computer #2 : "+computerDell.getSystemBlock().getMotherBoard().getBrand().toString());
