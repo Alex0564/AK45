@@ -36,11 +36,12 @@ public class App {
         VGA Fx2060 = new VGA("GeForce GTX2060", 8);
         VGA Fx3070 = new VGA("GeForce GTX3070", 16);
         //---------------------System block------------------------------
-        Systemblock Supergame = new Systemblock(Msi, Maxtor, Dellpower, Fx3070);
-        Systemblock Gamepro = new Systemblock(Asus,Samsung, Dellpower, Fx2060);
+        Systemblock SuperGame = new Systemblock(Msi, Maxtor, Dellpower, Fx3070);
+        Systemblock GamePro = new Systemblock(Asus,Samsung, Dellpower, Fx2060);
         Systemblock Game = new Systemblock(Asrock, Western, Thermaltake, Rx570);
         Systemblock Work = new Systemblock(Gygabyte, Seagate, Thermaltake, Fx1060);
 ////////------------------------End Systemblock----------------------------
         System.out.println(Game.getMotherboard().getCpu().getBrand()+" "+Game.getMotherboard().getCpu().getModel());
+        System.out.println(SuperGame.getMotherboard().getCpu().getBrand()+" "+SuperGame.getMotherboard().getCpu().getModel());
     }
 }
