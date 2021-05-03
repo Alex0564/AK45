@@ -18,4 +18,6 @@ public class Computer {
     public Monitor getMonitor(){return monitor;}
     public Keyboard getKeyboard(){return keyboard;}
     public Mouse getMouse(){return mouse;}
+
 }
+

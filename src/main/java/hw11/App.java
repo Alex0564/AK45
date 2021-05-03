@@ -32,6 +32,5 @@ public class App {
 
         String myCpu = myMotherBoard.getCpu().getBrand();
         System.out.println("Brand CPU in my computer: " + myCpu);
-
     }
 }
