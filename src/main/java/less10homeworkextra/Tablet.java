@@ -1,10 +1,18 @@
 package less10homeworkextra;
 
-public class Phone {
+public class Tablet {
     private Colour colour;
     private Manufacturer brand;
     private Double screen;
     private int memory;
+
+    public Tablet() {
+    }
+
+    @Override
+    public String toString() {
+        return "Tablet: colour " + colour + ", brand " + brand + ", screen " + screen + " inch, memory " + memory + "GB";
+    }
 
     public Colour getColour() {
         return colour;
@@ -38,17 +46,11 @@ public class Phone {
         this.memory = memory;
     }
 
-    @Override
-    public String toString() {
-        return "Phone: colour " + colour + ", brand " + brand + ", screen " + screen + " inch, memory " + memory + "GB";
-    }
-
-    public Phone(Colour colour, Manufacturer brand, Double screen, int memory) {
+    public Tablet(Colour colour, Manufacturer brand, Double screen, int memory) {
         this.colour = colour;
         this.brand = brand;
         this.screen = screen;
         this.memory = memory;
-
 
     }
 }
