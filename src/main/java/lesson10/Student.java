@@ -7,7 +7,6 @@ public class Student extends Person{
     public Subjects[] getSubjects() {
         return subjects;
     }
-
     public void setSubjects(Subjects[] subjects) {
         this.subjects = subjects;
     }
@@ -20,7 +19,6 @@ public class Student extends Person{
     public Subjects getMajor() {
         return major;
     }
-
     public void setMajor(Subjects major) {
         this.major = major;
     }

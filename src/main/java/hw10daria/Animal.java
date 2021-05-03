@@ -45,4 +45,5 @@ public class Animal {
     }
     public paws getPaws() {return paws; }
     public void setPaws(hw10daria.paws paws) { this.paws = paws; }
+
 }
