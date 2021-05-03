@@ -1,45 +1,19 @@
 package lesson10ez;
 
-public class Teacher extends Person{
-//    super(name,lastName,year);
-    private Subjects major;
+public class Teacher extends Person {
+    private Subjects subjects;
 
-    public Teacher(String name, String lastName, int year, Subjects major) {
-        this.name = name;
-        this.lastName = lastName;
-        this.year = year;
-        this.major = major;
+    public Teacher(String name, String lastName, int year, Subjects subjects) {
+        super(name,lastName,year);
+        this.subjects = subjects;
     }
 
-    public String getName() {
-        return name;
+
+    public Subjects getSubjects() {
+        return subjects;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public Subjects getMajor() {
-        return major;
-    }
-
-    public void setMajor(Subjects major) {
-        this.major = major;
+    public void setSubjects(Subjects subjects) {
+        this.subjects = subjects;
     }
 }
