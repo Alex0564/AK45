@@ -9,12 +9,6 @@ public class Tulip extends Flower{
         this.color = color;
         this.cost = cost;
     }
-//
-//    public Tulip(String name, String color, int cost) {
-//        super(name);
-//        this.color = color;
-//        this.cost = cost;
-//    }
 
     public String getColor() {
         return color;
@@ -38,6 +32,4 @@ public class Tulip extends Flower{
                         "\nYear: " + getYear()+
                         "\nCost " + cost);
     }
-
-
 }
