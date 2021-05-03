@@ -1,11 +1,11 @@
 package lesson11;
 
 public class House {
-    private Address address;
-    private Person owner;
-    private int bedrooms;
-    private int bathrooms;
-    private int year;
+    private final Address address;
+    private final Person owner;
+    private final int bedrooms;
+    private final int bathrooms;
+    private final int year;
 
     public House(Address address, Person owner, int bedrooms, int bathrooms, int year) {
         this.address = address;
@@ -34,4 +34,5 @@ public class House {
     public int getYear() {
         return year;
     }
+
 }
