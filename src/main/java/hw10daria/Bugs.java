@@ -9,6 +9,5 @@ public class Bugs extends Animal{
     }
 
     public String getWings() { return wings; }
-
     public void setWings(String wings) { this.wings = wings; }
 }
