@@ -14,12 +14,14 @@ public class AppInh {
         Bugs ladybug = new Bugs("Ladybug", "Black with red", "Small", "Land", "Wings");
         System.out.println (ladybug.getWings());
 
-        wolf.setFur("Fluffy");
-        System.out.println (wolf.getFur());
+//        wolf.setFur("Fluffy");
+//        System.out.println (wolf.getFur());
 
         Seaweed nori = new Seaweed("Nori", "Green", "Small", "Water");
         System.out.println (nori.getName());
 
+        Animal bear = new Animal("Bear", "Brown", "Big", "Land", "Fur", paws.FOUR);
+        System.out.println (bear.getPaws());
     }
 
 }

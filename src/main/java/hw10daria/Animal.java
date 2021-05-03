@@ -7,6 +7,8 @@ public class Animal {
     protected String environment;
 //    added another field
     protected String fur;
+//    added enum paws
+    protected paws paws;
 
     public Animal (String name, String color, String size, String environment){
         this.name=name;  this.color=color; this.size=size; this.environment=environment;}
@@ -21,13 +23,26 @@ public class Animal {
     public void setEnvironment(String environment) { this.environment = environment; }
 
 //new constructor after adding field fur
-    public Animal(String name, String color, String size, String environment, String fur) {
+//    public Animal(String name, String color, String size, String environment, String fur) {
+//        this.name = name;
+//        this.color = color;
+//        this.size = size;
+//        this.environment = environment;
+//        this.fur = fur;
+//    }
+//    public String getFur() { return fur; }
+//    public void setFur(String fur) { this.fur = fur; }
+
+//    new constructor after adding enum paws
+
+    public Animal(String name, String color, String size, String environment, String fur,  paws paws) {
         this.name = name;
         this.color = color;
         this.size = size;
         this.environment = environment;
         this.fur = fur;
+        this.paws=paws;
     }
-    public String getFur() { return fur; }
-    public void setFur(String fur) { this.fur = fur; }
+    public paws getPaws() {return paws; }
+    public void setPaws(hw10daria.paws paws) { this.paws = paws; }
 }
