@@ -1,5 +1,5 @@
 package hw9daria;
-
+// using setters and getters
 public class Chocolate {
     private String type;
     private String taste;

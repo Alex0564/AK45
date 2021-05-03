@@ -6,15 +6,11 @@ public class Galaxy {
     private int distancefromsun;
 
     public void printInfo(){
-        System.out.println("The name of Galaxy is "+name+" and the size is "+size+". Distance from the Sun is "+distancefromsun);
+        System.out.println("The name of Galaxy is "+name+" and the size is "+size+". " +
+                "Distance from the Sun is "+distancefromsun);
 }
-    public Galaxy(String name, String size){
-        this.name=name;
-        this.size=size;
+    public Galaxy(String name, String size){ this.name=name; this.size=size; }
+    public Galaxy(String name, String size, int distancefromsun){ this.name=name;
+        this.size=size; this.distancefromsun=distancefromsun; }
+
     }
-    public Galaxy(String name, String size, int distancefromsun){
-        this.name=name;
-        this.size=size;
-        this.distancefromsun=distancefromsun;
-    }
-}

@@ -20,5 +20,9 @@ public class EncTwo {
                 " is the taste. The type is "+Lindt.getType()+". And the weight is "
                 +Lindt.getWeight()+" gramms.");
 
+        Shoes sandals = new Shoes("Sandals", "Prada", "Leather");
+        Shoes tennisshoes = new Shoes ("Tennis Shoes", "Lacoste", "Leather", 39);
+
+        sandals.getinfo();
     }
 }

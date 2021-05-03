@@ -1,5 +1,5 @@
 package hw9daria;
-
+//using methods, setters, getters, methods
 public class Enc {
     public static void main (String []args){
         Glasses Sun = new Glasses();
@@ -27,7 +27,9 @@ public class Enc {
         Brand Prada= new Brand("Prada", "Italy", "Luxury");
         Galaxy Mercury=new Galaxy("Mercury", "small", 29596837);
         Galaxy Jupiter=new Galaxy ("Jupiter", "big");
-        System.out.println();
+        Mercury.printInfo();
+        Jupiter.printInfo();
+        Prada.getinfo();
 
 
     }
