@@ -19,6 +19,16 @@ public class Car extends Transport{
 
     public void printClassCar(){
         System.out.println("Jeep Landcruser: "+this.Type+" "+this.Brand+" "+this.year+" "+this.typeengine);
+
+    }
+
+       public void printInfo() {
+        System.out.println("Car{" +
+                "typeengine='" + typeengine + '\'' +
+                ", Type='" + Type + '\'' +
+                ", Brand='" + Brand + '\'' +
+                ", year=" + year +
+                '}');
     }
 }
 
