@@ -18,12 +18,17 @@ public class Enc {
         Cat.setname("Snowy");
         Cat.printInfo();
 
-        Brand Prada = new Brand();
-        Prada.setName("Prada");
-        Prada.setOrigin("Italy");
-        Prada.setPricerange("luxury brand");
-        System.out.println(Prada.getName());
-        System.out.println(Prada.getOrigin());
+//        Brand Prada = new Brand();
+//        Prada.setname("Prada");
+//        Prada.setOrigin("Italy");
+//        Prada.setPricerange("luxury brand");
+//        System.out.println(Prada.getName());
+//        System.out.println(Prada.getOrigin());
+        Brand Prada= new Brand("Prada", "Italy", "Luxury");
+        Galaxy Mercury=new Galaxy("Mercury", "small", 29596837);
+        Galaxy Jupiter=new Galaxy ("Jupiter", "big");
+
+
     }
 
 }

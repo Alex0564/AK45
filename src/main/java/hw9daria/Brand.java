@@ -5,7 +5,7 @@ public class Brand {
     private String origin;
     private String pricerange;
 
-    public void setName(String Name){
+    public void setname(String Name){
         this.name=Name;
     }
     public String getName(){
@@ -25,5 +25,10 @@ public class Brand {
     }
     public void printInfo(){
         System.out.println("The name is "+name+" and the origin is "+origin+" and the price range is "+pricerange);
+    }
+    public Brand (String name, String Origin, String pricerange){
+        this.name=name;
+        this.origin=origin;
+        this.pricerange=pricerange;
     }
 }
