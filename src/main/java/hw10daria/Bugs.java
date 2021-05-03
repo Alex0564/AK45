@@ -8,4 +8,7 @@ public class Bugs extends Animal{
         this.wings=wings;
     }
 
+    public String getWings() { return wings; }
+
+    public void setWings(String wings) { this.wings = wings; }
 }
