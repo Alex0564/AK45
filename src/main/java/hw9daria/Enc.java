@@ -27,6 +27,7 @@ public class Enc {
         Brand Prada= new Brand("Prada", "Italy", "Luxury");
         Galaxy Mercury=new Galaxy("Mercury", "small", 29596837);
         Galaxy Jupiter=new Galaxy ("Jupiter", "big");
+        System.out.println();
 
 
     }
