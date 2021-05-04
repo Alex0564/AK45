@@ -14,5 +14,17 @@ public class Work10Enum {
         System.out.println(mod2.getModification());
 
 
+        Dish pilaf = new Dish("Pilaf");
+        Ingredient [] ingredients = {Ingredient.RICE,Ingredient.MEAT,Ingredient.VEGETABLES};
+        for (Ingredient Pilaf:ingredients){
+            System.out.println(Pilaf);
+        }
+
+        Dish pasta = new Dish("Carbonara");
+        Ingredient [] ingredients1 = {Ingredient.PASTA,Ingredient.HALF_AND_HALF,Ingredient.SHRIMPS};
+        for (Ingredient Pasta:ingredients1){
+            System.out.println(Pasta);
+        }
+
     }
 }
