@@ -29,6 +29,6 @@ public class App10 {
         flower1.setBuds(buds1);
 
         flower1.printFlower();
-        System.out.println(Arrays.toString(flower1.getBuds()));
+        System.out.println(Arrays.toString(buds1));
     }
 }
