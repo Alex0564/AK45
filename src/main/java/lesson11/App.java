@@ -15,8 +15,8 @@ public class App {
         House house = new House(davidAddress,david,3,2,2020);
         streetAddressOfDavid = house.getOwner().getAddress().getAddressLine1();
         String zip = house.getAddress().getZip();
-        zip = ((house.getOwner()).getAddress()).getZip();
-
+//        zip = ((house.getOwner()).getAddress()).getZip();
+          zip=(house.getOwner()).getAddress().getZip();
         Person x = house.getOwner();
         Address y = x.getAddress();
         String z = y.getAddressLine1();
