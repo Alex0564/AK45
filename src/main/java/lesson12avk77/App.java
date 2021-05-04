@@ -3,18 +3,18 @@ package lesson12avk77;
 public class App {
     public static void main(String[] args) {
         Circle c1=new Circle(5.2);
-        c1.draw();
-        System.out.println(c1.getArea());
-        System.out.println(c1.getPerimeter());
+       // c1.draw();
+        //System.out.println(c1.getArea());
+        //System.out.println(c1.getPerimeter());
 
         Rectangle r1 = new Rectangle(2.3,3.3);
-        r1.draw();
+      //  r1.draw();
 
-        System.out.println(r1.getArea());
+        //System.out.println(r1.getArea());
         Square s1=new Square(5);
-        s1.draw();
-        System.out.println(s1.getArea());
-        System.out.println(s1.getPerimeter());
+       // s1.draw();
+       // System.out.println(s1.getArea());
+        //System.out.println(s1.getPerimeter());
         Rectangle s2 = new Square(7);
         Shape c2 = new Circle(5);
         Shape r2 = new Rectangle(2,3);

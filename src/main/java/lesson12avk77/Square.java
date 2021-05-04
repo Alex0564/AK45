@@ -6,6 +6,6 @@ public class Square extends Rectangle{
     }
     @Override
     public void draw(){
-        System.out.println("I draw square!");
+        System.out.println("I draw square with side ="+length);
     }
 }
