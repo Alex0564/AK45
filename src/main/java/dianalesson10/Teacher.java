@@ -1,9 +1,19 @@
 package dianalesson10;
 
-public class Teacher {
-    private String name;
-    private String lastName;
-    private int year;
+public class Teacher extends Person{
+
     private Subjects subject;
 
+    public Subjects getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subjects subject) {
+        this.subject = subject;
+    }
+
+    public Teacher(String name, String lastName, int year, Subjects subject) {
+       super(name,lastName,year);
+        this.subject = subject;
+    }
 }

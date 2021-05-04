@@ -12,9 +12,12 @@ public class App {
         anna.setYear(2000);
         System.out.println(anna.getYear());
 
-        Person anna = new Person("Anna", "Johnson", 2000);
 
-        anna.prinInfo();
+        anna.printInfo();
+
+        Vehicle myCar = new Vehicle("Toyota", "Camry",2013);
+        myCar.printInfo();
+
 
 
     }

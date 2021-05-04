@@ -5,18 +5,14 @@ public class Person {
     private String lastName;
     private int year;
 
-    public void setName(String n){
-        name = n;
-    }
-    public String getName(){
-        return name;
-    }
-    public void setLastName(String ln){
-        lastName = ln;
-    }
-    public String getLastName(){
+    public String getLastName() {
         return lastName;
     }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public void setYear(int y){
         year = y;
     }
@@ -38,9 +34,12 @@ public class Person {
     public String getName(){
         return name;
     }
-    public void prinInfo(){
-        System.out.println(Person "name= "+ name, "last name = "+ lastName, "Year = " + year);
 
+    public void printInfo() {
+        System.out.println("Person{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                '}');
     }
-
 }
