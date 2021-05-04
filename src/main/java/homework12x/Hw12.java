@@ -10,7 +10,8 @@ public class Hw12 {
         Parallelepiped p2 = new Parallelepiped(5.6, 18.6, 7);
         p2.draw();
         System.out.println("Volume of p2 = " + p2.getVolume());
-
+        
+        //1st-2nd object of class Cube 
         Cube cube1 = new Cube(8);
         cube1.draw();
         System.out.println("Volume of cube1 = " + cube1.getVolume());
