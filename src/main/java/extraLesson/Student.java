@@ -6,6 +6,9 @@ public class Student extends Person{
         super(name, lastName, year);
         this.major=major;
     }
-
+    @Override
+    public void hello(){
+        System.out.println("HI");
+    }
 
 }
