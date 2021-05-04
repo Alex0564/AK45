@@ -1,9 +1,9 @@
-package hw11;
+package less11homework;
 
-public class Mouse {
+public class PowerSupply {
     private String brand;
     private String model;
-    public Mouse (String brand, String model){
+    public PowerSupply (String brand, String model){
         this.brand = brand;
         this.model = model;
     }
@@ -12,7 +12,7 @@ public class Mouse {
 
     @Override
     public String toString() {
-        return "\nMouse{" +
+        return "\nPowerSupply{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 '}';

@@ -1,24 +1,20 @@
-package hw11;
+package less11homework;
 
-public class Monitor {
+public class Mouse {
     private String brand;
     private String model;
-    private int diag;
-    public Monitor (String brand, String model, int diag){
+    public Mouse (String brand, String model){
         this.brand = brand;
         this.model = model;
-        this.diag = diag;
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
-    public int getDiag(){return diag;}
 
     @Override
     public String toString() {
-        return "\nMonitor{" +
+        return "\nMouse{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", diag=" + diag +
                 '}';
     }
 }

@@ -1,20 +1,24 @@
-package hw11;
+package less11homework;
 
-public class GraphicAdapter {
+public class Disk {
     private String brand;
     private String model;
-    public GraphicAdapter (String brand, String model){
+    private int size;
+    public Disk (String brand, String model, int size){
         this.brand = brand;
         this.model = model;
+        this.size = size;
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
+    public int getSize(){return size;}
 
     @Override
     public String toString() {
-        return "\nGraphicAdapter{" +
+        return "\nDisk{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
+                ", size=" + size +
                 '}';
     }
 }

@@ -1,24 +1,20 @@
-package hw11;
+package less11homework;
 
-public class Disk {
+public class Keyboard {
     private String brand;
     private String model;
-    private int size;
-    public Disk (String brand, String model, int size){
+    public Keyboard (String brand, String model){
         this.brand = brand;
         this.model = model;
-        this.size = size;
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
-    public int getSize(){return size;}
 
     @Override
     public String toString() {
-        return "\nDisk{" +
+        return "\nKeyboard{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", size=" + size +
                 '}';
     }
 }

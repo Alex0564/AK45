@@ -1,6 +1,4 @@
-package hw11;
-
-import javax.sound.midi.Soundbank;
+package less11homework;
 
 public class App {
     public static void main(String[] args) {

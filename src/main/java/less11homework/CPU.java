@@ -1,9 +1,9 @@
-package hw11;
+package less11homework;
 
-public class Keyboard {
+public class CPU {
     private String brand;
     private String model;
-    public Keyboard (String brand, String model){
+    public CPU (String brand, String model){
         this.brand = brand;
         this.model = model;
     }
@@ -12,7 +12,7 @@ public class Keyboard {
 
     @Override
     public String toString() {
-        return "\nKeyboard{" +
+        return "\nCPU{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 '}';

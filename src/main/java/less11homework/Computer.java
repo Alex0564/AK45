@@ -1,4 +1,4 @@
-package hw11;
+package less11homework;
 
 
 public class Computer {
