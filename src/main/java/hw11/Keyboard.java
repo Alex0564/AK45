@@ -9,4 +9,12 @@ public class Keyboard {
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
+
+    @Override
+    public String toString() {
+        return "\nKeyboard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

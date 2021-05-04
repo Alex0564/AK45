@@ -9,4 +9,12 @@ public class Mouse {
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
+
+    @Override
+    public String toString() {
+        return "\nMouse{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

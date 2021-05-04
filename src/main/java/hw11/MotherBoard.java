@@ -16,4 +16,13 @@ public class MotherBoard {
     public CPU getCpu(){return cpu;}
     public RAM getRam() {return ram;}
 
+    @Override
+    public String toString() {
+        return "\nMotherBoard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", cpu=" + cpu +
+                ", ram=" + ram +
+                '}';
+    }
 }

@@ -12,4 +12,13 @@ public class Monitor {
     public String getBrand(){return brand;}
     public String getModel(){return model;}
     public int getDiag(){return diag;}
+
+    @Override
+    public String toString() {
+        return "\nMonitor{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", diag=" + diag +
+                '}';
+    }
 }

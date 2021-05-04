@@ -12,4 +12,13 @@ public class RAM {
     public String getBrand(){return brand;}
     public String getModel(){return model;}
     public int getSize(){return size;}
+
+    @Override
+    public String toString() {
+        return "\nRAM{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }

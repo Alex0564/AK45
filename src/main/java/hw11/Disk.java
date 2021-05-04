@@ -13,4 +13,12 @@ public class Disk {
     public String getModel(){return model;}
     public int getSize(){return size;}
 
+    @Override
+    public String toString() {
+        return "\nDisk{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }

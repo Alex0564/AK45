@@ -19,5 +19,14 @@ public class Computer {
     public Keyboard getKeyboard(){return keyboard;}
     public Mouse getMouse(){return mouse;}
 
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "mouse=" + mouse +
+                ", keyboard=" + keyboard +
+                ", systemBlock=" + systemBlock +
+                ", monitor=" + monitor +
+                '}';
+    }
 }
 

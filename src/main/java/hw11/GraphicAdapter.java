@@ -9,4 +9,12 @@ public class GraphicAdapter {
     }
     public String getBrand(){return brand;}
     public String getModel(){return model;}
+
+    @Override
+    public String toString() {
+        return "\nGraphicAdapter{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

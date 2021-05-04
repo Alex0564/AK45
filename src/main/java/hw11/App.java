@@ -30,7 +30,12 @@ public class App {
         SystemBlock wifeSystemBlock = new SystemBlock(aresgame, seagate, asus, wifeMotherboard);
         Computer wifeComputer = new Computer(wifeSystemBlock, samsung, redragon, razer);
 
-        String myCpu = myMotherBoard.getCpu().getBrand();
-        System.out.println("Brand CPU in my computer: " + myCpu);
+//        String myCpu = myMotherBoard.getCpu().getBrand();
+//        System.out.println("Brand CPU in my computer: " + myCpu);
+//        String wifeCPU = myComputer.getSystemBlock().getMotherBoard().getCpu().getBrand();
+//        System.out.println("Brand CPU in my wife's computer: " + myCpu);
+//        System.out.println(amd);
+//        System.out.println(myMotherBoard);
+        System.out.println(myComputer);
     }
 }
