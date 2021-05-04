@@ -32,5 +32,7 @@ public class App {
         Subjects[]victorSubjects = {Subjects.CS,Subjects.MATH,Subjects.BIOLOGY};
         victor.setSubjects(victorSubjects);
 
+
+
     }
 }

@@ -1,5 +1,7 @@
 package mytest;
 
+import java.util.Arrays;
+
 public class App {
 
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class App {
         Human h=new Human(25,1999);
 
         //object of child class Child
-        Child ch=new Child(2015,"hello");
+        Child ch=new Child(25,2015,"hello");
         /*
         HUMAN class
             private int age;
@@ -40,6 +42,11 @@ public class App {
         // get value from field private int age in class HUMAN wich is inheritted to Child class and using Method infoChild() in class CHILD(inherited from class HUMAN)
         ch.infoMyHuman();
 
+        Balls [] b = {Balls.BASKETBALL,Balls.BASKETBALL,Balls.VALLEYBALL};
+
+        System.out.println(Arrays.toString(b));
+String s="Hi";
+        System.out.println("{"+"dddd"+'\''+"}");
     }
 
 

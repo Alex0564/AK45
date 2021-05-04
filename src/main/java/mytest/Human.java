@@ -1,7 +1,7 @@
 package mytest;
 
 public class Human {
-    private int age;
+    protected int age;
     protected int year;
 
     public Human(int age, int year) {
@@ -9,9 +9,6 @@ public class Human {
         this.year = year;
     }
 
-    public Human(int year) {
-        this.year = year;
-    }
 
     public Human() {
     }

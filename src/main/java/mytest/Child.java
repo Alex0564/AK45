@@ -5,8 +5,8 @@ public class Child extends Human {
 
 
 
-    public Child(int year, String s) {
-        super(year);
+    public Child( int age, int year, String s) {
+        super(age,year);
         this.s = s;
     }
 
