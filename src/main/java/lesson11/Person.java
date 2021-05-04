@@ -16,31 +16,24 @@ public class Person {
     public Address getAddress() {
         return this.address;
     }
-
     public void setAddress(Address address) {
         this.address = address;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
     public int getYear() {
         return year;
     }
-
     public void setYear(int year) {
         this.year = year;
     }

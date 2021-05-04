@@ -18,19 +18,15 @@ public class House {
     public Address getAddress() {
         return address;
     }
-
     public Person getOwner() {
         return owner;
     }
-
     public int getBedrooms() {
         return bedrooms;
     }
-
     public int getBathrooms() {
         return bathrooms;
     }
-
     public int getYear() {
         return year;
     }

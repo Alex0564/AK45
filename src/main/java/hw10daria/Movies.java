@@ -1,15 +1,17 @@
 package hw10daria;
 
+import java.util.Arrays;
+
 public class Movies {
     private String name;
     private String country;
     private kind [] kind;
 
-    public Movies(String name, String country){ this.name = name; this.country=country; }
-    public void setName(String name){ this.name=name;}
-    public String getName(){ return name;}
-    public void setCountry(String country){this.country=country;}
-    public String getCountry(){return country;}
+//    public Movies(String name, String country){ this.name = name; this.country=country; }
+//    public void setName(String name){ this.name=name;}
+//    public String getName(){ return name;}
+//    public void setCountry(String country){this.country=country;}
+//    public String getCountry(){return country;}
 
 //new constructor
     public Movies(String name, String country, kind[] kind) {
@@ -18,6 +20,11 @@ public class Movies {
     public kind[] getKind() { return kind; }
     public void setKind(kind[] kind) { this.kind = kind; }
 
+    @Override
+    public String toString(){
+        return "Movies"+"name='"+name+'\''+", country='"+country+'\''+", kind="+
+                Arrays.toString(kind);
+    }
 
     // signle enum
 //    Movies(String name, String country, kind kind){
