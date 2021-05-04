@@ -26,9 +26,9 @@ public class App {
         SystemBlock systemBlock1 = new SystemBlock(powerSupply1,disk1,graphicAdapter1,motherBoard1);
         SystemBlock systemBlock2 = new SystemBlock(powerSupply2,disk2,graphicAdapter2,motherBoard2);
         Computer computer1 = new Computer(mouse1,keyboard1,systemBlock1,monitor1);
-        Computer computer2 =new Computer(mouse2,keyboard2,systemBlock2,monitor2);
-        System.out.println("Brand of 1st computer is "+computer1.getSystemBlock().getMotherBoard().getCpu().getBrand());
-        System.out.println("Brand of 2nd computer is "+computer2.getSystemBlock().getMotherBoard().getCpu().getBrand());
+        Computer computer2 = new Computer(mouse2,keyboard2,systemBlock2,monitor2);
+        System.out.println("Brand of 1st computer's CPU is "+computer1.getSystemBlock().getMotherBoard().getCpu().getBrand());
+        System.out.println("Brand of 2nd computer's CPU is "+computer2.getSystemBlock().getMotherBoard().getCpu().getBrand());
 
     }
 }
