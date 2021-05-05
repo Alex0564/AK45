@@ -14,16 +14,19 @@ public class Hexagone implements Shape {
         this.wide = wide;
     }
 
+    @Override
     public void draw() {
         System.out.println("I draw hexagone size:"+length+"*"+wide);
     }
 
+    @Override
 
     public double getPerimeter() {
         return 2*(length+wide);
     }
 
 
+    @Override
     public double getArea() {
         return length*wide;
     }
