@@ -5,7 +5,7 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        ArrayList<String> flowers = new ArrayList<>();
+        List<String> flowers = new ArrayList<>();
         flowers.add("Tulip");
         flowers.add(1, "Rose");
         for (int i=1; i<4; i++){
@@ -21,7 +21,7 @@ public class App {
             System.out.println(i);
         }
 
-        ArrayList<Integer> numberOfHouse= new ArrayList<>();
+        List<Integer> numberOfHouse= new ArrayList<>();
         numberOfHouse.add(1023);
         int [] numbers = {345, 2096, 23, 607};
         for (int i = 0; i<=3; i++){numberOfHouse.add(numbers[i]);}
@@ -44,6 +44,7 @@ public class App {
         companies.add(new Brand(newBrand[1]));
 //        for (int i = 0; i <= 2; i++) {
 ////            companies.add(new Brand(newBrand[i]));
+//            System.out.println(companies.get(i).getName());
 //        }
         int length2 = companies.size();
         System.out.println("\nNumber of brands are " + length2);
