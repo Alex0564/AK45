@@ -44,8 +44,9 @@ public class App {
    Computer Ajaks =new Computer(b,e,z,u);
 
    String CPUSenturion =Senturion.getSystemBlock().getMotherBoard().getCpu().getBrand();
-       System.out.println("Senturion computer has CPU's brand"+CPUSenturion);
-
+       System.out.println("Senturion computer has CPU's brand "+CPUSenturion);
+String CPUAjaks=Ajaks.getSystemBlock().getMotherBoard().getCpu().getModel();
+       System.out.println( "Computer Ajaks has CPU brand Intel "+CPUAjaks);
 
 
 
