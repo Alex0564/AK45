@@ -1,11 +1,17 @@
 package hw13daria;
+import hw10daria.kind;
+import lesson13.Person;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class App {
     public static void main (String []args){
         ArrayList<String> deserts = new ArrayList<>();
         ArrayList<String> moreDesserts =new ArrayList<String>();
         ArrayList<Integer> shoesSizes = new ArrayList<Integer>();
+        List<Vegetables> veggies =new ArrayList<>();
 
         moreDesserts.add("Brownie");
         moreDesserts.add("Cupcake");
@@ -48,8 +54,16 @@ public class App {
         shoesSizes.set(0, 34);
         System.out.println(shoesSizes.get(4));
 
+        veggies.add(new Vegetables("Tomato"));
+        veggies.add(new Vegetables("Potato"));
+        veggies.add( new Vegetables("Beet"));
+        Vegetables eggplant = new Vegetables("Eggplant");
+        Vegetables.add("Eggplant");
+        System.out.println(veggies.get(1).getName());
+        System.out.println(Arrays.toString(new List[]{veggies}));
+        for (Vegetables v : veggies) { System.out.print(veggies);}
 
-
-
+        // Tatyana, I was searching for the correct output for ArrayList but I found one
+//        I can see extra braces.. Thank you!
     }
 }

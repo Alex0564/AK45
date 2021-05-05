@@ -9,7 +9,6 @@ public class App3 {
         fruits.add("Apple");
 
         List<Integer> numbers = new ArrayList<Integer>();
-
         List<Person> people = new ArrayList<>();
         Person oleg = new Person("Oleg");
         people.add(oleg);

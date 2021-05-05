@@ -1,7 +1,6 @@
 package hw10daria;
 
 import lesson10.Subjects;
-
 public class Appenum {
     public static void main(String[] args) {
 
