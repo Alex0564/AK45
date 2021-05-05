@@ -20,8 +20,17 @@ public class CPU {
         this.model = model;
     }
 
+    @Override
+    public String toString() {
+        return "CPU{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
+
     public CPU(String brand, String model) {
         this.brand = brand;
         this.model = model;
+
     }
 }

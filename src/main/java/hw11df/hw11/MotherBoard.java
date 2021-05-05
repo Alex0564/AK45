@@ -38,10 +38,22 @@ public class MotherBoard {
         this.ram = ram;
     }
 
+    @Override
+    public String toString() {
+        return "MotherBoard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", cpu=" + cpu +
+                ", ram=" + ram +
+                '}';
+    }
+
     public MotherBoard(String brand, String model, CPU cpu, RAM ram) {
         this.brand = brand;
         this.model = model;
         this.cpu = cpu;
         this.ram = ram;
+
+
     }
 }

@@ -44,4 +44,14 @@ public class SystemBlock {
         this.graphicAdapter = graphicAdapter;
         this.motherBoard = motherBoard;
     }
+
+    @Override
+    public String toString() {
+        return "SystemBlock{" +
+                "powerSupply=" + powerSupply +
+                ", disk=" + disk +
+                ", graphicAdapter=" + graphicAdapter +
+                ", motherBoard=" + motherBoard +
+                '}';
+    }
 }

@@ -20,8 +20,18 @@ public class GraphicAdapter {
         this.model = model;
     }
 
+    @Override
+    public String toString() {
+        return "GraphicAdapter{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
+
     public GraphicAdapter(String brand, String model) {
         this.brand = brand;
         this.model = model;
+
+
     }
 }

@@ -24,4 +24,12 @@ public class Mouse {
         this.brand = brand;
         this.model = model;
     }
+
+    @Override
+    public String toString() {
+        return "Mouse{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

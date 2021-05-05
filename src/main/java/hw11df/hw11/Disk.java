@@ -9,8 +9,18 @@ public class Disk {
         return brand;
     }
 
+    @Override
+    public String toString() {
+        return "Disk{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", size=" + size +
+                '}';
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
+
     }
 
     public String getModel() {

@@ -29,6 +29,15 @@ public class Monitor {
         this.diag = diag;
     }
 
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", diag=" + diag +
+                '}';
+    }
+
     public Monitor(String brand, String model, int diag) {
         this.brand = brand;
         this.model = model;

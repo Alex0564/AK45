@@ -34,4 +34,13 @@ public class RAM {
         this.model = model;
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "RAM{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }

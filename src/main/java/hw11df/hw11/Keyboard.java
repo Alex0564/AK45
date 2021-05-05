@@ -20,9 +20,18 @@ public class Keyboard {
         this.model = model;
     }
 
+    @Override
+    public String toString() {
+        return "Keyboard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
+
     public Keyboard(String brand, String model) {
         this.brand = brand;
         this.model = model;
+
 
     }
 }
