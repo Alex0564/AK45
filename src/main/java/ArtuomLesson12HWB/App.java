@@ -30,26 +30,24 @@ public class App {
         MILSTD810F LAP = new LaptopArt("Samsung", Colors.GREEY, 2021, "USA");
 
         MILSTD810F[] laptop = {Lap, LAP};
-
         for (MILSTD810F Laptops : laptop) {
-            Laptops.Donthitthelapttop();//-Выдает 2 разных значения, потому что в 2 классах написано по разному
-
-            System.out.println("======================Assigning one object to interface type==============");
-
-
-            MILSTD810F LaptopTims= new LapTop("Sharp",Colors.GREEY,2020);
-            MILSTD810F LAPTOPANN=new LaptopArt("HP",Colors.GREEY,2021,"USA");
-            LaptopTims.Donthitthelapttop();
-            LaptopTims.Donthitthelapttop();
-
-            LAPTOPANN.Donthitthelapttop();
-            LAPTOPANN.Donotwasрthelaptopinthesink();
-
-
-
-
-
+            Laptops.Donthitthelapttop();
         }
-    }
 
+//            Laptops.Donthitthelapttop();//-Выдает 2 разных значения, потому что в 2 классах написано по разному
+
+    System.out.println("======================Assigning one object to interface type==============");
+
+
+     MILSTD810F LaptopTims = new LapTop("Sharp", Colors.GREEY, 2020);
+     MILSTD810F LAPTOPANN = new LaptopArt("HP", Colors.GREEY, 2021, "USA");
+     LaptopTims.Donthitthelapttop();
+     LaptopTims.Donthitthelapttop();
+
+      LAPTOPANN.Donthitthelapttop();
+      LAPTOPANN.Donotwasрthelaptopinthesink();
+
+
+
+    }
 }
