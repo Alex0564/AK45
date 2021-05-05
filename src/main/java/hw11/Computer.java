@@ -5,14 +5,15 @@ public class Computer {
     private Mouse mouse;
     private Keyboard keyboard;
     private SystemBlock systemBlock;
-    //    private Monitor[] monitors;
-    private Monitor monitor;
+    private Monitor[] monitors;
+   // private Monitor monitor;
 
-    public Computer(Mouse mouse, Keyboard keyboard, SystemBlock systemBlock, Monitor monitor) {
+
+    public Computer(Mouse mouse, Keyboard keyboard, SystemBlock systemBlock, Monitor []monitors) {
         this.mouse = mouse;
         this.keyboard = keyboard;
         this.systemBlock = systemBlock;
-        this.monitor = monitor;
+        this.monitors = monitors;
     }
 
     public Mouse getMouse() {
@@ -39,15 +40,13 @@ public class Computer {
         this.systemBlock = systemBlock;
     }
 
-    public Monitor getMonitor() {
-        return monitor;
+    public Monitor[] getMonitors() {
+        return monitors;
     }
 
-    public void setMonitor(Monitor monitor) {
-        this.monitor = monitor;
+    public void setMonitors(Monitor[] monitors) {
+        this.monitors = monitors;
     }
 }
-
-
 
 

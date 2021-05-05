@@ -39,30 +39,12 @@ public class App {
         Monitor Samsung=new Monitor("Samsung","Z658",24);
         Monitor HPmon=new Monitor("HP", "178",17);
 //===========================================Practic====================================================//
-         String mycomp="Hp";
-          String mycomp1="Samsung";
-          String x=mycomp;
-          String y=mycomp1;
-          String T=x+" "+y;
+        Monitor []monitors={Hp,Samsung,};
+        Monitor []monitor2={HPmon};
 
 
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(T);
-
-
-        String [] Monitor= {x,y};
-        String v=Monitor[0];
-        String w=Monitor[1];
-        System.out.println(v+" "+w);
-        String d=w;
-
-
-        System.out.println(Monitor[1]);
-
-
-        Computer HPArt=new Computer(Log,keyb1, HPac1,Hp);
-        Computer HPVer=new Computer(HPmouse,keyb2,Hpac2,HPmon);
+        Computer HPArt=new Computer(Log,keyb1, HPac1,monitors);
+        Computer HPVer=new Computer(HPmouse,keyb2,Hpac2,monitor2);
 
 
 //======================================Model CPU==============================================
