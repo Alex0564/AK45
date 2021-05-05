@@ -14,8 +14,6 @@ public class SystemBlock {
         this.motherBoard = motherBoard;
     }
 
-    public SystemBlock(Disk newDisk, MotherBoard myMotherBoard, GraphicAdapter myAdapter) {
-    }
 
     public PowerSupply getPowerSupply() {
         return powerSupply;
@@ -47,5 +45,17 @@ public class SystemBlock {
 
     public void setMotherBoard(MotherBoard motherBoard) {
         this.motherBoard = motherBoard;
+
+    }
+
+
+    public void print_Info() {
+
+        System.out.println("SystemBlock" +
+                "getMotherBoard" + getMotherBoard +
+                ", powerSupply" + powerSupply +
+                ", disk" + disk +
+                ", graphicAdapter" + graphicAdapter +
+                ", motherBoard" + motherBoard);
     }
 }

@@ -1,16 +1,18 @@
 package homework11;
 
+import java.util.Arrays;
+
 public class Computer {
     private Mouse mouse;
     private Keyboard keyboard;
     private SystemBlock systemBlock;
-    private Monitor[] monotors;
+    private Monitor[] monitors;
 
     public Computer(Mouse mouse, Keyboard keyboard, SystemBlock systemBlock, Monitor[] monotors) {
         this.mouse = mouse;
         this.keyboard = keyboard;
         this.systemBlock = systemBlock;
-        this.monotors = monotors;
+        this.monitors = monotors;
     }
 
     public Mouse getMouse() {
@@ -37,11 +39,20 @@ public class Computer {
         this.systemBlock = systemBlock;
     }
 
-    public Monitor[] getMonotors() {
-        return monotors;
+    public Monitor[] getMonitors() {
+        return monitors;
     }
 
-    public void setMonotors(Monitor[] monotors) {
-        this.monotors = monotors;
+    public void setMonitors(Monitor[] monitors) {
+        this.monitors = monitors;
+    }
+
+
+    public void print_info() {
+       System.out.println("Computer:" +
+                "mouse:" + mouse +
+                ", keyboard:" + keyboard +
+                ", systemBlock:" + systemBlock +
+                ", monitors:" + Arrays.toString(monitors));
     }
 }

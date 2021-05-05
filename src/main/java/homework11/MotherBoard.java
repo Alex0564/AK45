@@ -48,4 +48,13 @@ public class MotherBoard {
     public void setRam(RAM ram) {
         this.ram = ram;
     }
+
+
+    public void print_info() {
+        System.out.println("MotherBoard:" +
+                "brand:" + brand + '\'' +
+                ", model:" + model + '\'' +
+                ", cpu:" + cpu +
+                ", ram:" + ram);
+    }
 }

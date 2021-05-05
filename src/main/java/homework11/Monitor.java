@@ -1,29 +1,48 @@
 package homework11;
 
-public class Monitor<myMonitors> {
-    public static Monitor[] myMonitor;
-    String[]myMonitors1 = {"HP", "ASUS"};
+import java.util.Arrays;
+
+public class Monitor {
+    private Monitors1 [] myMonitors1s;
     private String model;
      private int diagonal;
 
-    public Monitor(Monitor[] myMonitors, String model, int diagonal) {
-        this.myMonitors1 = myMonitors1;
-        this.myMonitor = myMonitors;
+    public Monitor(Monitors1[] myMonitors1s, String model, int diagonal) {
+        this.myMonitors1s = myMonitors1s;
         this.model = model;
         this.diagonal = diagonal;
     }
 
-    public Monitor(Object monitors, String hp, int diagonal, Monitor[] myMonitor) {
-
-        Monitor.myMonitor = myMonitor;
+    public Monitors1[] getMyMonitors1s() {
+        return myMonitors1s;
     }
 
-    public Monitor[] getMyMonitor() {
-        return myMonitor;
+    public void setMyMonitors1s(Monitors1[] myMonitors1s) {
+        this.myMonitors1s = myMonitors1s;
     }
 
-    public void setMyMonitor(Monitor[] myMonitor) {
-        this.myMonitor = myMonitor;
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getDiagonal() {
+        return diagonal;
+    }
+
+    public void setDiagonal(int diagonal) {
+        this.diagonal = diagonal;
+    }
+
+
+    public void print_Info() {
+      System.out.println("Monitor:" +
+                "myMonitors1s:" + Arrays.toString(myMonitors1s) +
+                ", model:" + model + '\'' +
+                ", diagonal:" + diagonal);
     }
 }
 

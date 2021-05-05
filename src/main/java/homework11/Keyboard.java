@@ -24,4 +24,11 @@ public class Keyboard {
     public void setModel(String model) {
         this.model = model;
     }
+
+
+    public void print_info() {
+        System.out.println("Keyboard:" +
+                "brand:" + brand + '\'' +
+                ", model:" + model);
+    }
 }

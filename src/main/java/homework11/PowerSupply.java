@@ -24,4 +24,11 @@ public class PowerSupply {
     public void setModel(String model) {
         this.model = model;
     }
+
+
+    public void print_info() {
+        System.out.println("PowerSupply:" +
+                "brand:" + brand + '\'' +
+                ", model:" + model);
+    }
 }

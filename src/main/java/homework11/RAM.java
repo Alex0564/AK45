@@ -38,4 +38,12 @@ public class RAM {
     public void setSize(int size) {
         this.size = size;
     }
+
+
+    public void print_info() {
+        System.out.println("RAM:" +
+                "brand:" + brand + '\'' +
+                ", model:" + model + '\'' +
+                ", size:" + size);
+    }
 }

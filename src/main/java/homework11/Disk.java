@@ -11,10 +11,6 @@ public class Disk {
         this.size = size;
     }
 
-    public Disk(String wdBlue, String s) {
-
-    }
-
     public String getBrand() {
         return brand;
     }
