@@ -9,6 +9,10 @@ public class Animal {
     public Animal(){
 
     }
+
+    public Animal(String name, String kind, int year) {
+    }
+
     public Gender getGender() {
         return (hw10df.Gender) Gender;
     }
@@ -41,14 +45,27 @@ public class Animal {
         Gender = gender;
     }
 
-    public Animal(String name, String kind, int year) {
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", kind='" + kind + '\'' +
+                ", year=" + year +
+                ", Gender=" + Gender +
+                '}';
+    }
+
+    public Animal(String name, String kind, int year, Object gender) {
         this.name = name;
         this.kind = kind;
         this.year = year;
-
-
-        
-        
+        this.Gender = gender;
     }
-    
+
+
+
+
+
+
 }
