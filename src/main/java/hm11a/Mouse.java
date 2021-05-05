@@ -32,4 +32,5 @@ public class Mouse {
     public void setModel(String model) {
         this.model = model;
     }
+
 }

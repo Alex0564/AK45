@@ -1,5 +1,7 @@
 package hm11a;
 
+import java.util.Arrays;
+
 public class Computer {
     private Mouse mouse;
     private Keyboard keyboard;

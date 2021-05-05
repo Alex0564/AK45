@@ -43,4 +43,5 @@ public class SystemBlock {
     public void setMotherBoard(MotherBoard motherBoard) {
         this.motherBoard = motherBoard;
     }
+
 }

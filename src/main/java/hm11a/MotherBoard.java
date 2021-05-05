@@ -44,4 +44,5 @@ public class MotherBoard {
     public void setRam(RAM ram) {
         this.ram = ram;
     }
+
 }
