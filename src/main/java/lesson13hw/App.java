@@ -13,11 +13,14 @@ public class App {
         cellPhones.set(3,"Huawei");
         String oldValue = cellPhones.set(2,"LG");
         System.out.println(oldValue);
-        System.out.println(cellPhones);
+//        System.out.println(cellPhones);
         cellPhones.add("Nokia");
         cellPhones.add(3,"Google Phone");
-        System.out.println(cellPhones);
+//        System.out.println(cellPhones);
         System.out.println(cellPhones.size());
+        cellPhones.remove(0);
+        cellPhones.remove("Nokia");
+        System.out.println(cellPhones);
 
         for (String cellPhone : cellPhones){
             System.out.println(cellPhone);
