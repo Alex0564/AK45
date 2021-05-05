@@ -1,6 +1,6 @@
-package homework11op;
-
-public enum MouseBrand {
-    MICROSOFT,
-    LOGITECH,
-}
+//package homework11op;
+//
+//public enum MouseBrand {
+//    MICROSOFT,
+//    LOGITECH,
+//}

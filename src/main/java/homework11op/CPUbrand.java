@@ -1,6 +1,6 @@
 package homework11op;
 
-public enum CPUbrand {
-    INTEL,
-    AMD,
-}
+//public enum CPUbrand {
+//    INTEL,
+//    AMD,
+//}
