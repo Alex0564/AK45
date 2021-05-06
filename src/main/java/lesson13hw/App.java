@@ -1,10 +1,11 @@
 package lesson13hw;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        ArrayList<String> cellPhones = new ArrayList<String>();
+        List<String> cellPhones = new ArrayList<String>();
         cellPhones.add("Iphone");
         cellPhones.add("Samsung");
         cellPhones.add("LG");
