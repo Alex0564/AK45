@@ -1,10 +1,11 @@
 package HW13;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AppChart {
     public static void main(String[] args) {
-        ArrayList <billboard2020> chart =new ArrayList<>();
+        List<billboard2020> chart =new ArrayList<>();
         chart.add(new billboard2020("The Weeknd", "Blinding Lights", 1));
         chart.add(new billboard2020("Post Malone", "Circles", 2));
         chart.add(new billboard2020("Roddy Ricch", "The Box", 3));
