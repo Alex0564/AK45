@@ -7,6 +7,6 @@ public class HotelRoom {
     public int beds;
 
     public void RoomInfo() {
-        System.out.println("Hotel Room Category = " + this.name + "\nRoom view = " + this.view + "\nBeds Quantity = " + this.beds + "\nBed Size = " + this.bedSize);
+        System.out.println("Hotel Room Category = " + this.name + "\nRoom view = " + this.view + "\nBeds Quantity = " + this.beds + "\nBed Color = " + this.bedSize);
     }
 }
