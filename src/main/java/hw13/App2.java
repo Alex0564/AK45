@@ -1,15 +1,14 @@
 package hw13;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
+import java.util.List;
 
 public class App2 {
     public static void main(String[] args) {
 
         // Integer ArrayList
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        List<Integer> numbers = new ArrayList<Integer>();
         numbers.add(23);
         numbers.add(-12);
         numbers.add(25);

@@ -17,20 +17,23 @@ public class App1 {
         students.add(s3);
 
         System.out.println();
-        System.out.println(students.get(0).getName() + " " + students.get(0).getLastName() + " has a major: " +
-                students.get(0).getMajor());
+        System.out.println(students.get(0).getName() + " " + students.get(0).getLastName()
+                + " has a major: " + students.get(0).getMajor());
 
-        System.out.println(students.get(1).getName() + " " + students.get(1).getLastName() + "'s major is " +
-                students.get(1).getMajor());
+        System.out.println(students.get(1).getName() + " " + students.get(1).getLastName()
+                + "'s major is " + students.get(1).getMajor());
 
-        System.out.println(students.get(2).getName() + " " + students.get(2).getLastName() + " studies " + students.get(2).getMajor());
+        System.out.println(students.get(2).getName() + " " + students.get(2).getLastName() +
+                " studies " + students.get(2).getMajor());
         s1.setLastName("Williams");
 
-        System.out.println("Sarah Wilson after marriage has changed her Last name to " + s1.getLastName());
+        System.out.println("Sarah Wilson after marriage has changed her Last name to " +
+                s1.getLastName());
 
         students.add(0, new Student("Adam", "Miller", "Agriculture"));
 
-        System.out.println("Now Last name of first student is: " + students.get(0).getLastName() + " instead of Watson");
+        System.out.println("Now Last name of first student is: " + students.get(0).getLastName() +
+                " instead of Watson");
 
         System.out.println("And his major is " + students.get(0).getMajor() + " instead of Science");
 
@@ -41,7 +44,8 @@ public class App1 {
         System.out.println("\nUsing for loop:\n");
 
         for (Student ar : students) {
-            System.out.println("Name: " + ar.getName() + ", Last name: " + ar.getLastName() + ", major: " + ar.getMajor());
+            System.out.println("Name: " + ar.getName() + ", Last name: " + ar.getLastName() +
+                    ", major: " + ar.getMajor());
         }
         System.out.println();
 

@@ -3,6 +3,7 @@ package hw13;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class App {
          */
 
         // String ArrayList
-        ArrayList<String> subjects = new ArrayList<String>();
+        List<String> subjects = new ArrayList<>();
 
         subjects.add("Math"); // add new element to the array list
         subjects.add("Science");
