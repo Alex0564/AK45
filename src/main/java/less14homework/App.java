@@ -38,6 +38,7 @@ public class App {
         employee.put(new Surnames("Gomes"), new Names("Mario"));
         employee.put(new Surnames("Rivelli"), new Names("Ralph"));
         System.out.println(employee.size());
+        System.out.println(employee.get("Gomes"));
         System.out.println(employee.get(alex));
         System.out.println(employee);
 
