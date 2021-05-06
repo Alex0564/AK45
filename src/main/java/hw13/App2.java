@@ -59,9 +59,8 @@ public class App2 {
         for (int v :
                 numbers) {
             sum += v;
-
-
         }
+
         System.out.println("\nSum of values: " + sum);
     }
 }

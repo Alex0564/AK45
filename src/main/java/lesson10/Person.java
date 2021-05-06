@@ -4,6 +4,17 @@ public class Person {
     protected String name;
     protected String lastName;
     protected int year;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                ", gender=" + gender +
+                '}';
+    }
+
     protected Gender gender;
 
     public Person() {

@@ -1,11 +1,21 @@
 package lesson10;
 
+import java.util.Arrays;
+
 public class Student extends Person{
     private Subjects major;
     private Subjects[] subjects;
 
     public Subjects[] getSubjects() {
         return subjects;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "major=" + major +
+                ", subjects=" + Arrays.toString(subjects) +
+                '}';
     }
 
     public void setSubjects(Subjects[] subjects) {

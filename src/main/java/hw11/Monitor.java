@@ -6,7 +6,6 @@ public class Monitor {
     private String size;
     private MonitorType monitorType;
 
-
     public Monitor(String brand, String model, String size, MonitorType monitorType) {
         this.brand = brand;
         this.model = model;

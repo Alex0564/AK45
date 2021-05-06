@@ -11,6 +11,7 @@ public class App {
         ff.printInfo();
         System.out.println(ff.getYear());
         System.out.println(ff.getName());
+        System.out.println(ff);
         System.out.println();
 
         Flower ff1 = new Flower("Tulip", 3);
@@ -39,7 +40,6 @@ public class App {
 
         System.out.println("***********************************");
         System.out.println(Arrays.toString(chart));
-
 
     }
 

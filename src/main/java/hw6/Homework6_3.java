@@ -4,7 +4,8 @@ public class Homework6_3 {
 
     public static void main(String[] args) {
 
-        // Homework for Lesson 6 Functions 2 Problem 3 Finding Min & Max numbers
+        // Homework for Lesson 6 Functions 2
+        // Task 3 Finding Min & Max numbers
 
         int[] arr = {3, 9, 1, 8, 4, 8, 5, -16};
         int res = min(arr);
@@ -27,7 +28,7 @@ public class Homework6_3 {
     }
 
     // The min number in array
-    // version 1 using 'foreach' loop
+    // using 'foreach' loop
     public static int min(int[] arr) {
         int min = arr[0];
         for (int number : arr) {
@@ -38,7 +39,7 @@ public class Homework6_3 {
         return min;
     }
 
-    // version 2 using 'for' loop
+    // using 'for' loop
     public static int min1(int[] arr) {
         int min = arr[0];
         for (int i = 0; i < arr.length; i++) {

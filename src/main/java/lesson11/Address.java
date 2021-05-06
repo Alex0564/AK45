@@ -44,4 +44,5 @@ public class Address {
     public void setZip(String zip) {
         this.zip = zip;
     }
+
 }

@@ -22,9 +22,9 @@ public class App {
         myHome.price = 350000;
 
         myHome.homeCost();
-        System.out.println("*************************************************++++++++****+**");
+        System.out.println("****************************************************************");
         friendshome.homeCost();
-        System.out.println("*************************************************++++++++++**++++***+**");
+        System.out.println("***********************************************************************");
 
         Teacher english = new Teacher();
         english.name = "Sara";

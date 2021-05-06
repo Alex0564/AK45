@@ -12,6 +12,13 @@ public class Flower {
     public Flower() {
     }
 
+    @Override
+    public String toString() {
+        return "Flower: " +
+                "name='" + name + '\'' +
+                ", years=" + year;
+    }
+
     public Flower(String name, int year) {
         this.name = name;
         this.year = year;
