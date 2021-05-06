@@ -1,4 +1,4 @@
-package TMLesson12a;
+package TMLess12a;
 
 public interface IShape {
     void draw();

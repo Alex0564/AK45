@@ -1,4 +1,4 @@
-package TMLesson12a;
+package TMLess12a;
 
 public class Rectangle implements IShape{
     protected double length;

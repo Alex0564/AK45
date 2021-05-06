@@ -1,4 +1,4 @@
-package TMLesson12a;
+package TMLess12a;
 
 public class Square extends  Rectangle{
     public Square(double length) {
