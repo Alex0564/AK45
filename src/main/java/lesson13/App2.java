@@ -1,5 +1,6 @@
 package lesson13;
 
+
 import java.util.ArrayList;
 
 public class App2 {
@@ -35,11 +36,11 @@ public class App2 {
         colors.remove("Green");
         System.out.println(colors);
 
-//        for (String color: colors){
-//            System.out.println(color);
-//        }
+        for (String color: colors){
+            System.out.println(color);
+        }
         for (int i=0;i<colors.size();i++){
-            System.out.println(colors.get(i));
+          System.out.println(colors.get(i));
         }
 
     }
