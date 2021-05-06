@@ -14,4 +14,10 @@ public class Site {
     public void setNameSite(String nameSite) {
         this.nameSite = nameSite;
     }
+
+    @Override
+    public String toString() {
+        return "nameSite = "
+                + nameSite;
+    }
 }

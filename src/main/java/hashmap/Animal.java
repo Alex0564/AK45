@@ -14,4 +14,9 @@ public class Animal {
     public void setName(String name) {
         this.nameAnimal = name;
     }
+
+    @Override
+    public String toString() {
+        return "nameAnimal = " + nameAnimal + ", ";
+    }
 }
