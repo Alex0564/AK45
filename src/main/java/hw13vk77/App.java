@@ -83,6 +83,19 @@ public class App {
             System.out.println("type="+ar.getType()+", material="+ar.getMaterial()+", color="+ar.getColor()+", size="+ar.getSize());
         }
 
+        List<List<String>> al=new ArrayList<>();
+        List<String> inneral=new ArrayList<>();
+        List<String> inneral2=new ArrayList<>();
+        List<String> inneral3=new ArrayList<>();
+        List<String> inneral4=new ArrayList<>();
+        al.add(inneral);al.add(inneral2);al.add(inneral3);al.add(inneral4);
+        String s="Hello";
+        inneral.add(s);inneral2.add(s);inneral3.add(s);inneral4.add(s);inneral4.add(s+"sss");
+        for(List asd:al){
+            for(Object s1:asd)
+                System.out.println(s1);
+        }
+
 
 
 
