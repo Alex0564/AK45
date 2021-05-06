@@ -93,7 +93,7 @@ public class App {
         inneral.add(s);inneral2.add(s);inneral3.add(s);inneral4.add(s);inneral4.add(s+"sss");
         for(List asd:al){
             for(Object s1:asd)
-                System.out.println(s1);
+                System.out.println(s1);//
         }
 
 
