@@ -13,11 +13,11 @@ public class App {
 
         //1 Create 3 ArrayList - String, Integer and some Custom class
         //String
-        ArrayList<String> myALs = new ArrayList<>();
+        List<String> myALs = new ArrayList<>();
         //Integer
-        ArrayList<Integer> myALi = new ArrayList<>();
+        List<Integer> myALi = new ArrayList<>();
         //Custom class - Ball
-        ArrayList<Ball> myAL = new ArrayList<>();
+        List<Ball> myAL = new ArrayList<>();
         Ball soccerball= new Ball("leather","silver","regular big","soccer");
         Ball basketball= new Ball("rubber","brown","big","basketball");
         Ball tennisball= new Ball("leather","yellow","regular small","tennis");
