@@ -1,7 +1,6 @@
 package hw13;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class App1 {
@@ -35,5 +34,27 @@ public class App1 {
 
         System.out.println("And his major is " + students.get(0).getMajor() + " instead of Science");
 
+        System.out.println("***********************************************");
+
+        //display each element using for loop
+
+        System.out.println("\nUsing for loop:\n");
+
+        for (Student ar : students) {
+            System.out.println("Name: " + ar.getName() + ", Last name: " + ar.getLastName() + ", major: " + ar.getMajor());
+        }
+        System.out.println();
+
+        //display element using foreach loop
+
+        System.out.println("*************************************************");
+        System.out.println("\nUsing foreach loop:\n");
+
+        for (Student element:
+             students) {
+            System.out.println(element.getName() + " " + element.getLastName() + " studies " +
+                    element.getMajor());
+
+        }
     }
 }
