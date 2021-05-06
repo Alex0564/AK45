@@ -48,6 +48,7 @@ public class App {
         //CREATE COMPUTER 1
         //1 CPU
         CPU cpu= new CPU(Brands.INTEL,CPUmodel.COREi7);//done
+
         //2 RAM
         RAM ram= new RAM(Brands.CRUCIAL,RAMmodel.DDR4,RAMsize.R2X16GB);//done
 
