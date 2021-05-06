@@ -1,5 +1,7 @@
 package hw11;
 
+import hw13.Student;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -34,6 +36,21 @@ public class App {
         Monitor monitor2 = new Monitor("LG", "27GN950-B", "27'", MonitorType.NANO_IPS);
         Monitor[] monitors1 = {monitor1, monitor2};
 
+        System.out.println();
+        System.out.println("Computer 1 has two monitors with following features: ");
+
+        ArrayList<Monitor> monitors = new ArrayList<Monitor>();
+        monitors.add(monitor1);
+        monitors.add(monitor2);
+
+        for (Monitor element :
+                monitors) {
+            System.out.println("Brand: " + element.getBrand() + ", Model: " + element.getModel() +
+                    ", Monitor type: " + element.getMonitorType() + ", Monitor size: " +
+                    element.getSize());
+        }
+        System.out.println("*********************************************************************");
+
         Computer computer1 = new Computer(mouse1, keyboard1, systemBlock1, monitors1);
 
         // Computer 2 creation
@@ -59,31 +76,44 @@ public class App {
         Monitor monitor4 = new Monitor("Samsung", "CF390", "27'", MonitorType.LED);
         Monitor[] monitors2 = {monitor3, monitor4};
 
-        Computer computer2 = new Computer(mouse2, keyboard2, systemBlock2, monitors2);
+        ArrayList<Monitor> monitorsa = new ArrayList<Monitor>();
+        monitorsa.add(monitor3);
+        monitorsa.add(monitor4);
 
-        // Get CPU brand from computer 1
+        System.out.println("Computer 2 has two monitors with following features: ");
 
-        String cpuBrand1 = computer1.getSystemBlock().getMotherBoard().getCpu().getBrand();
-        String cpuModel1 = computer1.getSystemBlock().getMotherBoard().getCpu().getModel();
+        for (Monitor element :
+                monitorsa) {
+            System.out.println("Brand: " + element.getBrand() + ", Model: " + element.getModel() +
+                    ", Monitor type: " + element.getMonitorType() + ", Monitor size: " +
+                    element.getSize());
+        }
 
-        System.out.println("*********************************************************");
+            Computer computer2 = new Computer(mouse2, keyboard2, systemBlock2, monitors2);
 
-        System.out.println("Brand of Computer 1 cpu: " + " '" + cpuBrand1 + "'");
+            // Get CPU brand from computer 1
 
-        System.out.println("Model of Computer 1 cpu: " + " '" + cpuModel1 + "'");
+            String cpuBrand1 = computer1.getSystemBlock().getMotherBoard().getCpu().getBrand();
+            String cpuModel1 = computer1.getSystemBlock().getMotherBoard().getCpu().getModel();
 
-        // Get CPU brand from computer 2
+            System.out.println("*****************************************************************");
 
-        String cpuBrand2 = computer2.getSystemBlock().getMotherBoard().getCpu().getBrand();
-        String cpuModel2 = computer2.getSystemBlock().getMotherBoard().getCpu().getModel();
+            System.out.println("Brand of Computer 1 cpu: " + " '" + cpuBrand1 + "'");
 
-        System.out.println("*********************************************************");
+            System.out.println("Model of Computer 1 cpu: " + " '" + cpuModel1 + "'");
 
-        System.out.println("Brand of Computer 2 cpu: " + " '" + cpuBrand2 + "'");
+            // Get CPU brand from computer 2
 
-        System.out.println("Model of Computer 2 cpu: " + " '" + cpuModel2 + "'");
+            String cpuBrand2 = computer2.getSystemBlock().getMotherBoard().getCpu().getBrand();
+            String cpuModel2 = computer2.getSystemBlock().getMotherBoard().getCpu().getModel();
 
-        System.out.println("*********************************************************");
+            System.out.println("*********************************************************");
 
+            System.out.println("Brand of Computer 2 cpu: " + " '" + cpuBrand2 + "'");
+
+            System.out.println("Model of Computer 2 cpu: " + " '" + cpuModel2 + "'");
+
+            System.out.println("*********************************************************");
+
+        }
     }
-}
