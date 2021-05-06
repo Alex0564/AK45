@@ -7,10 +7,7 @@ package hw14;
 //        add 4 elements to each hashset
 //        try methods  put/replace/remove/get/foreach
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class App {
 
@@ -102,9 +99,11 @@ public class App {
 
         vehicles.remove(acura);
 
-        for (Object vehicle: vehicles) {
-            System.out.println(vehicle);
+
+        for (Vehicle vehicle: vehicles) {
+            System.out.println(vehicle.getMake());
         }
+
 
 
 
