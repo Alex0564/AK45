@@ -24,6 +24,7 @@ public class App1 {
         cityJob.add(new Names("Joseph"));
         cityJob.add(new Names("John"));
         cityJob.remove("Freddy");
+        System.out.println(cityJob.size());
         for (Names na: cityJob) {System.out.println(na);}
         Iterator<Names> it = cityJob.iterator();
         while (it.hasNext()){
