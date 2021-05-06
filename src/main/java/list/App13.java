@@ -64,6 +64,10 @@ public class App13 {
         System.out.println(cat.get(0).getKind());
         System.out.println(cat.toString());
 
+        for (Animal cats : cat) {
+            System.out.println(cats);
+        }
+
 
 
 

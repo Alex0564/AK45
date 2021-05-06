@@ -15,4 +15,9 @@ public class Animal {
         this.kind = kind;
     }
 
+    @Override
+    public String toString() {
+        return "Animal " +
+                "kind = " + kind;
+    }
 }
