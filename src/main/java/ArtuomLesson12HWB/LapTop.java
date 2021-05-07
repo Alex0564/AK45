@@ -27,6 +27,7 @@ public class LapTop implements  MILSTD810F{
         Colors = colors;
     }
 
+
     public int getYear() {
         return year;
     }

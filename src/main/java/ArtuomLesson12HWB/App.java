@@ -42,7 +42,7 @@ public class App {
      MILSTD810F LaptopTims = new LapTop("Sharp", Colors.GREEY, 2020);
      MILSTD810F LAPTOPANN = new LaptopArt("HP", Colors.GREEY, 2021, "USA");
      LaptopTims.Donthitthelapttop();
-     LaptopTims.Donthitthelapttop();
+     LaptopTims.Donotwasрthelaptopinthesink();
 
       LAPTOPANN.Donthitthelapttop();
       LAPTOPANN.Donotwasрthelaptopinthesink();
