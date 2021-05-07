@@ -71,7 +71,7 @@ try methods  put/replace/remove/get/foreach
         }
         String mystring;
         for(Map.Entry<Person,Pet> entry: humanandpet.entrySet()){
-            mystring="["+entry.getKey().getName()+" "+entry.getKey().getName()+" from "+entry.getKey().getCity()+"] : ["+entry.getValue().getPettype()+" "+entry.getValue().getPetnickname()+"]";
+            mystring="["+entry.getKey().getName()+" "+entry.getKey().getLastName()+" from "+entry.getKey().getCity()+"] : ["+entry.getValue().getPettype()+" "+entry.getValue().getPetnickname()+"]";
             System.out.println(mystring);
         }
 
@@ -99,7 +99,7 @@ try methods  put/replace/remove/get/foreach
         }
          mystring="";
         for(Map.Entry<Person,Pet> entry: humanandpet.entrySet()){
-            mystring="["+entry.getKey().getName()+" "+entry.getKey().getName()+" from "+entry.getKey().getCity()+"] : ["+entry.getValue().getPettype()+" "+entry.getValue().getPetnickname()+"]";
+            mystring="["+entry.getKey().getName()+" "+entry.getKey().getLastName()+" from "+entry.getKey().getCity()+"] : ["+entry.getValue().getPettype()+" "+entry.getValue().getPetnickname()+"]";
             System.out.println(mystring);
         }
 
