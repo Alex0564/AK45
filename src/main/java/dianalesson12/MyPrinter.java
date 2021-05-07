@@ -14,11 +14,13 @@ public class MyPrinter implements IAmericanElectricalPlug {
 
     @Override
     public void americanPlug() {
+
         System.out.println("I keep standard and can be used in USA");
     }
 
     @Override
     public int innerVoltage() {
+
         return 12;
     }
 }
