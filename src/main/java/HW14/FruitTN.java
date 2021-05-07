@@ -7,6 +7,7 @@ public class FruitTN {
         this.name = name;
     }
 
+
     public String getName() {
         return name;
     }

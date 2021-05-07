@@ -47,9 +47,12 @@ public class AppMap {
         fruit.put(new FruitTN("Plum"), new ColorTN("Blue"));
 
 
+        System.out.println(fruit.size());
 
         }
+
         }
+        
 
 
 
