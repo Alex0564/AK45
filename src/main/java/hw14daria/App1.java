@@ -26,7 +26,7 @@ public class App1 {
        doggies.add(dogg1);
 
        Iterator<Dogs>itr = doggies.iterator();
-        while (itr.hasNext()) { System.out.println(itr.next()); }
+       while (itr.hasNext()) { System.out.println(itr.next()); }
 
 
 
