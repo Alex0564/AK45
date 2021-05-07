@@ -1,0 +1,5 @@
+package hosp;
+
+public enum Position {
+    PHYSICIAN, CARDIOLOGIST, DERMATOLOGIST, NEUROLOGIST, OPHTHALMOLOGIST
+}
