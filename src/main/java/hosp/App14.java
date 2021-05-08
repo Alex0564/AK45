@@ -67,5 +67,11 @@ public class App14 {
 
         System.out.println(hospital1);
 
+        hospital1.printInfo();
+
+
+
+
+
     }
 }

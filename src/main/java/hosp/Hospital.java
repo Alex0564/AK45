@@ -60,6 +60,11 @@ public class Hospital {
         this.acceptedInsuranсes = acceptedInsuranсes;
     }
 
+    public void printInfo(){
+        System.out.println(hospitalName + address + doctors + rooms + acceptedInsuranсes);
+    }
+    
+
     @Override
     public String toString() {
         return "Hospital" + "\n" +
@@ -67,4 +72,5 @@ public class Hospital {
                 "\nRooms=" + rooms +
                 "\nAcceptedInsuranсes=" + acceptedInsuranсes;
     }
+
 }
