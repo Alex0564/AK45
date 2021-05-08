@@ -57,9 +57,5 @@ public class App15 {
 
         hospital2.printInfo();
 
-
-
-
-
     }
 }
