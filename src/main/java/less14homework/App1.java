@@ -23,17 +23,19 @@ public class App1 {
         cityJob.add(new Names("Stephen"));
         cityJob.add(new Names("Joseph"));
         cityJob.add(new Names("John"));
-        cityJob.remove("Freddy");
-
+        Names dexter = new Names("Dexter");
+        cityJob.add(dexter);
         System.out.println(cityJob.get(1));
         System.out.println(cityJob.get(0));
 
-        System.out.println("\nThere ara "+cityJob.size()+" employees\n");
-
+        System.out.println("\nThere ara "+cityJob.size()+" employees");
         System.out.println("Print names with 'toString':");
         for (Names n: cityJob) {System.out.println(n.toString());}
 
-        System.out.println("\nPrint names with 'getName':");
+        cityJob.remove(dexter);
+        System.out.println("\nThere ara "+cityJob.size()+" employees after removing");
+
+        System.out.println("Print names with 'getName':");
         for (Names na: cityJob) {System.out.println(na.getName());}
 
         System.out.println("\nPrint names with 'Iterator':");

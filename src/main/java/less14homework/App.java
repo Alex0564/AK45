@@ -36,16 +36,23 @@ public class App {
         System.out.println("==============");
         Map<Surnames, Names> employee = new HashMap<>();
         employee.put(new Surnames("Cannon"), new Names("Bob"));
-        Surnames alex = new Surnames("Gomes");
-        Names mario = new Names("Mario");
+        Surnames mei = new Surnames("Mei");
+        Names jing = new Names("Jing");
         employee.put(new Surnames("Gomes"), new Names("Mario"));
         employee.put(new Surnames("Rivelli"), new Names("Ralph"));
+        employee.put(new Surnames("Ling"), new Names("Raymond"));
+        employee.put(mei,jing);
+        employee.replace(mei,jing, new Names("Heman"));
 
-        System.out.println("Number of employees are "+employee.size());
+        System.out.println("\nPrint with employee: "+ employee);
+
+        System.out.println("\nNumber of employees before removing are "+employee.size());
+        employee.remove(mei);
+        System.out.println("Number of employees after removing are "+employee.size());
 
         System.out.println("\nPrint names with 'keySet':"+employee.keySet());
 
-        System.out.println("\nPrint with employee: "+ employee);
+
 
         System.out.println("\nPrint with foreach: ");
         for (Surnames d: employee.keySet()) {System.out.println(d);}
