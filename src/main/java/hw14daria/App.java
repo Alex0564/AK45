@@ -35,9 +35,12 @@ public class App {
         Books b2 = new Books ("Transerfing Realnosti");
         Magazines m1 = new Magazines("Bulgakhov");
         Magazines m2 = new Magazines("Zeland");
-//        vogue.put("Master and Margarita", "Bulgakhov");
 
-// Tatyana, I was confused with the custom class input and output.
+        for (Map.Entry<String, String> pairKeyValue: plants.entrySet()){
+            System.out.println("The "+pairKeyValue.getKey()+" "+pairKeyValue.getValue());
+        }
+
+
 
 
     }

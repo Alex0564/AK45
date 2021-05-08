@@ -5,5 +5,7 @@ public class Dogs {
         public Dogs(String name){ this.name = name ;}
         public void setName(String Name){ this.name=name; }
         public String getName(){return name;}
+
+        public String toString (){return name;}
     }
 
