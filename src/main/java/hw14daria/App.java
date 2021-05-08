@@ -39,6 +39,9 @@ public class App {
         for (Map.Entry<String, String> pairKeyValue: plants.entrySet()){
             System.out.println("The "+pairKeyValue.getKey()+" "+pairKeyValue.getValue());
         }
+        for (Map.Entry<Integer, String> pairKeyValue:days.entrySet()){
+            System.out.println(pairKeyValue.getKey()+" "+pairKeyValue.getValue());
+        }
 
 
 
