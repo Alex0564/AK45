@@ -53,7 +53,7 @@ public class App {
 
         System.out.println("Home  work #16 - Farm");
         System.out.println("=======================");
-        //call methos printInf() - implemented in the Farm class
+        //call method printInfo() - implemented in the Farm class
         BriarOakFarm.printInfo();
 
 
