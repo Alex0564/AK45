@@ -1,8 +1,5 @@
 package hw14;
 
-import lesson14HT.Person;
-import lesson14HT.Pet;
-
 import java.util.HashMap;
 import java.util.Map;
 

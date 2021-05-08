@@ -1,4 +1,4 @@
-package lesson14;
+package lesson14HT;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,10 +14,10 @@ public class App2 {
         fruits.add("mango");
         fruits.add("orange");
 
-        Iterator<String> it = fruits.iterator();
+        Iterator<String> itr = fruits.iterator();
 
-        while (it.hasNext()){
-            System.out.println(it.next());
+        while (itr.hasNext()){
+            System.out.println(itr.next());
         }
     }
 }

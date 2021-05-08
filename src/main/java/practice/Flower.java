@@ -1,4 +1,4 @@
-package Practice;
+package practice;
 /*
  Rule: Even though a subclass includes all the members of its superclass, it can not
  access those members of the superclass that have been declared private.  However,

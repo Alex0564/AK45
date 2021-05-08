@@ -1,4 +1,4 @@
-package Practice;
+package practice;
 
 // The goal is to inherit a class without using one of the member of superclass
 

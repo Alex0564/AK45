@@ -1,7 +1,5 @@
 package hw14;
 
-import lesson14HT.Person;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Iterator;
