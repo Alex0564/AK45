@@ -4,6 +4,9 @@ public class Surnames {
     public Surnames() {
     }
 
+    @Override
+    public String toString() {return "\nlastname: " + lastname;}
+
     private String lastname;
     public Surnames(String lastname) {this.lastname = lastname;}
     public String getLastname() {return lastname;}
