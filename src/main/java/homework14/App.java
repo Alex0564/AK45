@@ -57,11 +57,18 @@ public class App {
         major.put(jack, chemistry);
         major.put(oleg, philosophy);
 
-        for (Subject value : major.values()) {
-            System.out.println(value.toString(major.values()));
-        }
-        for (Student key : major.keySet()) {
-            System.out.println(key.toString(major.keySet()));
+//        for (Subject value : major.values()) {
+//            System.out.println(value.toString(major.values()));
+//        }
+//        for (Student key : major.keySet()) {
+//            System.out.println(key.toString(major.keySet()));
+//        }
+        String xx;
+        for (Map.Entry<Student, Subject> entry:major.entrySet()){
+            xx = entry.getKey().getName()+" - "
+            +entry.getValue().getName();
+            System.out.println(xx);
+
         }
 
 //        Create 2 HashSet- <String>,  and custom classes <Class1>
@@ -86,12 +93,16 @@ public class App {
         beaches.add("Zuma");
         System.out.println(beaches);
 
-        Set<Student> students = new HashSet<>();
+        Set<Student>students = new HashSet<>();
         students.add(kate);
         students.add(tamara);
         students.add(jack);
         students.add(oleg);
 
-//        не смогла распечатать!!!
+        for(Student name: students){
+            System.out.println(name.getName());
+        }
+
+
     }
 }
