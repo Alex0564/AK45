@@ -69,13 +69,43 @@ public class App {
         }
 
         for (Car c : cars1) {
-            System.out.println(c.getClor());
+            System.out.println(c.getColor());
         }
         for (Car c : cars1) {
-            System.out.println(c.getClor());
+            System.out.println(c.getColor());
+
         }
+
+        Celebrities celeb = new Celebrities("Justin Timberlake", 32, "Male", "Singer");
+        Celebrities celeb1 = new Celebrities("Alla Pugacheva", 80, "Female", "Primadona");
+        Celebrities celeb2 = new Celebrities("Nadejda Kadusheva", 60, "Female", "Folk singer");
+        Celebrities celeb3 = new Celebrities("Donald Trump", 72, "Male", "Polotician");
+
+        List<Celebrities> celebrities1 = new ArrayList<>();
+        celebrities1.add(celeb);
+        celebrities1.add(celeb1);
+        celebrities1.add(celeb2);
+        celebrities1.add(celeb3);
+
+        for (Celebrities c1 : celebrities1) {
+            System.out.println(c1);
+        }
+            for (Celebrities c1 : celebrities1) {
+                System.out.println(c1.getAge());
+
+        }
+            celeb2.setAge(25);
+        System.out.println(celeb2.getAge());
+        celeb3.setCareer("XPresident");
+        System.out.println(celeb3.getCareer());
+
+
+
+        }
+
+
     }
-}
+
 
 
 

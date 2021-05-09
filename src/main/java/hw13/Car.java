@@ -19,12 +19,12 @@ public class Car {
         this.model = model;
     }
 
-    public String getClor() {
+    public String getColor() {
         return color;
     }
 
-    public void setClor(String clor) {
-        this.color = clor;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getYear() {
