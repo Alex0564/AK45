@@ -41,21 +41,26 @@ public class App {
         employee.put(new Surnames("Gomes"), new Names("Mario"));
         employee.put(new Surnames("Rivelli"), new Names("Ralph"));
         employee.put(new Surnames("Ling"), new Names("Raymond"));
-        employee.put(mei,jing);
-        employee.replace(mei,jing, new Names("Heman"));
+        employee.put(mei, jing);
+        employee.replace(mei, jing, new Names("Heman"));
 
-        System.out.println("\nPrint with employee: "+ employee);
+        System.out.println("\nPrint with employee: " + employee);
 
-        System.out.println("\nNumber of employees before removing are "+employee.size());
+        System.out.println("\nNumber of employees before removing are " + employee.size());
         employee.remove(mei);
-        System.out.println("Number of employees after removing are "+employee.size());
+        System.out.println("Number of employees after removing are " + employee.size());
 
-        System.out.println("\nPrint names with 'keySet':"+employee.keySet());
-
-
+        System.out.println("\nPrint names with 'keySet':" + employee.keySet());
 
         System.out.println("\nPrint with foreach: ");
-        for (Surnames d: employee.keySet()) {System.out.println(d);}
+        for (Surnames d : employee.keySet()) {
+            System.out.println(d);
+        }
+
+        System.out.println("\nPrint with Map.Entry: ");
+        for (Map.Entry<Surnames, Names> entry: employee.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
         System.out.println("\nPrint with Iterator: ");
         Iterator<Surnames> sur = employee.keySet().iterator();
@@ -63,3 +68,5 @@ public class App {
 
     }
 }
+
+

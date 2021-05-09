@@ -3,6 +3,7 @@ package less14homework;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class App1 {
     public static void main(String[] args) {
@@ -43,8 +44,5 @@ public class App1 {
         while (it.hasNext()){
             System.out.println(it.next());
         }
-
-
-
     }
 }
