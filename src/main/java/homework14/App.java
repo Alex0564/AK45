@@ -68,7 +68,6 @@ public class App {
             xx = entry.getKey().getName()+" - "
             +entry.getValue().getName();
             System.out.println(xx);
-
         }
 
 //        Create 2 HashSet- <String>,  and custom classes <Class1>
