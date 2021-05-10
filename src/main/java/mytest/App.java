@@ -1,6 +1,6 @@
 package mytest;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class App {
 
@@ -47,8 +47,40 @@ public class App {
         System.out.println(Arrays.toString(b));
 String s="Hi";
         System.out.println("{"+"dddd"+'\''+"}");
+
+
+        List<String> list = new ArrayList<>();
+        list.add("NYC");
+        list.add("LA");
+        list.add("NYC");
+        list.add("Boston");
+        list.add("Washington");
+        //print it to check
+        System.out.println(list);
+
+        // create new arralist where we store no duplicate items
+        List<String> noduplicateList = new ArrayList<>();
+
+        //HashSet
+        //Set<String> myset = new HashSet<>();
+        Set<String> myset = new HashSet<>(list);
+        //here we check if we have duplicate or not. If duplicate - do not copy item
+        for(String v:list){
+        //    if (myset.contains(v)) {
+                //if true
+                System.out.println(" "+v);}
+          //  else {
+            //    myset.add(v);
+            //    noduplicateList.add(v);
+           // }П
+                       }
+
+        //System.out.println(noduplicateList);
+
+       // }
+
     }
 
 
 
-}
+
