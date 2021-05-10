@@ -19,11 +19,15 @@ public class App {
         rooms.put(109, "Surgery");
         rooms.put(110, "Urology");
         System.out.println(rooms);
+
         acceptInsurances.add(InsuranceCompanies.ANTHEM);
         acceptInsurances.add(InsuranceCompanies.HCSC);
         acceptInsurances.add(InsuranceCompanies.HCSC);
         acceptInsurances.add(InsuranceCompanies.OSCAR);
         acceptInsurances.add(InsuranceCompanies.FIDELIS);
         System.out.println("Insurance Companies: " + acceptInsurances);
+
+        Address addressOfSinay = new Address("4573 7th Ave", "Phoenox", "AZ", 85041 );
+
     }
 }
