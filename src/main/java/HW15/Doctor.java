@@ -22,11 +22,7 @@ private Position position;
     public Position getPosition() {
         return position;
     }
-
-//    public String getDoctors(){
-//        return "Doctror - "+name+" "+lastName+"-"+position;
-//    }
-    public void getDoctors(){
-        System.out.println("Doctror - "+name+" "+lastName+"-"+position);
+    public String printDoctor(){
+        return "Doctor - "+name+" "+lastName+"-"+position;
     }
 }
