@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Doctor{
-    private String name = new String();
-    private String lastName = new String();
+    private String name;
+    private String lastName;
     private Position position;
-    public void printDoctor(){
-        System.out.println(name+" "+lastName+", "+position.name());
-    }
 
 
 
@@ -19,8 +16,6 @@ public class Doctor{
         this.position = position;
     }
 
-    public Doctor() {
-    }
 
     public String getName() {
         return name;
@@ -44,5 +39,10 @@ public class Doctor{
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString() {
+        return name +" "+ lastName + " - "+position;
     }
 }

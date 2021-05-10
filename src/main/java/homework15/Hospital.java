@@ -3,18 +3,14 @@ package homework15;
 import java.util.*;
 
 public class Hospital {
-        private String hospitalName = new String();
-        private Address address = new Address();
-        private Map<Integer, String> rooms = new HashMap<>();
-        private List<InsuranseCompanies> acceptedInsurances = new ArrayList<>();
-        private List<Doctor> doctors = new ArrayList<>();
+        private String hospitalName;
+        private Address address;
+        private Map<Integer, Position> rooms;
+        private List<InsuranseCompanies> acceptedInsurances;
+        private List<Doctor> doctors;
 
 
-
-        public Hospital() {
-        }
-
-        public Hospital(String hospitalName, Address address, Map<Integer, String> rooms, List<InsuranseCompanies> acceptedInsurances, List<Doctor> doctors) {
+        public Hospital(String hospitalName, Address address, Map<Integer, Position> rooms, List<InsuranseCompanies> acceptedInsurances, List<Doctor> doctors) {
                 this.hospitalName = hospitalName;
                 this.address = address;
                 this.rooms = rooms;
@@ -38,11 +34,11 @@ public class Hospital {
                 this.address = address;
         }
 
-        public Map<Integer, String> getRooms() {
+        public Map<Integer, Position> getRooms() {
                 return rooms;
         }
 
-        public void setRooms(Map<Integer, String> rooms) {
+        public void setRooms(Map<Integer, Position> rooms) {
                 this.rooms = rooms;
         }
 
@@ -60,5 +56,22 @@ public class Hospital {
 
         public void setDoctors(List<Doctor> doctors) {
                 this.doctors = doctors;
+        }
+
+        public  void printInfo(){
+                System.out.println(hospitalName);
+                System.out.println(address.toString());
+                System.out.println("Doctors:");
+                for (Doctor d: doctors){
+                        System.out.println(d);
+                }
+                System.out.println("Rooms:");
+                for (Map.Entry<Integer,Position> entry: rooms.entrySet()){
+                        System.out.println(entry.getKey()+" - "+entry.getValue());
+                }
+                System.out.println("Accepted insurances:");
+                for (InsuranseCompanies i: acceptedInsurances){
+                        System.out.println(i);
+                }
         }
 }

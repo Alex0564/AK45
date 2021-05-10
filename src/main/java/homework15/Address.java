@@ -1,13 +1,10 @@
 package homework15;
 
 public class Address {
-    private String streetAddress = new String();
-    private String town = new String();
-    private String state = new String();
-    private String zip = new String();
-
-    public Address() {
-    }
+    private String streetAddress;
+    private String town;
+    private String state;
+    private String zip;
 
     public Address(String streetAddress, String town, String state, String zip) {
         this.streetAddress = streetAddress;
@@ -46,5 +43,10 @@ public class Address {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    @Override
+    public String toString() {
+        return "Address: " + streetAddress +", "+ town + ", " + state + " " + zip;
     }
 }
