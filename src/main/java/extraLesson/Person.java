@@ -10,7 +10,7 @@ public class Person {
         this.lastName = lastName;
         this.year = year;
     }
-    public final void hello(){
+    public void hello(){
         System.out.println("Hello");
     }
 
