@@ -35,4 +35,13 @@ public class Monitor {
     public void setDiag(int diag) {
         this.diag = diag;
     }
+
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", diag=" + diag +
+                '}';
+    }
 }

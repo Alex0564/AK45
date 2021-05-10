@@ -24,4 +24,12 @@ public class Mouse {
     public void setModel(String model) {
         this.model = model;
     }
+
+    @Override
+    public String toString() {
+        return "Mouse{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

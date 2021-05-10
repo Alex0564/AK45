@@ -15,12 +15,17 @@ public class CompB {
 
         Mouse mouseCompB = new Mouse("Microsoft","3500");
         Keyboard keyboardCompB = new Keyboard("ROCCAT","Vulcan 120 AIMO");
-        Monitor monitorCompB = new Monitor("Dell","U4021QW",40);
 
-        Computer compB = new Computer(mouseCompB,keyboardCompB,systemBlockCompB,monitorCompB);
+        Monitor monitorCompB1 = new Monitor("Dell","U4021QW",40);
+        Monitor monitorCompB2 = new Monitor("Dell","U4023QW",35);
+        Monitor[] monitors = {monitorCompB1,monitorCompB2};
+
+        Computer compB = new Computer(mouseCompB,keyboardCompB,systemBlockCompB,monitors);
 
 
         String cpu = compB.getSystemBlock().getMotherBoard().getCpu().getBrand();
         System.out.println(cpu);
+
+        System.out.println(compB.toString());
     }
 }

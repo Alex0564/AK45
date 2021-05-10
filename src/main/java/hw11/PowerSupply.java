@@ -24,4 +24,12 @@ public class PowerSupply {
     public void setModel(String model) {
         this.model = model;
     }
+
+    @Override
+    public String toString() {
+        return "PowerSupply{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

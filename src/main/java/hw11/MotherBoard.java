@@ -44,4 +44,14 @@ public class MotherBoard {
     public void setRam(RAM ram) {
         this.ram = ram;
     }
+
+    @Override
+    public String toString() {
+        return "MotherBoard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", cpu=" + cpu +
+                ", ram=" + ram +
+                '}';
+    }
 }

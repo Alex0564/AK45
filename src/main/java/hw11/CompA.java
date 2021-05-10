@@ -18,14 +18,17 @@ public class CompA {
 
         Mouse mouseCompA = new Mouse("Logitech","M317c");
         Keyboard keyboardCompA = new Keyboard("Logitech","K845 104-key TTC Brown");
-        Monitor monitorCompA = new Monitor("Samsung ","T350 Series LF24T350FHNXZA",24);
 
-        Computer compA = new Computer(mouseCompA,keyboardCompA,systemBlockCompA,monitorCompA);
+        Monitor monitorCompA1 = new Monitor("Samsung ","T350 Series LF24T350FHNXZA",24);
+        Monitor monitorCompA2 = new Monitor("Samsung ","T450 Series LF24T350F",32);
+        Monitor[] monitors = {monitorCompA1,monitorCompA2};
 
+        Computer compA = new Computer(mouseCompA,keyboardCompA,systemBlockCompA,monitors);
 
         String cpu = compA.getSystemBlock().getMotherBoard().getCpu().getBrand();
         System.out.println(cpu);
 
+        System.out.println(compA.toString());
 
     }
 }

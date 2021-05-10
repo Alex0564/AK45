@@ -24,4 +24,12 @@ public class Keyboard {
     public void setModel(String model) {
         this.model = model;
     }
+
+    @Override
+    public String toString() {
+        return "Keyboard{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }
