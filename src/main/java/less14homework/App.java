@@ -57,14 +57,14 @@ public class App {
             System.out.println(d);
         }
 
+        System.out.println("\nPrint with Iterator: ");
+        Iterator<Surnames> sur = employee.keySet().iterator();
+        while (sur.hasNext()){System.out.println(sur.next());}
+
         System.out.println("\nPrint with Map.Entry: ");
         for (Map.Entry<Surnames, Names> entry: employee.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
-
-        System.out.println("\nPrint with Iterator: ");
-        Iterator<Surnames> sur = employee.keySet().iterator();
-        while (sur.hasNext()){System.out.println(sur.next());}
     }
 }
 

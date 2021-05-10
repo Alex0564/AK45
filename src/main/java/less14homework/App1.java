@@ -36,14 +36,13 @@ public class App1 {
         cityJob.remove(dexter);
         System.out.println("\nThere ara "+cityJob.size()+" employees after removing");
 
-        System.out.println("Print names with 'getName':");
-        for (Names na: cityJob) {System.out.println(na.getName());}
-
         System.out.println("\nPrint names with 'Iterator':");
         Iterator<Names> it = cityJob.iterator();
         while (it.hasNext()){
             System.out.println(it.next());
 
         }
+        System.out.println("\nPrint names with 'getName':");
+        for (Names na: cityJob) {System.out.println(na.getName());}
     }
 }
