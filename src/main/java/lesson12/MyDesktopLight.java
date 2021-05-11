@@ -12,6 +12,11 @@ public class MyDesktopLight implements IAmericanElectricalPlug, IBulbE27{
     }
 
     @Override
+    public int outVoltage() {
+        return 0;
+    }
+
+    @Override
     public void keepE27() {
         System.out.println("Yep -> Correct size");
     }
