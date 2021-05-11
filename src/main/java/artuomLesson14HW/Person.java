@@ -55,4 +55,14 @@ public class Person {
                 ", age=" + age +
                 '}');
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", year=" + year +
+                ", age=" + age +
+                '}';
+    }
 }
