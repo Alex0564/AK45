@@ -1,10 +1,11 @@
 package lesson13HW;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class App1 {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
         numbers.add(5);
         numbers.add(0);
         numbers.add(-2);

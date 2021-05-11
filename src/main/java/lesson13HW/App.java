@@ -1,10 +1,11 @@
 package lesson13HW;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        ArrayList<String> fruits = new ArrayList<>();
+        List<String> fruits = new ArrayList<>();
         fruits.add("Apple");
         fruits.add("Mango");
         fruits.add("Orange");
