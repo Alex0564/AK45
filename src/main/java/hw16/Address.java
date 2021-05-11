@@ -46,7 +46,7 @@ public class Address {
 
     }
 
-    public void AddressInfo() {
-        System.out.println(this.streetLine + ", " + this.town + ", " + this.state + ", " + this.zip);
+    public String address_info() {
+        return (streetLine + ", " + town + ", " + state + ", " + zip);
     }
 }

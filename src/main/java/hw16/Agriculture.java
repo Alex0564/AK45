@@ -25,4 +25,9 @@ public class Agriculture {
         this.fieldsQuantity = fieldsQuantity;
 
     }
+
+    @Override
+    public String toString() {
+        return nameOfCulture + " in " + fieldsQuantity + " fields";
+    }
 }

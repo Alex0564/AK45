@@ -56,18 +56,11 @@ public class App {
             System.out.println(entry.getValue() + " " + entry.getKey());
         }
 
-        System.out.println("************************");
+        System.out.println("****************");
 
         //print out all info
 
-
-        System.out.println("Farm name: " + myFarm.getName() + "\nFarm address: " + myFarm.getAddress().getStreetLine()
-                + ", " + myFarm.getAddress().getTown() + ", " + myFarm.getAddress().getState() + ", " + myFarm.getAddress().getZip()
-                + "\nCattle variety & quantity: " + myFarm.getCattle() + "\nAgriculture grown in the farm: "
-                + myFarm.getAgriculture().get(0).getNameOfCulture() + " in " + myFarm.getAgriculture().get(0).getFieldsQuantity() + " fields"
-                + ", " + myFarm.getAgriculture().get(1).getNameOfCulture() + " in " + myFarm.getAgriculture().get(1).getFieldsQuantity() + " fields"
-                + ", " + myFarm.getAgriculture().get(2).getNameOfCulture() + " in " + myFarm.getAgriculture().get(2).getFieldsQuantity() + " fields");
-
+        System.out.println(myFarm.toString());
     }
 }
 

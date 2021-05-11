@@ -48,6 +48,19 @@ public class Farm {
         this.agriculture = agriculture;
 
     }
+
+    private String print_cattle() {
+        return cattle.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Farm information: " +
+                "\nName: " + name +
+                "\nFarm address: " + address.address_info() +
+                "\nCattle: " + print_cattle() +
+                "\nAgriculture: " + agriculture.toString();
+    }
 }
 
 

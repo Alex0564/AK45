@@ -57,4 +57,7 @@ public class Hospital {
     public void setAcceptedInsurances(List<InsuranceCompanies> acceptedInsurances) {
         this.acceptedInsurances = acceptedInsurances;
     }
+
+
+
 }
