@@ -72,7 +72,6 @@ public class App {
 
         Hospital mercy = new Hospital("Mercy", hospitalAddress, doctorList, rooms, insuranceCompanies);
 
-
         // Printout hospital with All fields
 
         System.out.println();

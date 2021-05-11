@@ -57,10 +57,4 @@ public class Hospital {
     public void setAcceptedInsurances(List<InsuranceCompanies> acceptedInsurances) {
         this.acceptedInsurances = acceptedInsurances;
     }
-
-    public void printHospitalInfo() {
-        System.out.println("Hospital name: " + getHospitalName() + "\nHospital address: " +
-                getAddress() + "\nDoctors: " + "\nRooms: " + getRooms()
-                + "\nAccepted Insurance companies: " + getAcceptedInsurances());
-    }
 }
