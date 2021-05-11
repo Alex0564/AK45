@@ -35,8 +35,9 @@ public class App3 {
         System.out.println("=============foreach1=========================");
         for (Person p : map.keySet()) {
             System.out.println("Name= " + " " + p.getName() + ", " + "LastName= " + p.getLastname() + ", " + "Year of Birth= " + p.getYear() + ", " + "Age= " + p.getAge() + ". ");
-
-//            p.printInfo();
+        }
+        for (Person p : map.keySet()) {
+            p.printInfo();
         }
         System.out.println("================Method===================");
         for (Address ad : map.values()) {
