@@ -68,11 +68,6 @@ public class App {
                 + ", " + myFarm.getAgriculture().get(1).getNameOfCulture() + " in " + myFarm.getAgriculture().get(1).getFieldsQuantity() + " fields"
                 + ", " + myFarm.getAgriculture().get(2).getNameOfCulture() + " in " + myFarm.getAgriculture().get(2).getFieldsQuantity() + " fields");
 
-
-
     }
-
-
-
 }
 

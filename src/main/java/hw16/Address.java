@@ -49,5 +49,4 @@ public class Address {
     public void AddressInfo() {
         System.out.println(this.streetLine + ", " + this.town + ", " + this.state + ", " + this.zip);
     }
-
 }

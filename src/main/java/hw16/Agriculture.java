@@ -24,6 +24,5 @@ public class Agriculture {
         this.nameOfCulture = nameOfCulture;
         this.fieldsQuantity = fieldsQuantity;
 
-
     }
 }
