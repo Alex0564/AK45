@@ -1,26 +1,23 @@
 package hw12;
-public class MyCar implements IJapaneseCar{
-    private  String brand;
+public class MyCar implements IJapaneseCar {
+    private String brand;
     private String model;
 
-    public MyCar(String brand,String model){
-        this.brand=brand;
-        this.model=model;
-    }
-    public void print(String xx){
-        System.out.println(brand+" "+model+" "+xx);
+    public MyCar(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
     }
 
 
     @Override
-    public boolean japaneseCar() {
-        System.out.println("in Japanese steering wheel should be on right side ");
+    public void japaneseCar() {
+        System.out.println("For Japanese market ");
 
-        return false;
     }
 
     @Override
-    public String SteeringWheel() {
-        return "wheel is on right side";
+    public int wheels() {
+        return 4;
     }
 }
+

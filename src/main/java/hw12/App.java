@@ -2,8 +2,13 @@ package hw12;
 
 public class App {
     public static void main(String[] args) {
-        MyCar xx = new MyCar("Honda","Fit");
-        System.out.println(xx.SteeringWheel());
-        System.out.println(xx);
+        IJapaneseCar car = new MyCar("Honda","Fit");
+        IJapaneseCar suzuki = new MyBike();
+
+        IJapaneseCar[] transport={car,suzuki};
+        for (IJapaneseCar tran:transport){
+            tran.japaneseCar();
+
+        }
     }
 }
