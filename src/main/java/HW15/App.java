@@ -43,7 +43,6 @@ public class App {
         for (Map.Entry<Integer,String> r: rooms.entrySet()){
             System.out.println("Room # "+r);
         }
-
             }
         }
 
