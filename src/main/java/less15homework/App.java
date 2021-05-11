@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
+//        List og rooms
         Map<Integer, String > rooms = new HashMap<>();
         List<InsuranceCompanies> acceptInsurances = new ArrayList<>() ;
         rooms.put(101, "Anesthesia");
@@ -20,6 +21,7 @@ public class App {
         rooms.put(110, "Urology");
         System.out.println(rooms);
 
+//        List of Insurance Companies
         acceptInsurances.add(InsuranceCompanies.ANTHEM);
         acceptInsurances.add(InsuranceCompanies.HCSC);
         acceptInsurances.add(InsuranceCompanies.HCSC);
@@ -27,7 +29,11 @@ public class App {
         acceptInsurances.add(InsuranceCompanies.FIDELIS);
         System.out.println("Insurance Companies: " + acceptInsurances);
 
+//     List og Hospitals
         Address addressOfSinay = new Address("4573 7th Ave", "Phoenox", "AZ", 85041 );
+        Address addressOfMayo = new Address();
+        Address addressOfUCLA = new Address();
+        Address addressOfUCFS = new Address();
 
     }
 }
