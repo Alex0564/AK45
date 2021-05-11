@@ -55,4 +55,14 @@ public class Address {
                 ", zipcode='" + zipcode + '\'' +
                 '}');
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", house=" + house +
+                ", zipcode='" + zipcode + '\'' +
+                '}';
+    }
 }
