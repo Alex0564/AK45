@@ -5,7 +5,7 @@ public class Surnames {
     }
 
     @Override
-    public String toString() {return "\n lastname: " + lastname;}
+    public String toString() {return "\n lastname:  " + lastname;}
 
     private String lastname;
     public Surnames(String lastname) {this.lastname = lastname;}
