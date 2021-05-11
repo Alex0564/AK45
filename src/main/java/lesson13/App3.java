@@ -15,6 +15,6 @@ public class App3 {
         people.add(oleg);
         people.add(new Person("Anna"));
 
-        System.out.println(people.get(1).getName());
+        System.out.println(people.get(0).getName());
     }
 }
