@@ -5,5 +5,6 @@ public interface ILife {
     void CanEat();
     void CanDie();
     void CanBreath();
-    
+
+
 }
