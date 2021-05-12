@@ -29,7 +29,7 @@ public class App {
         for(Map.Entry<Integer,RoomsNames>entry:rooms.entrySet()){
             System.out.println(entry.getKey()+" "+ entry.getValue());
         }
-// Как вывести здесь один или два не все сразу кабинеты?
+
 
          System.out.println(rooms);
 
