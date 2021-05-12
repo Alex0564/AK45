@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Birds extends Vertebrates{
+public interface IBirds extends IVertebrates {
     public abstract void hasFeathers();
 }

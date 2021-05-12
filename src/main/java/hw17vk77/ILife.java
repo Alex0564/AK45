@@ -1,6 +1,6 @@
 package hw17vk77;
 
-public interface Life {
+public interface ILife {
     void canBreath();
     void canEat();
     void canDie();

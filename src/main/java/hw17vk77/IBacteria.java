@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Bacteria extends Life{
+public interface IBacteria extends ILife {
     public abstract void singleCell();
 }

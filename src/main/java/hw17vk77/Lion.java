@@ -15,10 +15,10 @@ public class Lion extends Carnivores{
         System.out.println("Lion can breathe!");
     }
 
-    @Override
-    public void canEat() {
-
-    }
+//    @Override
+//    public void canEat() {
+//
+//    }
 
     @Override
     public void canDie() {
@@ -27,6 +27,7 @@ public class Lion extends Carnivores{
 
     @Override
     public void canReproduct() {
+        System.out.println("I am looking for lioness!");
 
     }
 

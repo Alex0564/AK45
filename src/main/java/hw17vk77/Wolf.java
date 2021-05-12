@@ -9,10 +9,10 @@ public class Wolf extends Carnivores{
 
     }
 
-    @Override
-    public void canEat() {
-
-    }
+//    @Override
+//    public void canEat() {
+//
+//    }
 
     @Override
     public void canDie() {

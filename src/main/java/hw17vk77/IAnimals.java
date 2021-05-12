@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Animals extends Life{
+public interface IAnimals extends ILife {
     public abstract void hasEukaryota();
 }

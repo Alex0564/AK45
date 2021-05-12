@@ -1,6 +1,6 @@
 package hw17vk77;
 
-public interface Fungi extends Life{
+public interface IFungi extends ILife {
     public abstract void spreadSpors();
 
 }

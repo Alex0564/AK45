@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Amphibians extends Vertebrates{
+public interface IAmphibians extends IVertebrates {
     public abstract void underwaterBreathe();
 }

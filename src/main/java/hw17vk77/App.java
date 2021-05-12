@@ -80,6 +80,8 @@ public void canBreath(){
         africanLion.iCanRun();
 
         whiteWolf.canDie();
+        mountainLion.canReproduct();
+         mountainLion.canEat();
 
     }
 

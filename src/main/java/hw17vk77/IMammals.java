@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Mammals extends Vertebrates{
+public interface IMammals extends IVertebrates {
 public abstract void feedMilk();
 }

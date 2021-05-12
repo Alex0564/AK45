@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Vertebrates extends Animals{
+public interface IVertebrates extends IAnimals {
     public abstract void hasSpine();
 }

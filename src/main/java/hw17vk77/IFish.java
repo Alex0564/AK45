@@ -1,5 +1,5 @@
 package hw17vk77;
 
-public interface Fish extends Vertebrates{
+public interface IFish extends IVertebrates {
     public abstract void swim();
 }
