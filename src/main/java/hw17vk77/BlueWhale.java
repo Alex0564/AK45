@@ -39,4 +39,9 @@ public class BlueWhale extends Whales{
     public void feedMilk() {
 
     }
+
+    @Override
+    public void swim() {
+        System.out.println("We can swim off course");
+    }
 }

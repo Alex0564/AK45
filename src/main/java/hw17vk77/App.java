@@ -64,6 +64,7 @@ public void canBreath(){
         BlueWhale blueWhale =new BlueWhale();
         blueWhale.fountain();
         greyWhale.fountain();
+        greyWhale.swim();
         Carnivores whiteWolf=new Wolf("White wolf");
         Wolf greyWolf=new Wolf("Grey Wolf");
 
