@@ -8,7 +8,7 @@ public class Hospital {
     private Address address;
     private List<Doctor> doctors;
     private Map<Integer, String> rooms;
-    private List<InsuranseCompamies> acceptInsurances;
+    private List<InsuranceCompanies> acceptInsurances;
 
     public Hospital() {
     }
@@ -16,7 +16,7 @@ public class Hospital {
     public Hospital(String hospitalName, Address address,
                     List<Doctor> doctors,
                     Map<Integer, String> rooms,
-                    List<InsuranseCompamies>
+                    List<InsuranceCompanies>
                             acceptInsurances) {
         this.hospitalName = hospitalName;
         this.address = address;
@@ -57,11 +57,11 @@ public class Hospital {
         this.rooms = rooms;
     }
 
-    public List<InsuranseCompamies> getAcceptInsurances() {
+    public List<InsuranceCompanies> getAcceptInsurances() {
         return acceptInsurances;
     }
 
-    public void setAcceptInsurances(List<InsuranseCompamies> acceptInsurances) {
+    public void setAcceptInsurances(List<InsuranceCompanies> acceptInsurances) {
         this.acceptInsurances = acceptInsurances;
     }
 

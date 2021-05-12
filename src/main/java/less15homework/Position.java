@@ -1,7 +1,12 @@
 package less15homework;
 
 public enum Position {
-    PHYSICIAN,
+    DERMATOLOGIST,
+    SURGEON,
+    UROLOGIST,
+    OTOLARYNGOLOGIST,
+    NEUROLOGIST
+
 
 
 }

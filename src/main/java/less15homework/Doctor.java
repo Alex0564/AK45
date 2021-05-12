@@ -7,6 +7,10 @@ public class Doctor {
 
     public Doctor() {}
 
+    public Doctor(String lastName) {
+        this.lastName = lastName;
+    }
+
     public Doctor(String name, String lastName, Position position) {
         this.name = name;
         this.lastName = lastName;
@@ -45,5 +49,6 @@ public class Doctor {
                 ", position=" + position +
                 '}';
     }
+
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        ArrayList<String> flowers = new ArrayList<>();
+        List<String> flowers = new ArrayList<>();
         flowers.add("Tulip");
         flowers.add(1, "Rose");
         for (int i=1; i<4; i++){
