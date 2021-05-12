@@ -24,7 +24,7 @@ public class App {
 ////        List of Insurance Companies
 //        acceptInsurances.add(InsuranceCompanies.ANTHEM);
 //        acceptInsurances.add(InsuranceCompanies.HCSC);
-//        acceptInsurances.add(InsuranceCompanies.HCSC);
+//        acceptInsurances.add(InsuranceCompanies.HHSC);
 //        acceptInsurances.add(InsuranceCompanies.OSCAR);
 //        acceptInsurances.add(InsuranceCompanies.FIDELIS);
 //        System.out.println("Insurance Companies: " + acceptInsurances);
