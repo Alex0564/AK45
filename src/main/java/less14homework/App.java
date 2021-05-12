@@ -31,7 +31,7 @@ public class App {
 //        size.replace(18, "XXL");
 //        size.remove(14);
 //        size.remove(10, "M");
-//        System.out.println(size
+//        System.out.println(size);
 //        System.out.println(size.get(18));
         System.out.println("==============");
         Map<Surnames, Names> employee = new HashMap<>();

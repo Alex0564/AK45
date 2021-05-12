@@ -42,7 +42,7 @@ public class App1 {
             System.out.println(it.next());
 
         }
-        System.out.println("\n Print names with 'getName':");
+        System.out.println("\nPrint names with 'getName':");
         for (Names na: cityJob) {System.out.println(na.getName());}
     }
 }
