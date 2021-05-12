@@ -1,6 +1,6 @@
 package extraLesson;
 
-public class Person {
+public class Person{
     protected String name;
     protected String lastName;
     protected int year;
@@ -10,24 +10,35 @@ public class Person {
         this.lastName = lastName;
         this.year = year;
     }
+
+    //method hello
     public void hello(){
         System.out.println("Hello");
     }
 
+    //method toString:
+
     @Override
     public String toString() {
-        return "name=" + name + ", lastName=" + lastName + ", year=" + year ;
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                '}';
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getLastName() {
+
         return lastName;
     }
 
     public int getYear() {
+
         return year;
     }
 }
