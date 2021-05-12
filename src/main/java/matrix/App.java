@@ -12,8 +12,8 @@ public class App {
 //        System.out.println(matrix);
 
 
-        Object xx = new Person("XXXXX");
-        System.out.println(xx);
+//        Object xx = new Person("XXXXX");
+//        System.out.println(xx);
     }
 
 }
