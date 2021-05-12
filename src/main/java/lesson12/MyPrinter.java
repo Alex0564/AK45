@@ -21,4 +21,10 @@ public class MyPrinter implements IAmericanElectricalPlug{
     public int innerVoltage() {
         return 12;
     }
+
+    @Override
+    public int outVoltage() {
+        return 0;
+    }
+
 }
