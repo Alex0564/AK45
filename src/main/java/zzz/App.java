@@ -13,7 +13,8 @@ public class App {
 
 
         Object xx = new Person("XXXXX");
-        System.out.println(xx);
+        int i = 12;
+        System.out.println(i);
     }
 
 }
