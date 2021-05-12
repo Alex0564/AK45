@@ -64,11 +64,11 @@ public void canBreath(){
         BlueWhale blueWhale =new BlueWhale();
         blueWhale.fountain();
         greyWhale.fountain();
-        Carnivores whiteWolf=new Wolf();
-        Wolf greyWolf=new Wolf();
+        Carnivores whiteWolf=new Wolf("White wolf");
+        Wolf greyWolf=new Wolf("Grey Wolf");
 
-        Carnivores africanLion=new Lion();
-        Lion mountainLion=new Lion();
+        Carnivores africanLion=new Lion("Simba");
+        Lion mountainLion=new Lion("Puma");
 
         africanLion.canBreath();
         mountainLion.canBreath();
@@ -82,6 +82,10 @@ public void canBreath(){
         whiteWolf.canDie();
         mountainLion.canReproduct();
          mountainLion.canEat();
+         africanLion.canEat();
+
+         whiteWolf.canEat();
+        greyWolf.canEat();
 
     }
 

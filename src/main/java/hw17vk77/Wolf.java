@@ -1,18 +1,21 @@
 package hw17vk77;
 
 public class Wolf extends Carnivores{
+    private String name;
 
-
+    public Wolf(String name) {
+        this.name = name;
+    }
 
     @Override
     public void canBreath() {
 
     }
 
-//    @Override
-//    public void canEat() {
-//
-//    }
+    @Override
+    public void canEat() {
+        System.out.println("I am "+name+" and I Can eat Mooses!");
+    }
 
     @Override
     public void canDie() {
