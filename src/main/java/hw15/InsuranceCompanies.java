@@ -7,4 +7,5 @@ public enum InsuranceCompanies {
     CIGNA_HEALTH,
     HUMANA,
     AETNA
+
 }

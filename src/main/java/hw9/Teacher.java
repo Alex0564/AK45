@@ -66,5 +66,15 @@ public class Teacher {
     public Teacher() {
     }
 
+    //toString constructor that allows to print out Class object:
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", subject='" + subject + '\'' +
+                ", numberOfStudent=" + numberOfStudent +
+                '}';
+    }
 }

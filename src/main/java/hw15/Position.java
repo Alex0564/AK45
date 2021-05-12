@@ -6,4 +6,5 @@ public enum Position {
     DERMATOLOGIST,
     PSYCHIATRIST,
     CARDIOLOGIST,
+
 }

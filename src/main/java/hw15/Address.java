@@ -44,4 +44,10 @@ public class Address {
     public void setZip(int zip) {
         this.zip = zip;
     }
+
+    public String address_info() {
+        return (streetAddress + ", " + city + ", " + state + ", " + zip);
+    }
 }
+
+

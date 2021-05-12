@@ -38,4 +38,10 @@ public class Doctor {
     public void printDoctorsInfo() {
         System.out.println(getName() + " " + getLastName() + " works as a " + getPosition());
     }
+
+    @Override
+    public String toString() {
+        return name + " " + lastName +
+                " - " + position;
+    }
 }

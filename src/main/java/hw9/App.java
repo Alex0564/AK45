@@ -48,6 +48,7 @@ public class App {
         System.out.println(english.getLastName());
         System.out.println(english.getSubject());
         System.out.println("**********************************");
+        System.out.println(english.toString());
 
         Teacher math = new Teacher();
         math.setName("Tom");

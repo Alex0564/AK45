@@ -36,7 +36,6 @@ public class App {
         - Printout hospital with ALL fields;
         - Printout Doctors and their titles; public void printDoctors();
         - Printout rooms;
-
         */
 
         Address hospitalAddress = new Address("1 Main street", "Saint Louis", "Missouri", 100023);
@@ -61,6 +60,8 @@ public class App {
         rooms.put(105, "Physician room");
         rooms.put(218, "Cardiologist room");
 
+        System.out.println(rooms.get(204));
+
         //Array list of accepted insurances
 
         List<InsuranceCompanies> insuranceCompanies = new ArrayList<InsuranceCompanies>();
@@ -76,17 +77,7 @@ public class App {
 
         System.out.println();
 
-        System.out.println("Hospital name: " + mercy.getHospitalName() + "\nHospital address: " +
-                mercy.getAddress().getStreetAddress() + ", " + mercy.getAddress().getCity() + ", " +
-                mercy.getAddress().getState() + ", " + mercy.getAddress().getZip() +
-                "\nDoctor's list: " + "\n" + mercy.getDoctorList().get(0).getName() + " "
-                + mercy.getDoctorList().get(0).getLastName() + ": " + mercy.getDoctorList().get(0).getPosition()
-                + ", " + mercy.getDoctorList().get(1).getName() + " " + mercy.getDoctorList().get(1).getLastName()
-                + ": " + mercy.getDoctorList().get(1).getPosition() + ", " + mercy.getDoctorList().get(2).getName()
-                + " " + mercy.getDoctorList().get(2).getLastName() + ": " + mercy.getDoctorList().get(2).getPosition()
-                + ", " + mercy.getDoctorList().get(3).getName() + " " + mercy.getDoctorList().get(3).getLastName()
-                + ": " + mercy.getDoctorList().get(3).getPosition() + "\nRooms: " + mercy.getRooms()
-                + "\nAccepted Insurance companies: " + mercy.getAcceptedInsurances());
+        System.out.println(mercy.toString());
 
         //printout Doctors and their titles
 

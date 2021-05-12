@@ -58,6 +58,13 @@ public class Hospital {
         this.acceptedInsurances = acceptedInsurances;
     }
 
+    @Override
+    public String toString() {
+        return "Hospital information: " +
+                "\nHospital Name: '" + hospitalName + '\'' +
+                "\nAddress: " + address.address_info() + "\n" + doctorList.toString() +
+                "\nRooms: " + rooms +
+                "\nAcceptedInsurances: " + acceptedInsurances;
 
-
+    }
 }
