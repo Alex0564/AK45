@@ -41,6 +41,5 @@ public class App {
         for (Room room : rooms) {
             room.paint();
         }
-
     }
 }

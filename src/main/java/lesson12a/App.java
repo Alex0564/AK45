@@ -19,9 +19,9 @@ public class App {
 
         Shape[] shapes = {c1,c2,r1,r2,s1,s2,s3};
 
-
         for (Shape shape: shapes){
             shape.draw();
+
         }
     }
 }

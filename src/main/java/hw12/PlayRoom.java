@@ -32,7 +32,6 @@ public class PlayRoom implements Room {
     public void floorCover() {
         System.out.println("The playroom's carpet needs to be replaced!");
 
-
     }
 
     @Override
