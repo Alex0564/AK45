@@ -24,7 +24,8 @@ public class Hospital {
         this.rooms = rooms;
         this.acceptInsurances = acceptInsurances;
     }
-
+    public Hospital(String nyu_langone_hospitals, Address addressOfNYULH, Doctor maher, int i, InsuranceCompanies anthem) {
+    }
     public String getHospitalName() {
         return hospitalName;
     }
