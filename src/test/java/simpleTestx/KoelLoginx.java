@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class KoelLogin {
+public class KoelLoginx {
     @Test
     public void loginToKoel_correctCredentials() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
