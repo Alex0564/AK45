@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SimpleTest {
+public class SimpleTestx {
     @Test
     public void udemySearch() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
