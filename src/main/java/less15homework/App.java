@@ -11,6 +11,8 @@ public class App {
         Map<Integer, String > rooms = new HashMap<>();
         List<InsuranceCompanies> acceptInsurances = new ArrayList<>() ;
         List<Doctor> doctors = new ArrayList<>();
+
+
         rooms.put(101, "Anesthesia");
         rooms.put(102, "Medicine");
         rooms.put(103, "Dermatology");
@@ -44,7 +46,8 @@ public class App {
         Doctor duran = new Doctor("Duran", "Hugo", Position.UROLOGIST);
 
 //        List of Hospitals
-//        Hospital nyulh = new Hospital("NYU Langone Hospitals", addressOfNYULH, doctors.add()  , 103, InsuranceCompanies.ANTHEM );
+        Hospital nyulh = new Hospital("NYU Langone Hospitals",
+        addressOfNYULH, maher  , 103, InsuranceCompanies.ANTHEM );
 
 
 
