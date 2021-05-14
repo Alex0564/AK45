@@ -24,8 +24,11 @@ public class Hospital {
         this.rooms = rooms;
         this.acceptInsurances = acceptInsurances;
     }
-    public Hospital(String nyu_langone_hospitals, Address addressOfNYULH, Doctor maher, int i, InsuranceCompanies anthem) {
-    }
+
+
+//    public Hospital(String nyu_langone_hospitals, Address addressOfNYULH, Doctor maher, int i, InsuranceCompanies anthem) {
+//    }
+
     public String getHospitalName() {
         return hospitalName;
     }
@@ -68,12 +71,10 @@ public class Hospital {
 
     @Override
     public String toString() {
-        return "Hospital{" +
-                "hospitalName='" + hospitalName + '\'' +
-                ", address=" + address +
-                ", doctors=" + doctors +
-                ", rooms=" + rooms +
-                ", acceptInsurances=" + acceptInsurances +
-                '}';
+        return "\nName of Hospital: " + hospitalName +
+                "\naddress: " + address +
+                "\nList of doctors: " + doctors +
+                "\nrooms: " + rooms +
+                "\nacceptInsurances: " + acceptInsurances;
     }
 }
