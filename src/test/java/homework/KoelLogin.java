@@ -9,12 +9,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Koel {
+public class KoelLogin {
     private WebDriver driver;
     @BeforeMethod
     public void before() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
-        WebDriver driver = new ChromeDriver();
+        this.driver = new ChromeDriver();
         driver.get("https://bbb.testpro.io/");
         Thread.sleep(1000);
     }
