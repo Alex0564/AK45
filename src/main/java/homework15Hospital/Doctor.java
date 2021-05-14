@@ -20,6 +20,10 @@ public class Doctor {
     public String printDoctor() {
         return position+" - "+name + " " + " " + LastName;
     }
+    @Override
+    public String toString() {
+        return printDoctor();
+    }
 
     public String getName() {
         return name;
@@ -41,13 +45,13 @@ public class Doctor {
         this.doctors = doctors;
     }
 
-    public void printDocs() {
-        System.out.println(doctors.toString());
-
-    }
-    @Override
-    public String toString() {
-        return "Doctor " + name + " " + LastName + " - " + position.toString();
-    }
+//    public void printDocs() {
+//        System.out.println(doctors.toString());
+//
+//    }
+//    @Override
+//    public String toString() {
+//        return "Doctor " + name + " " + LastName + " - " + position.toString();
+//    }
 
 }
