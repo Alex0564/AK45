@@ -1,4 +1,4 @@
 package homework17;
 
-public class Seals{
+abstract class Seals implements IMammals{
 }

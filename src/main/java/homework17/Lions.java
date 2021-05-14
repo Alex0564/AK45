@@ -1,36 +1,26 @@
 package homework17;
 
-public class Lions extends Carnivores implements IMammals{
-    @Override
-    public void canBreath() {
-        System.out.println("can breath");
-    }
-
-    @Override
-    public void move() {
-        System.out.println("can move");
-    }
-
-    @Override
-    public void canEat() {
-        System.out.println("can eat");
-    }
-
-    @Override
-    public void canReproduce() {
-        System.out.println("can reproduce");
-    }
-
-    @Override
-    public void spine() {
-        System.out.println("have spine");
-    }
-
-    @Override
-    public void feedMilk() {
-        System.out.println("feed newborn with milk");
-    }
+public class Lions extends Carnivores{
     private String name;
+
+    public void feedMilk(){
+        System.out.println("Lions feed milk newborns");
+    }
+    public void spine(){
+        System.out.println("Lions have spin");
+    }
+    public void move(){
+        System.out.println("Lions can move");
+    }
+    public void canBreath(){
+        System.out.println("Lions can breath");
+    }
+    public void canReproduce(){
+        System.out.println("Lions can reproduce");
+    }
+    public void canEat(){
+        System.out.println("Lions can eat");
+    }
 
     public Lions(String name) {
         this.name = name;
@@ -46,6 +36,6 @@ public class Lions extends Carnivores implements IMammals{
 
     @Override
     public String toString() {
-        return name;
+        return "Information about "+name+":";
     }
 }

@@ -1,4 +1,4 @@
 package homework17;
 
-public class Primates{
+abstract class Primates implements IMammals{
 }
