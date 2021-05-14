@@ -43,12 +43,9 @@ public class Doctor {
 
     @Override
     public String toString() {
-        return "Doctor{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", position=" + position +
-                '}';
-    }
+        return "Doctor " + name + " " + lastName + " position: " + position;}
+    public void printDoctors(){
+        System.out.println("Doctor "+this.name+" "+this.lastName+" position: "+ this.position); }
 
 
 }
