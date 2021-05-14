@@ -11,7 +11,7 @@ public class Sister implements IFamily,IKids {
 
     public void kid(String xx) {
         System.out.println(name + " " + nickName + " " + xx);
-
+    }
         @Override
         public void father () {
             System.out.println("I am father of my daughter.");
@@ -37,5 +37,5 @@ public class Sister implements IFamily,IKids {
     }
 
 
-    }
+
 
