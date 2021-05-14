@@ -1,6 +1,6 @@
 package homework17;
 
-public class BlueWhale extends Whales implements IMammals{
+public class BlueWhale extends Whales{
     private String name;
     public void feedMilk(){
         System.out.println("Blu whales feed milk newborns");
