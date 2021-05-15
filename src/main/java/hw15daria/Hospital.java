@@ -15,7 +15,7 @@ public class Hospital {
         this.address = address;
         this.doctors = doctors;
         this.rooms = rooms;
-         this.acceptedInsuranses = acceptedInsuranses;
+        this.acceptedInsuranses = acceptedInsuranses;
     }
 // getters
     public Address getAddress () { return address; }
@@ -58,6 +58,5 @@ public class Hospital {
         System.out.println("\nThe rooms are: ");
         print_Rooms();
     }
-
 
 }
