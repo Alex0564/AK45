@@ -50,7 +50,7 @@ public class Whales implements IMammals{
 
     @Override
     public void die() {
-        System.out.println("It can die...");
+        System.out.println("It can unfortunately die...");
 
     }
 
