@@ -49,6 +49,11 @@ public class App {
         doctors.add(ferrara);
         doctors.add(singh);
         doctors.add(duran);
+        doctors.set(1, maher);
+        doctors.set(2,mitchel);
+        doctors.set(3, ferrara);
+        doctors.set(0,singh);
+        doctors.set(4,duran);
 
 
 
@@ -62,6 +67,8 @@ public class App {
         maher.printDoctors();
         duran.printDoctors();
         singh.printDoctors();
+
+        System.out.println(doctors.get(3));
 
         System.out.println("\nList of rooms: "+rooms);
 
