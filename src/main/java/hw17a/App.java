@@ -3,7 +3,7 @@ package hw17a;
 public class App {
     public static void main(String[] args) {
 
-         /*Homework 17a
+         /*Homework 17a with abstract classes
 
     interface - Life
 
@@ -55,7 +55,6 @@ public class App {
 
         Lion barbaryLion = new Lion("Barbary Lion");
 
-        System.out.println();
         System.out.println("What is about a Barbary Lion?");
         barbaryLion.internalSkeleton();
         barbaryLion.heterotrophs();
