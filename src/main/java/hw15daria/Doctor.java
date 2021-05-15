@@ -10,13 +10,15 @@ public class Doctor {
     public String getLastName() { return lastName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
     public Position.position getPosition() { return position; }
-//    public void setPosition(Position position) { this.position = position; }
 
     public Doctor(String name, String lastName, Position.position position) { this.name = name;
         this.lastName = lastName;this.position = position; }
 
-    public void printDoctors (){ System.out.println( "Doctor's name is: "+ this.name+" and last name is: "+this.lastName+
-        ". "+"Doctor's title is: "+this.position+"."); }
+// it was created for the d.doctors
+    public boolean printDoctors (){ System.out.println( "Doctor's name is: "+ this.name+" and last name is: "+this.lastName+
+        ". "+"Doctor's title is: "+this.position+".");
+        return false;
+    }
 
     @Override
     public String toString() {

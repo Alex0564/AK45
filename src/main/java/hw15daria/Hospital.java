@@ -9,6 +9,7 @@ public class Hospital {
     private Map<Integer, String> rooms;
     private List<InsuranseCompamies> acceptedInsuranses;
 
+// full constructor for Hospital
     public Hospital(String hospitalName, Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranseCompamies> acceptedInsuranses) {
         this.hospitalName = hospitalName;
         this.address = address;
@@ -16,36 +17,49 @@ public class Hospital {
         this.rooms = rooms;
         this.acceptedInsuranses = acceptedInsuranses;
     }
-
-    public void setHospitalName (String hospitalName){ this.hospitalName = hospitalName; }
-    public String getHospitalName () { return hospitalName; }
-    public void setAddress (Address address){ this.address = address; }
+// getters
     public Address getAddress () { return address; }
-
-//  public Hospital(List<Doctor> doctors) { this.doctors = doctors; }
-    public List<Doctor> getDoctors() { return doctors; }
-    public void setDoctors(List<Doctor> doctors) { this.doctors = doctors; }
-
-    public Map<Integer, String> getRooms() { return rooms; }
-    public void setRooms(Map<Integer, String> rooms) { this.rooms = rooms; }
-    public Hospital(Map<Integer, String> rooms) { this.rooms = rooms; }
-
+    public List<Doctor> getDocrots () {return doctors;}
+    public Map<Integer, String> getRooms () {return rooms;}
     public List<InsuranseCompamies> getAcceptedInsuranses() { return acceptedInsuranses; }
+
+    // setters
+    public void setHospitalName (String hospitalName){ this.hospitalName = hospitalName; }
+    public void setAddress (Address address){ this.address = address; }
+    public void setDoctors(List<Doctor> doctors) { this.doctors = doctors; }
+    public void setRooms(Map<Integer, String> rooms) { this.rooms = rooms; }
     public void setAcceptedInsuranses(List<InsuranseCompamies> acceptedInsuranses) { this.acceptedInsuranses = acceptedInsuranses; }
-    public Hospital(List<InsuranseCompamies> acceptedInsuranses) { this.acceptedInsuranses = acceptedInsuranses; }
 
-    public void printHospital(){ System.out.println("The name of the hospital is: "+ this.hospitalName+
-            "and the Address is: "+this.address+". The list of the doctors is: "+this.doctors+". List of" +
-            "the rooms is: "+this.rooms+". And the accepted Insurance companies are: "+this.acceptedInsuranses); }
+// print info
 
-    @Override
-    public String toString() {
-        return "Hospital{" +
-                "hospitalName='" + hospitalName + '\'' +
-                ", address=" + address +
-                ", doctors=" + doctors +
-                ", rooms=" + rooms +
-                ", acceptedInsuranses=" + acceptedInsuranses +
-                '}';
+    public void print_doctors (){
+        for (Doctor d: doctors){
+            System.out.println(d.printDoctors());
+        }
     }
+
+    public void print_Insurance (){
+        for (InsuranseCompamies i: acceptedInsuranses){
+            System.out.println (i);
+        }
+    }
+
+    public void print_Rooms(){
+        for (Map.Entry<Integer, String> pairKeyValue: rooms.entrySet()){
+            System.out.println("The"+pairKeyValue+" "+pairKeyValue.getValue()+".");
+        }
+    }
+
+
+    public void printHospital(){
+        System.out.println("The name of the hospital is: "+ hospitalName+
+                "and the Address is: "+address+"\nThe list of the doctors is: ");
+        print_doctors();
+        System.out.println("\nAnd accepted insurances are: ");
+        print_Insurance();
+        System.out.println("\nThe rooms are: ");
+        print_Rooms();
+    }
+
+
 }

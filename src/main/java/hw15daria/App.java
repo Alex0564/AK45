@@ -20,7 +20,6 @@ public class App {
     docs.add(Thomas);
     docs.add(Megan);
     docs.add(Mayre);
-//    for (Doctor d: docs){ System.out.println(docs); }
 
     Map<Integer, String> rooms =new HashMap<>();
     rooms.put(0, "Allergist's Room");
@@ -36,7 +35,6 @@ public class App {
     insur.add(InsuranseCompamies.InsuranseComp.KAISER);
     insur.add(InsuranseCompamies.InsuranseComp.MEDICAID);
 
-    Hospital orl = new Hospital();
 
 
     }
