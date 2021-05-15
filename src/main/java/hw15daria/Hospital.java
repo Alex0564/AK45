@@ -7,39 +7,38 @@ public class Hospital {
     private Address address;
     private List<Doctor> doctors;
     private Map<Integer, String> rooms;
-    private List<InsuranseCompamies> acceptedInsuranses;
+    private List<InsuranseCompany> acceptedInsuranses;
 
 // full constructor for Hospital
-    public Hospital(String hospitalName, Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranseCompamies> acceptedInsuranses) {
+    public Hospital(String hospitalName, Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranseCompany> acceptedInsuranses) {
         this.hospitalName = hospitalName;
         this.address = address;
         this.doctors = doctors;
         this.rooms = rooms;
-        this.acceptedInsuranses = acceptedInsuranses;
+         this.acceptedInsuranses = acceptedInsuranses;
     }
 // getters
     public Address getAddress () { return address; }
     public List<Doctor> getDocrots () {return doctors;}
     public Map<Integer, String> getRooms () {return rooms;}
-    public List<InsuranseCompamies> getAcceptedInsuranses() { return acceptedInsuranses; }
+    public List<InsuranseCompany> getAcceptedInsuranses() { return acceptedInsuranses; }
 
     // setters
     public void setHospitalName (String hospitalName){ this.hospitalName = hospitalName; }
     public void setAddress (Address address){ this.address = address; }
     public void setDoctors(List<Doctor> doctors) { this.doctors = doctors; }
     public void setRooms(Map<Integer, String> rooms) { this.rooms = rooms; }
-    public void setAcceptedInsuranses(List<InsuranseCompamies> acceptedInsuranses) { this.acceptedInsuranses = acceptedInsuranses; }
+    public void setAcceptedInsuranses(List<InsuranseCompany> acceptedInsuranses) { this.acceptedInsuranses = acceptedInsuranses; }
 
 // print info
-
     public void print_doctors (){
         for (Doctor d: doctors){
-            System.out.println(d.printDoctors());
+            System.out.println(d.print_info());
         }
     }
 
     public void print_Insurance (){
-        for (InsuranseCompamies i: acceptedInsuranses){
+        for (InsuranseCompany i: acceptedInsuranses){
             System.out.println (i);
         }
     }
@@ -49,7 +48,6 @@ public class Hospital {
             System.out.println("The"+pairKeyValue+" "+pairKeyValue.getValue()+".");
         }
     }
-
 
     public void printHospital(){
         System.out.println("The name of the hospital is: "+ hospitalName+

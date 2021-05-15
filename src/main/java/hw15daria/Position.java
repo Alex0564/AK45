@@ -1,5 +1,9 @@
 package hw15daria;
 
-public class Position {
-    public enum position {PHYSICIAN, DENTIST, EYE_DOCTOR, DERMATOLOGIST, ALLERGIST  }
+public enum Position {
+    PHYSICIAN,
+    DENTIST,
+    EYE_DOCTOR,
+    DERMATOLOGIST,
+    ALLERGIST
 }

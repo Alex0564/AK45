@@ -7,19 +7,19 @@ import java.util.Map;
 
 public class App {
     public static void main (String []args){
-    Address adr = new Address("9401 Turkey Lake RD", "Orlando", "FL", 32819);
-    Doctor Luis = new Doctor("Luis", "Garcia", Position.position.DENTIST);
-    Doctor Holly = new Doctor("Holly", "Lapka", Position.position.EYE_DOCTOR);
-    Doctor Thomas = new Doctor("Thomas", "Todd", Position.position.ALLERGIST);
-    Doctor Megan = new Doctor ("Megan", "Hunt", Position.position.DERMATOLOGIST);
-    Doctor Mayre = new Doctor("Mayra", "George", Position.position.PHYSICIAN);
+    Address address = new Address("9401 Turkey Lake RD", "Orlando", "FL", 32819);
+    Doctor Luis = new Doctor("Luis", "Garcia", Position.DENTIST);
+    Doctor Holly = new Doctor("Holly", "Lapka", Position.EYE_DOCTOR);
+    Doctor Thomas = new Doctor("Thomas", "Todd", Position.ALLERGIST);
+    Doctor Megan = new Doctor ("Megan", "Hunt", Position.DERMATOLOGIST);
+    Doctor Mayre = new Doctor("Mayra", "George", Position.PHYSICIAN);
 
-    List<Doctor> docs = new ArrayList<>();
-    docs.add(Luis);
-    docs.add(Holly);
-    docs.add(Thomas);
-    docs.add(Megan);
-    docs.add(Mayre);
+    List<Doctor> doctorArrayList = new ArrayList<>();
+    doctorArrayList.add(Luis);
+    doctorArrayList.add(Holly);
+    doctorArrayList.add(Thomas);
+    doctorArrayList.add(Megan);
+    doctorArrayList.add(Mayre);
 
     Map<Integer, String> rooms =new HashMap<>();
     rooms.put(0, "Allergist's Room");
@@ -28,14 +28,15 @@ public class App {
     rooms.put(3, "Physician's Room");
 
 
-    List<InsuranseCompamies.InsuranseComp> insur = new ArrayList<>();
-    insur.add(InsuranseCompamies.InsuranseComp.AETHNA);
-    insur.add(InsuranseCompamies.InsuranseComp.BLUE_CROSS);
-    insur.add(InsuranseCompamies.InsuranseComp.CIGNA);
-    insur.add(InsuranseCompamies.InsuranseComp.KAISER);
-    insur.add(InsuranseCompamies.InsuranseComp.MEDICAID);
+    List<InsuranseCompany> InsuranseComps = new ArrayList<>();
+    InsuranseComps.add(InsuranseCompany.AETHNA);
+    InsuranseComps.add(InsuranseCompany.BLUE_CROSS);
+    InsuranseComps.add(InsuranseCompany.CIGNA);
+    InsuranseComps.add(InsuranseCompany.KAISER);
+    InsuranseComps.add(InsuranseCompany.MEDICAID);
 
-
+    Hospital hospital = new Hospital("Orlando Health", address, doctorArrayList, rooms, InsuranseComps);
+    hospital.printHospital();
 
     }
 }
