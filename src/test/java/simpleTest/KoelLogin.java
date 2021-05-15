@@ -72,7 +72,7 @@ public class KoelLogin {
         newPlaylist.click();
         WebElement textField = driver.findElement(By.xpath("//*[@class='create']/input"));
         textField.sendKeys("XXXX");
-        textField.sendKeys(Keys.RETURN);
+        textField.sendKeys(Keys.ENTER);
         Thread.sleep(200);
         WebElement green = driver.findElement(By.xpath("//*[@class='success show']"));
         Assert.assertTrue(green.isDisplayed());
