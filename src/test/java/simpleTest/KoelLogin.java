@@ -73,7 +73,7 @@ public class KoelLogin {
         WebElement textField = driver.findElement(By.xpath("//*[@class='create']/input"));
         textField.sendKeys("XXXX");
         textField.sendKeys(Keys.RETURN);
-        Thread.sleep(200);
+        Thread.sleep(300);
         WebElement green = driver.findElement(By.xpath("//*[@class='success show']"));
         Assert.assertTrue(green.isDisplayed());
 
