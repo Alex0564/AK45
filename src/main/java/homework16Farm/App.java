@@ -12,14 +12,14 @@ public class App {
     public static void main(String[] args) {
        Address address = new Address("425 Lincoln rd", "Bend", "Oregon", 90342);
 
-       HashMap<Cattle,Integer> cattle = new HashMap<>();
+       Map<Cattle,Integer> cattle = new HashMap<>();
        cattle.put(Cattle.PIGS,40);
        cattle.put(Cattle.SHEEP, 140);
        cattle.put(Cattle.CHICKEN, 70);
        cattle.put(Cattle.COWS, 90);
        cattle.put(Cattle.GOATS, 70);
        cattle.put(Cattle.TURKEY, 45);
-       
+
        AgreeCultural weet = new AgreeCultural("Weet", 1);
        AgreeCultural soya = new AgreeCultural("Soya", 2);
        AgreeCultural pea = new AgreeCultural("Pea", 3);

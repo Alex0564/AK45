@@ -2,14 +2,15 @@ package homework16Farm;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Farm {
     private String name;
     private Address address;
-    private HashMap<Cattle, Integer> heads;
+    private Map<Cattle, Integer> heads;
     private List<AgreeCultural> agreeCultural;
 
-    public Farm(String name, Address address, HashMap<Cattle, Integer> heads, List<AgreeCultural> agreeCultural) {
+    public Farm(String name, Address address, Map<Cattle, Integer> heads, List<AgreeCultural> agreeCultural) {
         this.name = name;
         this.address = address;
         this.heads = heads;
@@ -37,7 +38,7 @@ public class Farm {
         this.address = address;
     }
 
-    public HashMap<Cattle, Integer> getHeads() {
+    public Map<Cattle, Integer> getHeads() {
         return heads;
     }
 

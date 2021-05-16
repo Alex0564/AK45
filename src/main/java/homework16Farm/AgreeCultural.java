@@ -7,14 +7,9 @@ public class AgreeCultural {
     private int fieldsNumber;
     private List<AgreeCultural> agreeCulturals;
 
-    public AgreeCultural(List<AgreeCultural> agreeCulturals) {
-        this.agreeCulturals = agreeCulturals;
-    }
-
     public AgreeCultural(String nameOfCulture, int fieldsNumber) {
         this.nameOfCulture = nameOfCulture;
         this.fieldsNumber = fieldsNumber;
-        this.agreeCulturals = agreeCulturals;
 
     }
     public String printAgreeCulturals() {
@@ -27,14 +22,6 @@ public class AgreeCultural {
 
     public String getNameOfCulture() {
         return nameOfCulture;
-    }
-
-    public List<AgreeCultural> getAgreeCulturals() {
-        return agreeCulturals;
-    }
-
-    public void setAgreeCulturals(List<AgreeCultural> agreeCulturals) {
-        this.agreeCulturals = agreeCulturals;
     }
 
     public void setNameOfCulture(String nameOfCulture) {
