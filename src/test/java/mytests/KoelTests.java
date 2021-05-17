@@ -26,7 +26,7 @@ public class KoelTests {
         driver.quit();
     }
     @Test
-    public void loginToKoel_correctCredentials() throws InterruptedException {
+    public void loginToKoel_createPlaylist() throws InterruptedException {
         WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
         WebElement loginButton = driver.findElement(By.tagName("button"));
