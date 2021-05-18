@@ -1,12 +1,12 @@
-package pageObjectsTests;
+package pageObjectsTestsVK77;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
+import pageObjectsVK77.LoginPage;
+import pageObjectsVK77.MainPage;
 
 public class PlaylistTests {
     private WebDriver driver;
@@ -24,7 +24,12 @@ public class PlaylistTests {
     public void playlistTests_createPlaylist_playlistCreated(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
+
+        //MainPage mainPage = loginPage.loginToApp("valeriy.kan@gmail.com","te$t$tudent");
         MainPage mainPage = loginPage.loginToApp("koeluser06@testpro.io","te$t$tudent");
-        mainPage.createPlaylist("XXXX");
+
+        //mainPage.createPlaylist("XXXX");
+        System.out.println("playlist id - "+mainPage.createPlaylist("XXXX"));
+
     }
 }
