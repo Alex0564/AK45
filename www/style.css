@@ -1,19 +1,26 @@
 body {
-  background-color: lightblue;
+  background-color: lightpink;
 }
 
 h1 {
   color: white;
   text-align: center;
 }
+h2 {
+color: darkgrey;
+}
 
 .cc {
-  font-family: arial;
-  font-size: 15px;
+  font-family: times;
+  font-size: 18px;
 }
 .vv {
-  color:yellow;
+  color: green;
+}
+.dd {
+color: red;
+font-size: 20px;
 }
 #jie{
-color:red;
+color:white;
 }
