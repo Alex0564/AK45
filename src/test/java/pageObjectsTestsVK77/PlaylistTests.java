@@ -32,4 +32,15 @@ public class PlaylistTests {
         System.out.println("playlist id - "+mainPage.createPlaylist("XXXX"));
 
     }
+    @Test
+    public void playlistTests_deletePlaylist_playlistDeleted(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+
+        //MainPage mainPage = loginPage.loginToApp("valeriy.kan@gmail.com","te$t$tudent");
+        MainPage mainPage = loginPage.loginToApp("koeluser06@testpro.io","te$t$tudent");
+
+        mainPage.createPlaylist("XXXX");
+        System.out.println("playlist id - "+mainPage.createPlaylist("XXXX"));
+    }
 }
