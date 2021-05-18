@@ -31,7 +31,7 @@ public class KoelLogin {
     }
     @Test
     public void loginToKoel_incorrectCredentials() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://bbb.testpro.io/");
         Thread.sleep(1000);
