@@ -1,15 +1,23 @@
 package homework;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class KoelLogin {
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.beans.PropertyChangeListener;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+public class DeletePlaylist {
     private WebDriver driver;
     @BeforeMethod
     public void before() throws InterruptedException {
@@ -20,7 +28,7 @@ public class KoelLogin {
     }
     @AfterMethod
     public void after() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.quit();
     }
 
@@ -34,26 +42,16 @@ public class KoelLogin {
         email.sendKeys("asting2006@rambler.ru");
         password.sendKeys("te$t$tudent");
         loginButton.click();
-
         Thread.sleep(2000);
 
-        WebElement home = driver.findElement(By.cssSelector(".home")); //*[@class = 'home active']
-        Assert.assertTrue(home.isDisplayed());
-    }
-
-    @Test
-    public void loginToKoel_incorrectCredentials() throws InterruptedException {
-        WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
-        WebElement password = driver.findElement(By.cssSelector("[type='password']"));
-        WebElement loginButton = driver.findElement(By.tagName("button"));
-
-        email.sendKeys("asting2006@rambler.ru");
-        password.sendKeys("wrongPassword");
-        loginButton.click();
-
+        Actions a = new Actions(driver);
+        a.contextClick(driver.findElement(By.xpath("//*[@id=\"playlists\"]/ul/li[3]/a/text()"))).pause(Duration.ofMillis(1000))
+                .click(driver.findElement(By.xpath("//*[@id=\"playlists\"]/ul/li[3]/nav/ul/li[2]")));
         Thread.sleep(500);
 
-        WebElement home = driver.findElement(By.cssSelector(".error")); //*[@class = 'home active']
-        Assert.assertTrue(home.isDisplayed());
+
+        WebElement greenFrame = driver.findElement(By.xpath("//*[@class='Success show']"));
+        Assert.assertTrue(greenFrame.isDisplayed());
+
     }
 }
