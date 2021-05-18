@@ -1,4 +1,4 @@
-package unitTesting;
+package SimpleTestTN;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
