@@ -55,7 +55,27 @@ public class MainPage {
             return "exception ";
         }
     }
-
+    private WebElement getPlaylistToDel(){
+        By plusButtonBy = By.xpath("//a[text()='XXXX']");
+        wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
+        return driver.findElement(plusButtonBy);
+    }
+    private WebElement getPlaylistDelButton(){
+        //By delButtonBy = By.className("del btn-delete-playlist");
+        By delButtonBy = By.xpath("//*[@title='Delete this playlist']");
+        wait.until(ExpectedConditions.elementToBeClickable(delButtonBy));
+        return driver.findElement(delButtonBy);
+    }
+    public boolean isSuccess(){
+        //By successBy = By.className("success show");
+        By successBy = By.xpath("//*[@class='success show']");
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
+            return true;
+        } catch (TimeoutException err){
+            return false;
+        }
+    }
 
     public String createPlaylist(String playlistName){
         String playlistId = "";
@@ -66,5 +86,14 @@ public class MainPage {
         playlistId=playListId();
 
         return playlistId;
+    }
+    //public void deletePlaylist(String playlistId){
+        public void deletePlaylist(){
+        getPlaylistToDel().click();
+        //after click find button to delete
+        getPlaylistDelButton().click();
+         // need success info
+        isSuccess();
+
     }
 }
