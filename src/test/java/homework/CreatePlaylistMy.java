@@ -10,9 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.security.Key;
-
-public class CreatePlaylist {
+public class CreatePlaylistMy {
     private WebDriver driver;
     @BeforeMethod
     public void before() throws InterruptedException {
