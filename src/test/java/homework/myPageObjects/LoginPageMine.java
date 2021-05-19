@@ -5,16 +5,11 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.MainPage;
 
-public class MyLoginPage {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
-    public MyLoginPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,200);
+
+public class LoginPageMine extends BasePageMine{
+    public LoginPageMine(WebDriver driver) {
+        super(driver);
     }
 
     private WebElement getEmailField(){
@@ -28,11 +23,11 @@ public class MyLoginPage {
     private WebElement getLoginButton(){
         return driver.findElement(By.tagName("button"));
     }
-    public MyMainPage loginToApp(String username, String password){
+    public MainPageMine loginToApp(String username, String password){
         getEmailField().sendKeys(username);
         getPasswordField().sendKeys(password);
         getLoginButton().click();
-        return new MyMainPage(driver);
+        return new MainPageMine(driver);
     }
     public void open(){
         driver.get("https://bbb.testpro.io/");

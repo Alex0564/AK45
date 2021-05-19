@@ -1,16 +1,18 @@
 package homework;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CreatePlaylistMy {
+import java.time.Duration;
+
+public class DeletePlaylistMine {
     private WebDriver driver;
     @BeforeMethod
     public void before() throws InterruptedException {
@@ -37,16 +39,13 @@ public class CreatePlaylistMy {
         loginButton.click();
         Thread.sleep(2000);
 
-        WebElement plusButton = driver.findElement(By.xpath("//*[@title='Create a new playlist']"));
-        plusButton.click();
-        WebElement createPlaylist = driver.findElement(By.xpath("//*[text()='New Playlist']"));
-        createPlaylist.click();
-        WebElement textField = driver.findElement(By.xpath("//*[@class='create']/input"));
-        textField.sendKeys("Playlist2");
-        textField.sendKeys(Keys.ENTER);
-        Thread.sleep(400);
+        Actions a = new Actions(driver);
+        a.contextClick(driver.findElement(By.xpath("//*[@id=\"playlists\"]/ul/li[3]/a/text()"))).pause(Duration.ofMillis(1000))
+                .click(driver.findElement(By.xpath("//*[@id=\"playlists\"]/ul/li[3]/nav/ul/li[2]")));
+        Thread.sleep(500);
 
-        WebElement greenFrame = driver.findElement(By.xpath("//*[@class='success show']"));
+
+        WebElement greenFrame = driver.findElement(By.xpath("//*[@class='Success show']"));
         Assert.assertTrue(greenFrame.isDisplayed());
 
     }
