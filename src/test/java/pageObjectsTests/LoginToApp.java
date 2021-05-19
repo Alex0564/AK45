@@ -13,7 +13,7 @@ public class LoginToApp {
     private WebDriver driver;
     @BeforeMethod
     public void starUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod

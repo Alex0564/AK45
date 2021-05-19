@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class SimpleTest {
     @Test
     public void udemySearch() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://udemy.com");
 
