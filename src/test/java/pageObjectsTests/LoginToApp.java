@@ -13,7 +13,7 @@ public class LoginToApp {
     private WebDriver driver;
     @BeforeMethod
     public void starUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -25,14 +25,14 @@ public class LoginToApp {
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.loginToApp("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.loginToApp("nessi.tima@gmail.com","te$t$tudent");
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        loginPage.loginToApp("koeluser06@testpro.io","wrongPassword");
+        loginPage.loginToApp("nessi.tima@gmail.com","wrongPassword");
         Assert.assertTrue(loginPage.isError());
     }
 }
