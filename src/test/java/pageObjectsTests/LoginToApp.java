@@ -6,33 +6,23 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.BasePage;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
-public class LoginToApp {
-    private WebDriver driver;
-    @BeforeMethod
-    public void starUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
+public class LoginToApp extends BaseTest {
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.loginToApp("nessi.tima@gmail.com","te$t$tudent");
+        MainPage mainPage = loginPage.loginToApp(username,password);
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        loginPage.loginToApp("nessi.tima@gmail.com","wrongPassword");
+        loginPage.loginToApp(username,"wrongPassword");
         Assert.assertTrue(loginPage.isError());
     }
 }
