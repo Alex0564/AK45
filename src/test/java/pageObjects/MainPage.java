@@ -1,23 +1,16 @@
 package pageObjects;
 
 import com.google.common.eventbus.SubscriberExceptionContext;
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-public class MainPage {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+public class MainPage extends BasePage {
 
-    public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,200);
-    }
 
-    public boolean isMain() {
+   public boolean isMain() {
         By homeBy = By.className("home");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
@@ -26,9 +19,15 @@ public class MainPage {
             return true;
         }
     }
-    public String createPlaylist(){
-        String playListId = null;
 
-        return playListId;
+    public boolean checkPlaylist(CreateNewPlayList newPlayList) {
+        By playlistBy = By.xpath("//*[@href='#!/playlist/"+newPlayList+"']");
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
+            String name = driver.findElement(playlistBy).getText();
+            return name.equals(newPlayList);
+        } catch (TimeoutException c){
+            return false;
+        }
     }
 }

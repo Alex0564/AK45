@@ -8,13 +8,13 @@ public class UnitTest {
     @Test
     public void ticketsTest_infant_priceIsZero(){
         // Arrange - Given
-        Tickets infant = new Tickets(1, 1000);
+        Tickets infant = new Tickets(1,1000);
 
         // Act - When
         double result = infant.getPrice();
 
         // Assert - Then
-        Assert.assertEquals(0.0, result);
+        Assert.assertEquals(result,0.0);
     }
 
     @Test
@@ -30,9 +30,9 @@ public class UnitTest {
         Assert.assertEquals(result,1000.0);
     }
     @Test
-    public void ticketsTest_senior_priseIs80percent(){
-        Tickets senior = new Tickets(78,1000);
-        double result = senior.getPrice();
+    public void ticketsTest_senior_priceIs80percent(){
+        Tickets adult = new Tickets(78,1000);
+        double result = adult.getPrice();
         Assert.assertEquals(result,800.0);
     }
 }
