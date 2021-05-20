@@ -1,17 +1,14 @@
 package pageObjectsVK77;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MainPage {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+
+public class MainPage extends BasePage{
 
     public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,200);
+        super(driver);
     }
 
     public boolean isMain() {
@@ -56,7 +53,7 @@ public class MainPage {
         }
     }
     private WebElement getPlaylistToDel(){
-        By plusButtonBy = By.xpath("//a[text()='XXXX']");
+        By plusButtonBy = By.xpath("//a[text()='RABDOMPLAYLIS']");
         wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
         return driver.findElement(plusButtonBy);
     }
@@ -76,24 +73,69 @@ public class MainPage {
             return false;
         }
     }
+    private WebElement getPlFieldToRename(){
+        By PlInputBy = By.xpath("//*[@class='playlist playlist editing']/input");
+        wait.until(ExpectedConditions.elementToBeClickable(PlInputBy));
+        return driver.findElement(PlInputBy);
 
+    }
     public String createPlaylist(String playlistName){
         String playlistId = "";
         getPlusButton().click();
         getNewPlaylist().click();
         getPlInput().sendKeys(playlistName);
         getPlInput().sendKeys(Keys.RETURN);
-        playlistId=playListId();
+        By successBy = By.xpath("//*[@class='success show']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
+        return driver.getCurrentUrl().split("/")[5];
 
-        return playlistId;
-    }
-    //public void deletePlaylist(String playlistId){
-        public void deletePlaylist(){
-        getPlaylistToDel().click();
-        //after click find button to delete
-        getPlaylistDelButton().click();
-         // need success info
-        isSuccess();
 
     }
+    private By playlistBy(String playlistId){
+        return By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
+
+    }
+
+    public boolean checkPlaylist(String playlistId, String playlistName){
+
+
+
+        By playlistBy = playlistBy(playlistId);
+
+        //scroll JS for Firefox browsers
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement Element = driver.findElement(playlistBy);
+
+        //This will scroll the page till the element is found
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
+            String name = driver.findElement(playlistBy).getText();
+            return name.equals(playlistName); // name == playlistName
+        } catch (TimeoutException c){
+            return false;
+        }
+
+    }
+    public void renamePlaylist(String playlistId, String newPlaylistName){
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement playlist = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
+
+        //This will scroll the page till the element is found
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
+
+        // double click
+        Actions actions = new Actions(driver);
+        //double click JS
+        actions.doubleClick(playlist).perform();
+
+        // Ctrl-A     Cmd-A
+        getPlFieldToRename().sendKeys(Keys.CONTROL,"a");
+        getPlFieldToRename().sendKeys(newPlaylistName+"(renamedByValeriy)");
+        getPlFieldToRename().sendKeys(Keys.RETURN);
+
+    }
+
+
 }

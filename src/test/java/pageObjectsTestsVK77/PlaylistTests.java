@@ -1,48 +1,46 @@
 package pageObjectsTestsVK77;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjectsVK77.LoginPage;
 import pageObjectsVK77.MainPage;
 
-public class PlaylistTests {
-    private WebDriver driver;
+public class PlaylistTests extends BaseTest{
 
-    @BeforeMethod
-    public void starUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
+
+
     @Test
     public void playlistTests_createPlaylist_playlistCreated(){
+
+        Faker faker =new Faker();
+        //String playlistName = TestDataGenerator.getString(7);
+        String playlistName = faker.funnyName().name();
+        System.out.println(playlistName);
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username,password);
+        String playlistId = mainPage.createPlaylist(playlistName);
 
-        //MainPage mainPage = loginPage.loginToApp("valeriy.kan@gmail.com","te$t$tudent");
-        MainPage mainPage = loginPage.loginToApp("koeluser06@testpro.io","te$t$tudent");
-
-        //mainPage.createPlaylist("XXXX");
-        System.out.println("playlist id - "+mainPage.createPlaylist("XXXX"));
+        Assert.assertTrue(mainPage.checkPlaylist(playlistId,playlistName));
 
     }
     @Test
-    public void playlistTests_deletePlaylist_playlistDeleted(){
+    public void playlistTests_renamePlaylist_playlistRenamed(){
+        Faker faker = new Faker();
+        String playlistName = faker.funnyName().name();
+        System.out.println(playlistName);
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username,password);
+        String playlistId=  mainPage.createPlaylist(playlistName);
 
-        //MainPage mainPage = loginPage.loginToApp("valeriy.kan@gmail.com","te$t$tudent");
-        MainPage mainPage = loginPage.loginToApp("koeluser06@testpro.io","te$t$tudent");
-        mainPage.deletePlaylist();
-        //mainPage.deletePlaylist("3318");
-        Assert.assertTrue(mainPage.isSuccess());
+        String newPlaylistName = faker.artist().name();
+        mainPage.renamePlaylist(playlistId,newPlaylistName);
+        Assert.assertTrue(mainPage.checkPlaylist(playlistId,newPlaylistName+"(renamedByValeriy)"));
     }
+
 }
