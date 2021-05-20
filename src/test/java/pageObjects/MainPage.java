@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
@@ -51,11 +52,42 @@ public class MainPage extends BasePage{
         }
     }
 
-    public void renamePlaylist(String playlistId, String newPlaylistName) {
-        // Scroll
-        // By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
-        // https://www.guru99.com/scroll-up-down-selenium-webdriver.html
-        // double click or right-click
-        // Ctrl-A     Cmd-A
+    public void renamePlaylist(String playlistId, String newPlaylistName) throws InterruptedException {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        By playlistNameBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']"); //By.xpath("//*[@href='#!/playlist/3433']");
+        WebElement scrollTo = driver.findElement(playlistNameBy);
+        js.executeScript("arguments[0].scrollIntoView();", scrollTo);
+
+//        Actions action = new Actions(driver);
+//        WebElement link = driver.findElement(playlistNameBy);
+//        action.doubleClick(link).perform();
+
+        Actions action = new Actions(driver);
+        WebElement link = driver.findElement(playlistNameBy);
+        action.contextClick(link).perform();
+
+//        By editBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']/following-sibling::nav/ul/li[text()='Edit']");
+        Thread.sleep(3000);
+        By editBy = By.xpath("//*[text() = 'Edit']");
+        WebElement edit = driver.findElement(editBy);
+        edit.click();
+        wait.until(ExpectedConditions.elementToBeSelected(edit));
+        edit.sendKeys(Keys.CONTROL+"A");
+        edit.sendKeys(newPlaylistName);
+
+//        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+//        link.clear();
+
+//        Thread.sleep(2000);
+//
+//        link.sendKeys("Selenium");
+//        String s = Keys.chord(Keys.CONTROL, "a");
+//        link.sendKeys(s);
+
+
+        Thread.sleep(5000);
+
     }
-}
+    }
+

@@ -27,7 +27,7 @@ public class PlaylistTests extends BaseTest{
         Assert.assertTrue(mainPage.checkPlaylist(playlistId,playlistName));
     }
     @Test
-    public void playlistTests_renamePlaylist_playlistRenamed(){
+    public void playlistTests_renamePlaylist_playlistRenamed() throws InterruptedException {
         Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
         System.out.println(playlistName);
@@ -39,7 +39,8 @@ public class PlaylistTests extends BaseTest{
 
         String newPlaylistName = faker.artist().name();
         mainPage.renamePlaylist(playlistId,newPlaylistName);
-
+        System.out.println(newPlaylistName);
+//
         Assert.assertTrue(mainPage.checkPlaylist(playlistId,newPlaylistName));
     }
 }
