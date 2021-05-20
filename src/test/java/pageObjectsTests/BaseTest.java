@@ -13,7 +13,7 @@ public class BaseTest {
     public void starUp() {
         username = "koeluser06@testpro.io";
         password = "te$t$tudent";
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
     @AfterMethod
