@@ -13,27 +13,27 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LoginToApp {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    @BeforeMethod
-    public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//        driver.get("https://bbb.testpro.io/");
-    }
-    @AfterMethod
-    public void tearDown()throws InterruptedException{
-        Thread.sleep(5000);
-        driver.quit();
-    }
+public class LoginToApp extends BaseTest{
+//    private WebDriver driver;
+////    private WebDriverWait wait;
+//    @BeforeMethod
+//    public void startUp(){
+//        System.setProperty("webdriver.chrome.driver", "chromedriver");
+//        driver = new ChromeDriver();
+////        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+////        driver.get("https://bbb.testpro.io/");
+//    }
+//    @AfterMethod
+//    public void tearDown()throws InterruptedException{
+//        Thread.sleep(5000);
+//        driver.quit();
+//    }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         MyLoginPage myLoginPage = new MyLoginPage(driver);
         myLoginPage.open();
 //        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
-        MainPage mainPage = myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
 
     }
@@ -42,7 +42,7 @@ public class LoginToApp {
         MyLoginPage myLoginPage = new MyLoginPage(driver);
         myLoginPage.open();
 //        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
-        myLoginPage.loginToApp("oleksiy564@gmail.com", "wrong");
+        myLoginPage.loginToApp(userName, "wrong");
         Assert.assertTrue(myLoginPage.isError());
 
     }

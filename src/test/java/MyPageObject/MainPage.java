@@ -5,13 +5,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MainPage {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+public class MainPage extends BasePage{
+//    MainPage extends BasePage <- добавили
+//    переместили в BasePage И сделали protected,видны везде:
+//    private WebDriver driver;
+//    private Wait<WebDriver> wait;
 
     public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10, 200);
+//        this.driver = driver;
+//        wait = new WebDriverWait(driver, 10, 200); <-- in BasePage
+        super(driver);
     }
 
     private WebElement getPlusButton(){
@@ -49,4 +52,27 @@ public class MainPage {
         return driver.getCurrentUrl().split("/")[5];
     }
 
+    public boolean checkPlaylist(String playListId, String playListNameFull) {
+//        Add scroll page here too
+//
+        By playlistBy = By.xpath("//*[@href='#!/playlist/" + playListId + "']");
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
+            String name = driver.findElement(playlistBy).getText();
+//            return name == playListNameFull; нельзя сравнивать два стринга в java
+            return name.equals(playListNameFull);
+        } catch (TimeoutException c) {
+            return false;
+        }
+    }
+
+    public void renamePlaylist(String playListId, String newPlayListName) {
+//        scroll page
+//        By.xpath("//*[@href='#!/playlist/" + playListId + "']");
+//        js.executeScript("arguments[0].scrollIntoView();", Element);
+//        https://www.guru99.com/scroll-up-down-selenium-webdriver.html
+//        double click or right-click
+//        Cmd-A выделить все
+
+    }
 }

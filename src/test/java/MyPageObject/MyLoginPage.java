@@ -8,13 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MyLoginPage {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+public class MyLoginPage extends BasePage{
+//    private WebDriver driver;
+//    private Wait<WebDriver> wait;
 
     public MyLoginPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10, 200);
+//        this.driver = driver;
+//        wait = new WebDriverWait(driver, 10, 200);
+        super(driver);
     }
     public WebElement getEmailField(){
         //        return driver.findElement(By.xpath("//*[@type='email']"));
