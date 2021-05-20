@@ -3,17 +3,11 @@ package pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.JavascriptExecutor;
-
-import javax.swing.text.Element;
 
 public class MainPage extends BasePage{
-    private boolean selected;
-
     public MainPage(WebDriver driver) {
         super(driver);
     }
-
     private WebElement getPlusButton(){
         By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
         wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
@@ -22,7 +16,7 @@ public class MainPage extends BasePage{
     private WebElement getNewPlaylistItem(){
         return driver.findElement(By.xpath("//*[text()='New Playlist']"));
     }
-    private WebElement getEditPlaylistField(){
+    private WebElement getCreatePlaylistField(){
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
 
@@ -39,21 +33,23 @@ public class MainPage extends BasePage{
         String playlistId = "";
         getPlusButton().click();
         getNewPlaylistItem().click();
-        getEditPlaylistField().sendKeys(playlistName);
-        getEditPlaylistField().sendKeys(Keys.RETURN);
+        getCreatePlaylistField().sendKeys(playlistName);
+        getCreatePlaylistField().sendKeys(Keys.RETURN);
         By successBy = By.xpath("//*[@class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
         return driver.getCurrentUrl().split("/")[5];
     }
+    private By getPlaylistBy(String playlistId){
+        return By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
+    }
 
     public boolean checkPlaylist(String playlistId, String playlistName) {
-        By playlistBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement Element = driver.findElement(playlistBy);
-        js.executeScript("arguments[0].scrollIntoView();", Element);
-        // Add scroll here too
 
         try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            By playlistBy = getPlaylistBy(playlistId);
+            WebElement playlist = driver.findElement(playlistBy);
+            js.executeScript("arguments[0].scrollIntoView();", playlist);
             wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
             String name = driver.findElement(playlistBy).getText();
             return name.equals(playlistName); // name == playlistName
@@ -63,26 +59,23 @@ public class MainPage extends BasePage{
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
-        By playlistBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement Element = driver.findElement(playlistBy);
-            js.executeScript("arguments[0].scrollIntoView();", Element);
-            Element.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        By playlistBy = getPlaylistBy(playlistId);
+        WebElement playlist = driver.findElement(playlistBy);
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
+
         Actions actions = new Actions(driver);
-        WebElement elementLocator = Element;
-        actions.doubleClick(elementLocator).perform();
-        elementLocator.sendKeys("tatatatat");
+        actions.doubleClick(playlist).perform();
 
-
-
-
-
-
-        }
-        // Scroll
-        // By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
-        // https://www.guru99.com/scroll-up-down-selenium-webdriver.html
-        // double click or right-click
-        // Ctrl-A     Cmd-A
+        WebElement editingField = getEditPlaylistField();
+        editingField.sendKeys(Keys.CONTROL+"A");
+        editingField.sendKeys(newPlaylistName);
+        editingField.sendKeys(Keys.RETURN);
     }
 
+    private WebElement getEditPlaylistField() {
+        By editBy = By.xpath("//*[@type='text']");
+        wait.until(ExpectedConditions.elementToBeClickable(editBy));
+        return driver.findElement(editBy);
+    }
+}
