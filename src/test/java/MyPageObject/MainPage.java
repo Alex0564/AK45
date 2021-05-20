@@ -45,9 +45,8 @@ public class MainPage {
         getEditPlayListField().sendKeys(Keys.RETURN);
         By greenBy = By.xpath("//*[@class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(greenBy));
-        System.out.println(driver.getCurrentUrl());
-
-        return playListId;
+//        String url = driver.getCurrentUrl();
+        return driver.getCurrentUrl().split("/")[5];
     }
 
 }

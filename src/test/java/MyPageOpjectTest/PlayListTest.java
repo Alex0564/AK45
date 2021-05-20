@@ -33,7 +33,10 @@ public class PlayListTest {
         MyLoginPage myLoginPage = new MyLoginPage(driver);
         myLoginPage.open();
         MainPage mainPage = myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
-        mainPage.createdPlayList("Alex "+playListName);
+        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListNameFull);
+        System.out.println("Playlist " + playListNameFull + " has ID "+ playListId);
+
 
     }
 }
