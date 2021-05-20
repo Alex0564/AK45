@@ -18,7 +18,7 @@ public class KoelLogin {
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
         WebElement loginButton = driver.findElement(By.tagName("button"));
 
-        email.sendKeys("koeluser06@testpro.io");
+        email.sendKeys("academic198405@gmail.com");
         password.sendKeys("te$t$tudent");
         loginButton.click();
 
@@ -39,7 +39,7 @@ public class KoelLogin {
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
         WebElement loginButton = driver.findElement(By.tagName("button"));
 
-        email.sendKeys("koeluser06@testpro.io");
+        email.sendKeys("academic198405@gmail.com");
         password.sendKeys("wrongPassword");
         loginButton.click();
 
