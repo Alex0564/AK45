@@ -33,7 +33,7 @@ public class PlayListTest {
         MyLoginPage myLoginPage = new MyLoginPage(driver);
         myLoginPage.open();
         MainPage mainPage = myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
-        mainPage.createdPlayList(playListName);
+        mainPage.createdPlayList("Alex "+playListName);
 
     }
 }
