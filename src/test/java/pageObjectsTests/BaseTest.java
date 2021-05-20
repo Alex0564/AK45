@@ -11,8 +11,8 @@ public class BaseTest {
     protected String password;
     @BeforeMethod
     public void startUp() {
-        username = "";
-        password = "";
+        username = "koeluser06@testpro.io";
+        password = "te$t$tudent";
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
     }

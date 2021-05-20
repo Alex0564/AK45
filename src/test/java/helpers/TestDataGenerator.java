@@ -6,6 +6,6 @@ public class TestDataGenerator {
     public static String getString(int length){
         boolean useLetters = true;
         boolean useNumbers = false;
-        return RandomStringUtils.random(length, useLetters, useLetters);
+        return RandomStringUtils.random(length, useLetters, useNumbers);
     }
 }
