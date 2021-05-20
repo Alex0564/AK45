@@ -57,9 +57,11 @@ public class PlayListTest extends BaseTest{
         MainPage mainPage = myLoginPage.loginToApp(userName, password);
 //        String playListNameFull  = "Alex "+playListName;
         String playListId = mainPage.createdPlayList(playListName);
-        System.out.println("Playlist " + playListName + " has ID "+ playListId);
+//        System.out.println("Playlist " + playListName + " has ID "+ playListId);
 
         String newPlayListName = faker.aviation().aircraft();
+
+//        System.out.println("New Play list: "+ newPlayListName);
         mainPage.renamePlaylist(playListId,newPlayListName );
 
         Assert.assertTrue(mainPage.checkPlaylist(playListId,newPlayListName));

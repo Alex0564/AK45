@@ -1,9 +1,9 @@
 package MyPageObject;
 
+import lesson10.ElectricalDevice;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage extends BasePage{
 //    MainPage extends BasePage <- добавили
@@ -27,7 +27,7 @@ public class MainPage extends BasePage{
         return driver.findElement(By.xpath("//*[text()='New Playlist']"));
     }
 
-    private WebElement getEditPlayListField(){
+    private WebElement getCreatePlayListField(){
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
 
@@ -44,19 +44,28 @@ public class MainPage extends BasePage{
         String playListId = "";
         getPlusButton().click();
         getNewPlayListItem().click();
-        getEditPlayListField().sendKeys(playListName);
-        getEditPlayListField().sendKeys(Keys.RETURN);
+        getCreatePlayListField().sendKeys(playListName);
+        getCreatePlayListField().sendKeys(Keys.RETURN);
         By greenBy = By.xpath("//*[@class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(greenBy));
 //        String url = driver.getCurrentUrl();
         return driver.getCurrentUrl().split("/")[5];
     }
 
+    private By getPlaylistBy(String playListId){
+        return By.xpath("//*[@href='#!/playlist/" + playListId + "']");
+
+    }
+
     public boolean checkPlaylist(String playListId, String playListNameFull) {
 //        Add scroll page here too
 //
-        By playlistBy = By.xpath("//*[@href='#!/playlist/" + playListId + "']");
+
         try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            By playlistBy = getPlaylistBy(playListId);
+            WebElement playlist = driver.findElement(playlistBy);
+            js.executeScript("arguments[0].scrollIntoView();", playlist);
             wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
             String name = driver.findElement(playlistBy).getText();
 //            return name == playListNameFull; нельзя сравнивать два стринга в java
@@ -74,5 +83,26 @@ public class MainPage extends BasePage{
 //        double click or right-click
 //        Cmd-A выделить все
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        By playlistBy = getPlaylistBy(playListId);
+        WebElement playlist = driver.findElement(playlistBy);
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
+
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlist).perform();
+
+        WebElement editingField = getEditPlayListField();
+        editingField.sendKeys(Keys.COMMAND+"A");
+        editingField.sendKeys(newPlayListName);
+        editingField.sendKeys(Keys.RETURN);
+//        try {Thread.sleep(5000);
+//        }catch (InterruptedException e){e.printStackTrace();}
+    }
+
+    private WebElement getEditPlayListField() {
+        By nownElement1By = By.xpath("//*[@type='text']");
+//        By nownElement2By = By.xpath("//*[@href='#!/playlist/"+playListId+"']/following-sibling::input");
+        wait.until(ExpectedConditions.elementToBeClickable(nownElement1By));
+        return driver.findElement(nownElement1By);
     }
 }
