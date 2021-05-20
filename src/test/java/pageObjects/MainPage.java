@@ -16,7 +16,7 @@ public class MainPage extends BasePage{
     private WebElement getNewPlaylistItem(){
         return driver.findElement(By.xpath("//*[text()='New Playlist']"));
     }
-    private WebElement getEditPlaylistField(){
+    private WebElement getCreatePlaylistField(){
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
 
@@ -33,17 +33,23 @@ public class MainPage extends BasePage{
         String playlistId = "";
         getPlusButton().click();
         getNewPlaylistItem().click();
-        getEditPlaylistField().sendKeys(playlistName);
-        getEditPlaylistField().sendKeys(Keys.RETURN);
+        getCreatePlaylistField().sendKeys(playlistName);
+        getCreatePlaylistField().sendKeys(Keys.RETURN);
         By successBy = By.xpath("//*[@class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
         return driver.getCurrentUrl().split("/")[5];
     }
+    private By getPlaylistBy(String playlistId){
+        return By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
+    }
 
     public boolean checkPlaylist(String playlistId, String playlistName) {
-        // Add scroll here too
-        By playlistBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
+
         try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            By playlistBy = getPlaylistBy(playlistId);
+            WebElement playlist = driver.findElement(playlistBy);
+            js.executeScript("arguments[0].scrollIntoView();", playlist);
             wait.until(ExpectedConditions.visibilityOfElementLocated(playlistBy));
             String name = driver.findElement(playlistBy).getText();
             return name.equals(playlistName); // name == playlistName
@@ -52,42 +58,24 @@ public class MainPage extends BasePage{
         }
     }
 
-    public void renamePlaylist(String playlistId, String newPlaylistName) throws InterruptedException {
-
+    public void renamePlaylist(String playlistId, String newPlaylistName) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        By playlistNameBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']"); //By.xpath("//*[@href='#!/playlist/3433']");
-        WebElement scrollTo = driver.findElement(playlistNameBy);
-        js.executeScript("arguments[0].scrollIntoView();", scrollTo);
+        By playlistBy = getPlaylistBy(playlistId);
+        WebElement playlist = driver.findElement(playlistBy);
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
 
-//        Actions action = new Actions(driver);
-//        WebElement link = driver.findElement(playlistNameBy);
-//        action.doubleClick(link).perform();
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlist).perform();
 
-        Actions action = new Actions(driver);
-        WebElement link = driver.findElement(playlistNameBy);
-        action.contextClick(link).perform();
-
-//        By editBy = By.xpath("//*[@href='#!/playlist/"+playlistId+"']/following-sibling::nav/ul/li[text()='Edit']");
-        Thread.sleep(3000);
-        By editBy = By.xpath("//*[text() = 'Edit']");
-        WebElement edit = driver.findElement(editBy);
-        edit.click();
-        wait.until(ExpectedConditions.elementToBeSelected(edit));
-        edit.sendKeys(Keys.CONTROL+"A");
-        edit.sendKeys(newPlaylistName);
-
-//        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
-//        link.clear();
-
-//        Thread.sleep(2000);
-//
-//        link.sendKeys("Selenium");
-//        String s = Keys.chord(Keys.CONTROL, "a");
-//        link.sendKeys(s);
-
-
-        Thread.sleep(5000);
-
-    }
+        WebElement editingField = getEditPlaylistField();
+        editingField.sendKeys(Keys.CONTROL+"A");
+        editingField.sendKeys(newPlaylistName);
+        editingField.sendKeys(Keys.RETURN);
     }
 
+    private WebElement getEditPlaylistField() {
+        By editBy = By.xpath("//*[@type='text']");
+        wait.until(ExpectedConditions.elementToBeClickable(editBy));
+        return driver.findElement(editBy);
+    }
+}
