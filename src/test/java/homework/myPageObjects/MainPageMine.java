@@ -1,7 +1,9 @@
 package homework.myPageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.JavascriptExecutor;
 
 
 public class MainPageMine extends BasePageMine {
@@ -58,6 +60,28 @@ public class MainPageMine extends BasePageMine {
         } catch (TimeoutException c) {
             return false;
         }
+    }
 
+    public void renamePlaylist(String playlistId, String newPlaylistName) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement playlistToRename = driver.findElement(By.xpath("//*[@href='#!/playlist/"+playlistId+"']"));
+        js.executeScript("arguments[0].scrollIntoView();", playlistToRename);
+
+        Actions a = new Actions(driver);
+        String selectAll = Keys.chord(Keys.COMMAND+"a");
+        a.doubleClick(playlistToRename).sendKeys(selectAll);
+
+        By inputPlaylistField = By.xpath("//*[@type='text']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(inputPlaylistField));
+        a.moveToElement(driver.findElement(inputPlaylistField)).sendKeys(newPlaylistName).sendKeys(Keys.ENTER);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='success show']")));
+
+
+
+        // Scroll
+        // By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
+        // https://www.guru99.com/scroll-up-down-selenium-webdriver.html
+        // double click or right-click
+        // Ctrl-A     Cmd-A
     }
 }
