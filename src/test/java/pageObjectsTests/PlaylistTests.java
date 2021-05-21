@@ -37,11 +37,6 @@ public class PlaylistTests extends BaseTest{
 
 
 
-
-
-
-
-
         Assert.assertTrue(mainPage.checkPlaylist(playlistId,newPlaylistName));
     }
 }
