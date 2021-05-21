@@ -1,9 +1,6 @@
 package MyPageObject;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,9 +17,25 @@ public class MyLoginPage extends BasePage{
     public WebElement getEmailField(){
         //        return driver.findElement(By.xpath("//*[@type='email']"));
         By emailBy = By.xpath("//*[@type='email']");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
-        return driver.findElement(emailBy);
+        //        кастомный вейтер - то что внутри обычного вейтера
+        for (int i=0; i<10; i++) {
+            try {
+                WebElement email = driver.findElement(emailBy);
+                return email;
+            } catch (NoSuchElementException ee) {
+               try {
+                   Thread.sleep(200);
+               }catch (InterruptedException xx){
+               }
+            }
+        }
+        throw new TimeoutException("No such element");
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
+//        return driver.findElement(emailBy);
     }
+
+
+
     private WebElement getPasswordField(){
         return driver.findElement(By.cssSelector("[type='password']"));
     }
