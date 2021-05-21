@@ -9,13 +9,10 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.MainPage;
 
-public class LoginPageI {
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+public class LoginPageI extends BasePageI{
 
     public LoginPageI(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,200);
+        super(driver);
     }
 
     private WebElement getEmailField(){

@@ -11,30 +11,19 @@ import pageObjects.MainPage;
 import pageObjectsIuliia.LoginPageI;
 import pageObjectsIuliia.MainPageI;
 
-public class LoginToAppI {
-    private WebDriver driver;
-    @BeforeMethod
-    public void starUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-    }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
+public class LoginToAppI extends BaseTestI{
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPageI loginPageI = new LoginPageI(driver);
         loginPageI.open();
-        MainPageI mainPageI = loginPageI.loginToApp("uliyax88@gmail.com","te$t$tudent");
+        MainPageI mainPageI = loginPageI.loginToApp(username, password);
         Assert.assertTrue(mainPageI.isMain());
     }
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.open();
-        loginPage.loginToApp("uliyax88@gmail.com","wrongPassword");
-        Assert.assertTrue(loginPage.isError());
+        LoginPageI loginPageI = new LoginPageI(driver);
+        loginPageI.open();
+        loginPageI.loginToApp(username, "wrongPassword");
+        Assert.assertTrue(loginPageI.isError());
     }
 }
