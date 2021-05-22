@@ -1,10 +1,10 @@
-package pageObjectsTests_old;
+package pageObjectsTests;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects_old.LoginPage;
-import pageObjects_old.MainPage;
+import pageObjects.LoginPage;
+import pageObjects.MainPage;
 
 public class PlaylistTests extends BaseTest{
     @Test
