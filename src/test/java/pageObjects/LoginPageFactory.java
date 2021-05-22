@@ -29,11 +29,11 @@ public class LoginPageFactory {
     @FindBy(className = "error")
     private WebElement error;
 
-    public  void open(String url){
+    public void open(String url){
         driver.get(url);
     }
 
-    public boolean ieErrorFrame() {
+    public boolean isErrorFrame() {
         try {
             return error.isDisplayed();
         } catch (TimeoutException err){

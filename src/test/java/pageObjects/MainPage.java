@@ -79,6 +79,6 @@ public class MainPage extends BasePage {
     private WebElement getEditPlaylistField() {
         By editBy = By.xpath("//*[@type = 'text']");
         wait.until(ExpectedConditions.elementToBeClickable(editBy));
-        return  driver.findElement(By.xpath("//*[@type = 'text']"));
+        return  driver.findElement(editBy);
     }
 }
