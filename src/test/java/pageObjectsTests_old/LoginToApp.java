@@ -1,9 +1,9 @@
-package pageObjectsTests;
+package pageObjectsTests_old;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
+import pageObjects_old.LoginPage;
+import pageObjects_old.MainPage;
 
 public class LoginToApp extends BaseTest {
     @Test

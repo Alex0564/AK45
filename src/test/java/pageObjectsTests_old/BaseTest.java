@@ -1,4 +1,4 @@
-package pageObjectsTests;
+package pageObjectsTests_old;
 
 import enums.BrowserType;
 import helpers.BrowserFactory;

@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_old;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
