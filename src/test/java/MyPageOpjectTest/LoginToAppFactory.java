@@ -40,4 +40,63 @@ public class LoginToAppFactory extends BaseTest{
 
     }
 
+    @Test(enabled = false)
+    public void loginToApp_correctCredentials_successfulLogin1(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        Assert.assertTrue(mainPage.isMainPage());
+
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin1(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        myLoginPage.loginToApp(userName, "wrong");
+        Assert.assertTrue(myLoginPage.isErrorFrame());
+
+    }
+
+    @Test
+    public void loginToApp_correctCredentials_successfulLogin2(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        Assert.assertTrue(mainPage.isMainPage());
+
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin2(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        myLoginPage.loginToApp(userName, "wrong");
+        Assert.assertTrue(myLoginPage.isErrorFrame());
+
+    }
+
+    @Test
+    public void loginToApp_correctCredentials_successfulLogin3(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        Assert.assertTrue(mainPage.isMainPage());
+
+    }
+    @Test
+    public void loginToApp_incorrectCredentials_failedLogin3(){
+        LoginPageFactory myLoginPage = new LoginPageFactory(driver);
+        myLoginPage.open("https://bbb.testpro.io/");
+//        myLoginPage.loginToApp("oleksiy564@gmail.com", "te$t$tudent");
+        myLoginPage.loginToApp(userName, "wrong");
+        Assert.assertTrue(myLoginPage.isErrorFrame());
+
+    }
+
+
+
 }

@@ -66,4 +66,124 @@ public class PlayListTest extends BaseTest{
 
         Assert.assertTrue(mainPage.checkPlaylist(playListId,newPlayListName));
     }
+
+    @Test
+    public void playListTests_createPlayList_playListCreated1(){
+        Faker faker = new Faker();
+        String playListNameFake = faker.funnyName().name();
+        System.out.println(playListNameFake);
+
+        String playListName = TestDataGenerator.getString(7);
+        System.out.println(playListName);
+
+        playListName = playListNameFake;
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListNameFull);
+        System.out.println("Playlist " + playListNameFull + " has ID "+ playListId);
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,playListNameFull));
+    }
+
+    @Test
+    public void playListTests_renamePlayList_playListRenamed1(){
+        Faker faker = new Faker();
+        String playListName = faker.funnyName().name();
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+//        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListName);
+//        System.out.println("Playlist " + playListName + " has ID "+ playListId);
+
+        String newPlayListName = faker.aviation().aircraft();
+
+//        System.out.println("New Play list: "+ newPlayListName);
+        mainPage.renamePlaylist(playListId,newPlayListName );
+
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,newPlayListName));
+    }
+
+    @Test
+    public void playListTests_createPlayList_playListCreated2(){
+        Faker faker = new Faker();
+        String playListNameFake = faker.funnyName().name();
+        System.out.println(playListNameFake);
+
+        String playListName = TestDataGenerator.getString(7);
+        System.out.println(playListName);
+
+        playListName = playListNameFake;
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListNameFull);
+        System.out.println("Playlist " + playListNameFull + " has ID "+ playListId);
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,playListNameFull));
+    }
+
+    @Test
+    public void playListTests_renamePlayList_playListRenamed2(){
+        Faker faker = new Faker();
+        String playListName = faker.funnyName().name();
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+//        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListName);
+//        System.out.println("Playlist " + playListName + " has ID "+ playListId);
+
+        String newPlayListName = faker.aviation().aircraft();
+
+//        System.out.println("New Play list: "+ newPlayListName);
+        mainPage.renamePlaylist(playListId,newPlayListName );
+
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,newPlayListName));
+    }
+
+    @Test
+    public void playListTests_createPlayList_playListCreated3(){
+        Faker faker = new Faker();
+        String playListNameFake = faker.funnyName().name();
+        System.out.println(playListNameFake);
+
+        String playListName = TestDataGenerator.getString(7);
+        System.out.println(playListName);
+
+        playListName = playListNameFake;
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListNameFull);
+        System.out.println("Playlist " + playListNameFull + " has ID "+ playListId);
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,playListNameFull));
+    }
+
+    @Test
+    public void playListTests_renamePlayList_playListRenamed3M(){
+        Faker faker = new Faker();
+        String playListName = faker.funnyName().name();
+
+        MyLoginPage myLoginPage = new MyLoginPage(driver);
+        myLoginPage.open();
+        MainPage mainPage = myLoginPage.loginToApp(userName, password);
+//        String playListNameFull  = "Alex "+playListName;
+        String playListId = mainPage.createdPlayList(playListName);
+//        System.out.println("Playlist " + playListName + " has ID "+ playListId);
+
+        String newPlayListName = faker.aviation().aircraft();
+
+//        System.out.println("New Play list: "+ newPlayListName);
+        mainPage.renamePlaylist(playListId,newPlayListName );
+
+        Assert.assertTrue(mainPage.checkPlaylist(playListId,newPlayListName));
+    }
 }
