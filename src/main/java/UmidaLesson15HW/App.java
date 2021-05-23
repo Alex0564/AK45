@@ -42,11 +42,7 @@ public class App {
 
         System.out.println("-Hospital Info:");
         Hospital hospital = new Hospital("StAnneChildren",address,docs,rooms,acceptedInsurances);
-        System.out.println(hospital.getHospitalName());
-        System.out.println(hospital.getAddress().getStreetAddress());
-        System.out.println(hospital.getAddress().getTown());
-        System.out.println(hospital.getAddress().getState());
-        System.out.println(hospital.getAddress().getZip());
+        System.out.println(hospital.toString());
 
         System.out.println("---------------------");
         System.out.println("-Doctors Info:");
@@ -55,15 +51,12 @@ public class App {
 
         System.out.println("----------------------");
         System.out.println("-Rooms Info:");
-        for(Map.Entry<Integer,String>entry: rooms.entrySet())
-        System.out.println(entry.getValue()+" room # is "+entry.getKey());
+        hospital.printInfoHospital();
+
+
+
 
         System.out.println("---------------");
         System.out.println("the end");
-
-
-
-
-
     }
 }

@@ -58,5 +58,17 @@ public class Hospital {
     public void setAcceptedInsurances(List<InsuranceCompanies> acceptedInsurances) {
         this.acceptedInsurances = acceptedInsurances;
     }
-    public void printInfoHospital(){}
+    public void printInfoHospital(){
+        for(Map.Entry<Integer,String>entry: rooms.entrySet())
+            System.out.println(entry.getValue()+" room # is "+entry.getKey());
+    }
+
+    @Override
+    public String toString() {
+        return "hospitalName: '" + hospitalName + '\'' +
+                "\nAddress: " + address +
+                "\nDoctors: " + doctors +
+                "\nRooms: " + rooms +
+                "\nAcceptedInsurances: " + acceptedInsurances;
+    }
 }

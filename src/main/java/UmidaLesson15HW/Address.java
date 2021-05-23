@@ -44,4 +44,13 @@ public class Address {
     public void setZip(int zip) {
         this.zip = zip;
     }
+
+    @Override
+    public String toString() {
+        return "streetAddress='" + streetAddress + '\'' +
+                ", town='" + town + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                '}';
+    }
 }

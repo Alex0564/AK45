@@ -37,4 +37,12 @@ public class Doctor {
     public void printDoctors() {
         System.out.println(position + " " + name + " " + lastName);
     }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position=" + position +
+                '}';
+    }
 }
