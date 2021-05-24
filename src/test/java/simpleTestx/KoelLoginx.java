@@ -1,10 +1,9 @@
-package simpleTest;
+package simpleTestx;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,13 +13,13 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class KoelLogin {
+public class KoelLoginx {
     private WebDriver driver;
-    private Wait<WebDriver> wait;
-    private Wait<WebDriver> fluentWait;
+    private WebDriverWait wait;//private Wait<WebDriver> wait;
+    private FluentWait<WebDriver> fluentWait;//private Wait<WebDriver> fluentWait;
 
     @BeforeMethod
-    public void starUp() {
+    public void startUp(){
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver,5,200);
@@ -33,75 +32,92 @@ public class KoelLogin {
                 .ignoring(StaleElementReferenceException.class);
 
 
-//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://bbb.testpro.io/");
+
     }
+
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
     }
+
     @Test
     public void loginToKoel_correctCredentials() {
         By emailBy = By.xpath("//*[@type='email']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
         WebElement email = driver.findElement(emailBy);
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
-        WebElement loginButton = driver.findElement(By.tagName("button"));
+        WebElement login = driver.findElement(By.tagName("button"));
 
         email.sendKeys("koeluser06@testpro.io");
         password.sendKeys("te$t$tudent");
-        loginButton.click();
+        login.click();
 
 
         By homeBy = By.cssSelector(".home");
         wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
         WebElement home = driver.findElement(homeBy); //*[@class = 'home active']
         Assert.assertTrue(home.isDisplayed());
+
+
     }
+
     @Test
-    public void loginToKoel_incorrectCredentials() {
+    public void loginToKoel_incorrectCredentials()  {
         By emailBy = By.xpath("//*[@type='email']");
         fluentWait.until(x->x.findElement(emailBy).isDisplayed());
 
-        WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
+        WebElement email = driver.findElement(emailBy);
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
-        WebElement loginButton = driver.findElement(By.tagName("button"));
+        WebElement login = driver.findElement(By.tagName("button"));
 
         email.sendKeys("koeluser06@testpro.io");
         password.sendKeys("wrongPassword");
-        loginButton.click();
+        login.click();
+
+
 
         By errorBy = By.cssSelector(".error");
         fluentWait.until(x->x.findElement(errorBy).isDisplayed());
-        WebElement home = driver.findElement(errorBy); //*[@class = 'home active']
-        Assert.assertTrue(home.isDisplayed());
+        WebElement wrongLoginForm = driver.findElement(errorBy); //*[@class = 'home active']
+        Assert.assertTrue(wrongLoginForm.isDisplayed());
+
     }
+
     @Test
     public void loginToKoel_createPlaylist() {
         By emailBy = By.xpath("//*[@type='email']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
         WebElement email = driver.findElement(emailBy);
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
-        WebElement loginButton = driver.findElement(By.tagName("button"));
+        WebElement login = driver.findElement(By.tagName("button"));
 
         email.sendKeys("koeluser06@testpro.io");
         password.sendKeys("te$t$tudent");
-        loginButton.click();
+        login.click();
 
-        By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
-        wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
-        WebElement plusButton = driver.findElement(plusButtonBy);
-        plusButton.click();
-        WebElement newPlaylist = driver.findElement(By.xpath("//*[text()='New Playlist']"));
-        newPlaylist.click();
-        WebElement textField = driver.findElement(By.xpath("//*[@class='create']/input"));
-        textField.sendKeys("XXXX");
-        textField.sendKeys(Keys.RETURN);
-        By successBy = By.xpath("//*[@class='success show']");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
+        By plus_by_button = By.xpath("//*[@class='fa fa-plus-circle control create']");
+        wait.until(ExpectedConditions.elementToBeClickable(plus_by_button));
+        WebElement plus_button = driver.findElement(plus_by_button);
+        plus_button.click();
 
-        WebElement green = driver.findElement(successBy);
+
+        WebElement New_Playlist = driver.findElement(By.xpath("//*[text()='New Playlist']"));
+        New_Playlist.click();
+
+
+        WebElement Text_Field = driver.findElement(By.xpath("//*[@class='create']/input"));
+        Text_Field.sendKeys("XXXX");
+        Text_Field.sendKeys(Keys.RETURN);
+
+
+        By greenBy = By.xpath("//*[@class='success show']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(greenBy));
+        WebElement green = driver.findElement(greenBy);
         Assert.assertTrue(green.isDisplayed());
+
+
     }
 }
