@@ -1,22 +1,24 @@
 package pageObjectsTestsIuliia;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageObjectsIuliia.LoginPageFactoryI;
 import pageObjectsIuliia.LoginPageI;
 import pageObjectsIuliia.MainPageI;
 
-public class LoginToAppI extends BaseTestI{
+public class LoginToAppFactoryI extends BaseTestI{
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
-        LoginPageI loginPageI = new LoginPageI(driver);
-        loginPageI.open();
+        LoginPageFactoryI loginPageI = new LoginPageFactoryI(driver);
+        loginPageI.open("https://bbb.testpro.io/");
         MainPageI mainPageI = loginPageI.loginToApp(username, password);
         Assert.assertTrue(mainPageI.isMain());
     }
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
-        LoginPageI loginPageI = new LoginPageI(driver);
-        loginPageI.open();
+        LoginPageFactoryI loginPageI = new LoginPageFactoryI(driver);
+        loginPageI.open("https://bbb.testpro.io/");
         loginPageI.loginToApp(username, "wrongPassword");
-        Assert.assertTrue(loginPageI.isError());
+        Assert.assertTrue(loginPageI.isErrorFrame());
     }
 }
