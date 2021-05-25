@@ -3,6 +3,9 @@
     <parameter name="username" value="koeluser06@testpro.io"/>
     <parameter name="password" value="te$t$tudent"/>
     <parameter name="browser" value="chrome"/>
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
     <test name="Main tests">
         <classes>
             <class name="pageObjectsTests.LoginToAppFactory">
