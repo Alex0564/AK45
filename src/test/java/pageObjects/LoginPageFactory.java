@@ -26,11 +26,18 @@ public class LoginPageFactory {
     @FindBy(tagName = "Button")
     private WebElement loginButton;
 
-    @FindBy(className = "error")
+    @FindBy(xpath = "//*[@data-cy='loginForm']")//className = "error")
     private WebElement error;
 
     public void open(String url){
         driver.get(url);
+    }
+
+    public MainPage loginToApp(String username, String password) {
+        email.sendKeys(username);
+        this.password.sendKeys(password);
+        loginButton.click();
+        return new MainPage(driver);
     }
 
     public boolean isErrorFrame() {
@@ -39,11 +46,6 @@ public class LoginPageFactory {
         } catch (TimeoutException err){
             return false;
         }
-    }
-    public MainPage loginToApp(String username, String password) {
-        email.sendKeys(username);
-        this.password.sendKeys(password);
-        loginButton.click();
-        return new MainPage(driver);
+
     }
 }

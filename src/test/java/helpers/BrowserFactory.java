@@ -1,7 +1,7 @@
 package helpers;
 
 import enums.BrowserType;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,7 +24,7 @@ public class BrowserFactory {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1400,1000");
         options.addArguments("--headless");
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         return new ChromeDriver(options);
     }
 
@@ -33,17 +33,17 @@ public class BrowserFactory {
         options.addArguments("weight=1400");
         options.addArguments("heigh=1000");
         options.addArguments("--headless");
-        WebDriverManager.firefoxdriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver(options);
     }
 
     private static WebDriver getOperaDriver() {
-        WebDriverManager.operadriver().setup();
+//        WebDriverManager.operadriver().setup();
         return new OperaDriver();
     }
 
     private static WebDriver getEdgeDriver() {
-        WebDriverManager.edgedriver().setup();
+//        WebDriverManager.edgedriver().setup();
         return new EdgeDriver();
     }
 }

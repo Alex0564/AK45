@@ -4,17 +4,37 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.logging.LogManager;
+
 public class MainPage extends BasePage {
+//    private static Logger logger = LogManager.getLogger(MainPage.class);
     public MainPage(WebDriver driver) {
         super(driver);
     }
 
+//    private WebElement getPlusButton(){
+//        By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
+//        wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
+//        return driver.findElement(plusButtonBy);
+//    }
     private WebElement getPlusButton(){
-        By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
-        wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
-        return driver.findElement(plusButtonBy);
+        By plusButtonBy = By.className("fa fa-plus-circle control create");//By.xpath("//*[@class='fa fa-plus-circle control create']");
+        for (int i = 0; i<10; i++){
+            try {
+                WebElement button = driver.findElement(plusButtonBy);
+                return button;
+            } catch (NoSuchElementException ee){
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException xx){}
+            }
+        }
+        throw new TimeoutException("No such element found "+plusButtonBy);
     }
-    private WebElement getNewPlaylistItem() {return driver.findElement(By.xpath("//*[text()='New Playlist']"));}
+
+    private WebElement getNewPlaylistItem() {
+        return driver.findElement(By.xpath("//*[text()='New Playlist']"));
+    }
 
     private WebElement getCreatePlaylistField() {
         return driver.findElement(By.xpath("//*[@class='create']/input"));
@@ -31,14 +51,15 @@ public class MainPage extends BasePage {
     }
 
     public String createPlaylist(String playlistName) {
-        String playlistId = "";
+//        logger.debug("Create Playlist with name ->"+playlistName);
+//        String playlistId = "";
         getPlusButton().click();
         getNewPlaylistItem().click();
         getCreatePlaylistField().sendKeys(playlistName);
         getCreatePlaylistField().sendKeys(Keys.RETURN);
         By successBy = By.xpath("//*[@class='success show']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(successBy));
-        String url = driver.getCurrentUrl();
+//        String url = driver.getCurrentUrl();
         return  driver.getCurrentUrl().split("/")[5];
     }
 
@@ -62,6 +83,8 @@ public class MainPage extends BasePage {
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
+//        logger.debug("Updating playlist di "+playlistId);
+//        logger.debug("New playlist name ="+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
         WebElement playlist = driver.findElement(playlistBy);

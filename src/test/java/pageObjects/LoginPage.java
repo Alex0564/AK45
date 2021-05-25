@@ -4,8 +4,20 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
+
     public LoginPage(WebDriver driver) {
         super(driver);
+    }
+
+    public void open(){
+        driver.get("https://bbb.testpro.io");
+    }
+
+    public MainPage loginToApp(String username, String password){
+        getEmailField().sendKeys(username);
+        getPasswordField().sendKeys(password);
+        getLoginButton().click();
+        return new MainPage(driver);
     }
 
 //    private WebElement getEmailField(){
@@ -28,25 +40,17 @@ public class LoginPage extends BasePage{
         }
         throw new TimeoutException("No such element");
     }
-    private WebElement getPasswordField(){
 
+    private WebElement getPasswordField(){
         return driver.findElement(By.xpath("//*[@type='password']"));
     }
-    private WebElement getLoginButton(){
 
+    private WebElement getLoginButton(){
         return driver.findElement(By.tagName("button"));
     }
-    public MainPage loginToApp(String username, String password){
-        getEmailField().sendKeys(username);
-        getPasswordField().sendKeys(password);
-        getLoginButton().click();
-        return  new MainPage(driver);
-    }
-    public void open(){
-        driver.get("https://bbb.testpro.io");
-    }
+
     public boolean isError(){
-        By errorBy = By.className("error");
+        By errorBy = By.xpath("//*[@data-cy='loginForm']");//("error");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(errorBy));
             return true;
