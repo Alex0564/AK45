@@ -12,7 +12,6 @@ public class PlaylistTests extends BaseTest{
         Faker faker = new Faker();
 //        String playlistName = TestDataGenerator.getString(7);
         String playlistName = faker.funnyName().name();
-        System.out.println(playlistName);
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -25,7 +24,6 @@ public class PlaylistTests extends BaseTest{
     public void playlistTests_renamePlaylist_playlistRenamed(){
         Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
-        System.out.println(playlistName);
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
