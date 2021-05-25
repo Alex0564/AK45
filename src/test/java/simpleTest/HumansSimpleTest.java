@@ -131,11 +131,11 @@ public class HumansSimpleTest {
         Actions action = new Actions(driver);
         action.moveToElement(humburger);
         action.perform();
-       Thread.sleep(1000);
+//       Thread.sleep(1000);
 
     By aboutBy = By.xpath("//*[@href='/about-us']");
     driver.findElement(aboutBy).click();
-    Thread.sleep(1000);
+//    Thread.sleep(1000);
 
     By playBy = By.xpath("//*[contains(@src, 'PHN2ZyB3aWR0aD0iODAiIGhl')]");
     driver.findElement(playBy).click();
@@ -143,11 +143,12 @@ public class HumansSimpleTest {
     By videoBy = By.xpath("//*[@class='video-react-video']");
     WebElement video = driver.findElement(videoBy);
     Assert.assertTrue(video.isDisplayed());
-    Thread.sleep(1000);
+//    Thread.sleep(1000);
 
     By offBy = By.xpath("//*[@class='modal__close-btn-full']");
     driver.findElement(offBy).click();
-    By humansBy = By.xpath("//*[@class=\"y-0w\"]");
+
+    By humansBy = By.xpath("//*[@class='y-0w']");
     WebElement humans = driver.findElement(humansBy);
     Assert.assertTrue(humans.isDisplayed());
 //    Thread.sleep(5000);
