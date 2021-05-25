@@ -1,10 +1,13 @@
 package pageObjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
+    private static Logger logger = LogManager.getLogger(MainPage.class);
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -26,12 +29,15 @@ public class MainPage extends BasePage{
             wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
             return true;
         } catch (TimeoutException xx){
+            logger.fatal("Wrong page");
             return false;
         }
     }
     public String createPlaylist(String playlistName){
-        String playlistId = "";
+        logger.trace("in create playlist method");
+        logger.info("Create Playlist with name -> "+playlistName);
         getPlusButton().click();
+        logger.trace("plus button clicked");
         getNewPlaylistItem().click();
         getCreatePlaylistField().sendKeys(playlistName);
         getCreatePlaylistField().sendKeys(Keys.RETURN);
@@ -44,7 +50,6 @@ public class MainPage extends BasePage{
     }
 
     public boolean checkPlaylist(String playlistId, String playlistName) {
-
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             By playlistBy = getPlaylistBy(playlistId);
@@ -57,8 +62,9 @@ public class MainPage extends BasePage{
             return false;
         }
     }
-
     public void renamePlaylist(String playlistId, String newPlaylistName) {
+        logger.debug("Updating playlist id "+playlistId);
+        logger.debug("New playlist name = "+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
         WebElement playlist = driver.findElement(playlistBy);
