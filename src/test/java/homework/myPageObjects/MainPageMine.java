@@ -68,20 +68,18 @@ public class MainPageMine extends BasePageMine {
         js.executeScript("arguments[0].scrollIntoView();", playlistToRename);
 
         Actions a = new Actions(driver);
-        String selectAll = Keys.chord(Keys.COMMAND+"a");
-        a.doubleClick(playlistToRename).sendKeys(selectAll);
+        a.doubleClick(playlistToRename).perform();
 
-        By inputPlaylistField = By.xpath("//*[@type='text']");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(inputPlaylistField));
-        a.moveToElement(driver.findElement(inputPlaylistField)).sendKeys(newPlaylistName).sendKeys(Keys.ENTER);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='success show']")));
+        WebElement editingField = getEditPlaylistField();
+        editingField.sendKeys(Keys.COMMAND+"A");
+        editingField.sendKeys(newPlaylistName);
+        editingField.sendKeys(Keys.RETURN);
 
-
-
-        // Scroll
-        // By.xpath("//*[@href='#!/playlist/"+playlistId+"']");
-        // https://www.guru99.com/scroll-up-down-selenium-webdriver.html
-        // double click or right-click
-        // Ctrl-A     Cmd-A
     }
+    private WebElement getEditPlaylistField() {
+        By editBy = By.xpath("//*[@type='text']");
+        wait.until(ExpectedConditions.elementToBeClickable(editBy));
+        return driver.findElement(editBy);
+    }
+
 }
