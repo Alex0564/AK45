@@ -1,21 +1,27 @@
 package pageObjectsTestsVK77;
 
+import enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import helpers.BrowserFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+
 
 public class BaseTest {
     protected WebDriver driver;
     protected String username;
     protected String password;
+    @Parameters({"username","password","browser"})
 
     @BeforeMethod
-    public void starUp() {
-        username="koeluser06@testpro.io";
-        password="te$t$tudent";
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
+    public void starUp(String email, String password, String browser) {
+
+        username=email;
+        this.password=password;
+        BrowserType browserType = browser.equals("chrome")?BrowserType.CHROME: BrowserType.FIREFOX;
+        driver=BrowserFactory.getDriver(browserType);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {

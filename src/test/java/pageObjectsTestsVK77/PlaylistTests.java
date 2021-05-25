@@ -42,5 +42,12 @@ public class PlaylistTests extends BaseTest{
         mainPage.renamePlaylist(playlistId,newPlaylistName);
         Assert.assertTrue(mainPage.checkPlaylist(playlistId,newPlaylistName+"(renamedByValeriy)"));
     }
+    @Test
+    public void playlistATests_deleteAllPlaylists_playlistDeleted(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username,password);
+        mainPage.deleteAllPlaylists();
+    }
 
 }
