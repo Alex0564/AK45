@@ -44,6 +44,11 @@ public class HumansSimpleTest {
         WebElement logIn = driver.findElement(logInBy);
         logIn.click();
 
+        By isLoginBy = By.xpath("//*[text()='Forgot your password?']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(isLoginBy));
+        WebElement isLogin = driver.findElement(isLoginBy);
+        Assert.assertTrue(isLogin.isDisplayed());
+
 //        By emailBy = By.xpath("//*[@class='form-input__area form-input__area--with-valid-icon phone-email-field-input--single phone-email-field-input']");
         By emailBy = By.xpath("//*[@type='text']");
         Thread.sleep(1000);
