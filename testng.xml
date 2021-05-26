@@ -22,6 +22,7 @@
             </class>
             <class name="pageObjectsTests.LoginToApp">
                 <methods>
+                    <include name="flakyTest"/>
                     <include name="loginToApp_correctCredentials_successfulLogin"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin"/>
                     <include name="loginToApp_correctCredentials_successfulLogin1"/>
