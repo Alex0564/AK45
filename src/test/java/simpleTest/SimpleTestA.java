@@ -1,3 +1,5 @@
+package simpleTest;
+
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -7,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class simpleTestA {
+public class SimpleTestA {
     @Test
     public void udemySearch() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
