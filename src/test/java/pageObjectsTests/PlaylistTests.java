@@ -16,7 +16,6 @@ public class PlaylistTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         MainPage mainPage = loginPage.loginToApp(username, password);
-        System.out.println("login ok");
         String playlistId = mainPage.createPlaylist(playlistName);
 
         Assert.assertTrue(mainPage.checkPlaylist(playlistId,playlistName));

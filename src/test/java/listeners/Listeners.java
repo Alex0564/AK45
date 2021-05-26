@@ -1,26 +1,29 @@
 package listeners;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+
 
 public class Listeners implements ITestListener {
-//    private static Logger logger = LogManager.getLogManager(Listeners.class);
+    private static Logger logger = (Logger) LogManager.getLogger(Listeners.class);
     @Override
     public void onTestStart(ITestResult iTestResult) {
-//        logger.info(iTestResult.getName()+" started");
+        logger.info(iTestResult.getName()+" started ============================");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        System.out.println(iTestResult.getName() + " finished");
 
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        System.out.println(iTestResult.getName() + " Fatal error");
 
     }
 

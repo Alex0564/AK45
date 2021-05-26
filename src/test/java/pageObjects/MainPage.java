@@ -1,13 +1,12 @@
 package pageObjects;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.logging.LogManager;
-
 public class MainPage extends BasePage {
-//    private static Logger logger = LogManager.getLogger(MainPage.class);
+    private static Logger logger = LogManager.getLogger(MainPage.class);
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -18,14 +17,15 @@ public class MainPage extends BasePage {
 //        return driver.findElement(plusButtonBy);
 //    }
     private WebElement getPlusButton(){
-        By plusButtonBy = By.className("fa fa-plus-circle control create");//By.xpath("//*[@class='fa fa-plus-circle control create']");
+//        By plusButtonBy = By.className("fa fa-plus-circle control create");
+        By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
         for (int i = 0; i<10; i++){
             try {
                 WebElement button = driver.findElement(plusButtonBy);
                 return button;
             } catch (NoSuchElementException ee){
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(1000);
                 } catch (InterruptedException xx){}
             }
         }
@@ -46,14 +46,16 @@ public class MainPage extends BasePage {
             wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
             return  true;
         } catch (TimeoutException xx){
+            logger.fatal("Wrong page");
             return true;
         }
     }
 
     public String createPlaylist(String playlistName) {
-//        logger.debug("Create Playlist with name ->"+playlistName);
-//        String playlistId = "";
+        logger.trace("in create playlist method");
+        logger.info("Create Playlist with name -> "+playlistName);
         getPlusButton().click();
+        logger.trace("plus button clicked");
         getNewPlaylistItem().click();
         getCreatePlaylistField().sendKeys(playlistName);
         getCreatePlaylistField().sendKeys(Keys.RETURN);
@@ -83,8 +85,8 @@ public class MainPage extends BasePage {
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
-//        logger.debug("Updating playlist di "+playlistId);
-//        logger.debug("New playlist name ="+newPlaylistName);
+        logger.debug("Updating playlist id "+playlistId);
+        logger.debug("New playlist name = "+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
         WebElement playlist = driver.findElement(playlistBy);
