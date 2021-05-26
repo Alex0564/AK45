@@ -1,5 +1,8 @@
 package homework.myPageObjectsTests;
 
+import homework.enumsMine.BrowserTypeMine;
+import homework.helpersMine.BrowserFactoryMine;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -13,8 +16,10 @@ public class BaseTestMine {
     public void starUp() {
         username = "asting2006@rambler.ru";
         password = "te$t$tudent";
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
+        driver = BrowserFactoryMine.getDriver(BrowserTypeMine.FIREFOX);
+//        System.setProperty("webdriver.chrome.driver", "chromedriver");
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
