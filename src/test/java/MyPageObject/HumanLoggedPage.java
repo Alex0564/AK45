@@ -9,16 +9,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HumanLoggedPage {
+public class HumanLoggedPage extends HumansBasePage{
 
 
     public HumanLoggedPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10, 200);
+        super(driver);
+//        this.driver = driver;заменили на super(driver) как в MainPage
+//        wait = new WebDriverWait(driver, 10, 200); перенесли в конструктор в BasePage
     }
 
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+//    private WebDriver driver; перенесли в HumansBasePage
+//    private Wait<WebDriver> wait; перенесли в HumansBasePage
 
     public boolean isLoggedPage() {
         By myprofileBy = By.xpath("//*[@class='D-0L']");

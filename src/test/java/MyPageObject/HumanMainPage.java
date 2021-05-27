@@ -8,18 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HumanMainPage {
+public class HumanMainPage extends HumansBasePage{
 
-
-
-
-    public HumanMainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10,200);
-    }
-
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+    public HumanMainPage(WebDriver driver) {super(driver);}
 
     public void open(){driver.get("https://humans.net/");}
 
