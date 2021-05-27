@@ -1,4 +1,4 @@
-package lesson15;
+package lesson15op;
 
 public class Person {
     private  String name;
