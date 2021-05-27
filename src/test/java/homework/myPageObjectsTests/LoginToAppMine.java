@@ -1,9 +1,11 @@
 package homework.myPageObjectsTests;
 
 import homework.listerners.RetryMine;
+import homework.myPageObjects.LoginPageMine;
+import homework.myPageObjects.MainPageMine;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
+
 import pageObjects.MainPage;
 
 public class LoginToAppMine extends BaseTestMine{
@@ -18,14 +20,14 @@ public class LoginToAppMine extends BaseTestMine{
     }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPageMine loginPage = new LoginPageMine(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.loginToApp(username,password);
+        MainPageMine mainPage = loginPage.loginToApp(username,password);
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
     public void loginToApp_incorrectCredentials_failedLogin(){
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPageMine loginPage = new LoginPageMine(driver);
         loginPage.open();
         loginPage.loginToApp(username,"wrongPassword");
         Assert.assertTrue(loginPage.isError());
