@@ -1,0 +1,12 @@
+package homework.homework15;
+
+public enum Position {
+    PEDIATRICIAN,
+    GYNECOLOGIST,
+    PSYCHIATRIST,
+    CARDIOLOGIST,
+    DERMATOLOGIST,
+    ENDOCRINOLOGIST,
+    GASTROENTEROLOGIST,
+    OPHTHALMOLOGIST
+}
