@@ -1,15 +1,21 @@
 package homework.myPageObjectsTests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import homework.listerners.RetryMine;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 public class LoginToAppMine extends BaseTestMine{
+    private int count =0;
+    @Test(retryAnalyzer = RetryMine.class)
+    public void flakyTest(){
+        if(count<=2){
+            count++;
+            Assert.assertTrue(false);
+        }
+        Assert.assertTrue(true);
+    }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
