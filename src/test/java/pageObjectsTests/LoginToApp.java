@@ -1,22 +1,11 @@
 package pageObjectsTests;
 
-import listeners.MyRetry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 public class LoginToApp extends BaseTest {
-    private int count = 0;
-    @Test(retryAnalyzer = MyRetry.class)
-    public void flakyTest(){
-        if(count<1){
-            count++;
-            Assert.assertTrue(false);
-        }
-        Assert.assertTrue(true);
-
-    }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);
