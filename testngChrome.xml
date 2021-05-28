@@ -35,6 +35,7 @@
             </class>
             <class name="pageObjectsTests.PlaylistTests">
                 <methods>
+                    <include name="playlistTests_createPlaylist_playlistCreated0"/>
                     <include name="playlistTests_createPlaylist_playlistCreated"/>
                     <include name="playlistTests_renamePlaylist_playlistRenamed"/>
                     <include name="playlistTests_createPlaylist_playlistCreated1"/>
