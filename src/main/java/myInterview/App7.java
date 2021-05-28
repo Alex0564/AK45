@@ -14,13 +14,19 @@ public class App7 {
 //        System.out.println(y)
 //        System.out.println(z);
 //        int rand = (int) (x%100);
-        for (int i=1;i<=10;i++){
-            long a = System.currentTimeMillis();
-            int rand = (int) (a%100);
-            System.out.println(a);
-            System.out.println(rand);
-        }
-
-
+//        for (int i=1;i<=10;i++){
+//            long a = System.currentTimeMillis();
+//            int rand = (int) (a%1000);
+////            System.out.println(a);
+//            System.out.println(rand);
+//        }
+        System.out.println(rand(10));
     }
+    public static int rand (int b){
+        long x = System.currentTimeMillis();
+        int rd = (int) (x%b);
+//        System.out.println(rand);
+        return rd;
+    }
+
 }
