@@ -29,7 +29,7 @@ public class PlaylistTests extends BaseTest{
         MainPage mainPage = loginPage.loginToApp(username,password);
         String playlistId = mainPage.createPlaylist(playlistName);
 
-        Assert.assertTrue(mainPage.checkPlaylist(playlistId,playlistName));
+        Assert.assertEquals(mainPage.checkPlaylist(playlistId,playlistName),true);
     }
     @Test
     public void playlistTests_renamePlaylist_playlistRenamed(){
