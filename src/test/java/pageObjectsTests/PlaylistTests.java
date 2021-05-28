@@ -10,7 +10,18 @@ public class PlaylistTests extends BaseTest{
     @Test
     public void playlistTests_createPlaylist_playlistCreated(){
         Faker faker = new Faker();
-//        String playlistName = TestDataGenerator.getString(7);
+        String playlistName = faker.funnyName().name();
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.loginToApp(username,password);
+        String playlistId = mainPage.createPlaylist(playlistName);
+
+        Assert.assertTrue(mainPage.checkPlaylist(playlistId,playlistName));
+    }
+    @Test
+    public void playlistTests_createPlaylist_playlistCreated0(){
+        Faker faker = new Faker();
         String playlistName = faker.funnyName().name();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -38,7 +49,6 @@ public class PlaylistTests extends BaseTest{
     @Test
     public void playlistTests_createPlaylist_playlistCreated1(){
         Faker faker = new Faker();
-//        String playlistName = TestDataGenerator.getString(7);
         String playlistName = faker.funnyName().name();
         System.out.println(playlistName);
 
@@ -68,7 +78,6 @@ public class PlaylistTests extends BaseTest{
     @Test
     public void playlistTests_createPlaylist_playlistCreated2(){
         Faker faker = new Faker();
-//        String playlistName = TestDataGenerator.getString(7);
         String playlistName = faker.funnyName().name();
         System.out.println(playlistName);
 
@@ -98,7 +107,6 @@ public class PlaylistTests extends BaseTest{
     @Test
     public void playlistTests_createPlaylist_playlistCreated3(){
         Faker faker = new Faker();
-//        String playlistName = TestDataGenerator.getString(7);
         String playlistName = faker.funnyName().name();
         System.out.println(playlistName);
 
