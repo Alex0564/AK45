@@ -3,8 +3,10 @@ package homework.myPageObjectsTests;
 import homework.enumsMine.BrowserTypeMine;
 import homework.helpersMine.BrowserFactoryMine;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import listeners.GetScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -25,7 +27,10 @@ public class BaseTestMine {
 //        driver = new ChromeDriver();
     }
     @AfterMethod
-    public void tearDown() throws InterruptedException {
+    public void tearDown(ITestResult iTestResult) throws InterruptedException {
+        if(iTestResult.getStatus()==iTestResult.FAILURE){
+            GetScreenshot.capture(driver,iTestResult.getName());
+        }
         Thread.sleep(3000);
         driver.quit();
     }
