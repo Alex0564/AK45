@@ -8,15 +8,15 @@ import pageObjects.MainPage;
 
 public class LoginToApp extends BaseTest{ //lesson 05/25/2021
     private int count = 0;
-//    @Test(retryAnalyzer = MyRetry)
-//    public void flakyTest(){
-//        if(count<=2){
-//            count++;
-//            Assert.assertTrue(false);
-//        }
-//        Assert.assertTrue(true);
-//
-//    }
+    @Test(retryAnalyzer = MyRetry.class)
+    public void flakyTest(){
+        if(count<=2){
+            count++;
+            Assert.assertTrue(false);
+        }
+        Assert.assertTrue(true);
+
+    }
     @Test
     public void loginToApp_correctCredentials_successfulLogin(){
         LoginPage loginPage = new LoginPage(driver);

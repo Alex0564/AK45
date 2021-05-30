@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-30T16:26:47Z" name="Master Suite" finished-at="2021-05-30T16:27:05Z" duration-ms="18084">
+    <groups>
+    </groups>
+    <test started-at="2021-05-30T16:26:47Z" name="Main tests" finished-at="2021-05-30T16:27:05Z" duration-ms="18084">
+      <class name="pageObjectsTests.PlaylistTests">
+        <test-method is-config="true" signature="startUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pageObjectsTests.PlaylistTests@5af3a0f]" started-at="2021-05-30T16:26:47Z" name="startUp" finished-at="2021-05-30T16:26:48Z" duration-ms="1453" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[koeluser06.testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[te$t$tudent]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="playlistTests_createPlaylist_playlistCreated()[pri:0, instance:pageObjectsTests.PlaylistTests@5af3a0f]" started-at="2021-05-30T16:26:48Z" name="playlistTests_createPlaylist_playlistCreated" finished-at="2021-05-30T16:27:02Z" duration-ms="13381" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[No such element found By.xpath: //*[@class='fa fa-plus-circle control create']
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'I7', ip: '10.0.0.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: No such element found By.xpath: //*[@class='fa fa-plus-circle control create']
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'I7', ip: '10.0.0.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: unknown
+at pageObjects.MainPage.getPlusButton(MainPage.java:32)
+at pageObjects.MainPage.createPlaylist(MainPage.java:57)
+at pageObjectsTests.PlaylistTests.playlistTests_createPlaylist_playlistCreated(PlaylistTests.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- playlistTests_createPlaylist_playlistCreated -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:pageObjectsTests.PlaylistTests@5af3a0f]" started-at="2021-05-30T16:27:02Z" name="tearDown" finished-at="2021-05-30T16:27:05Z" duration-ms="3232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=playlistTests_createPlaylist_playlistCreated status=FAILURE method=PlaylistTests.playlistTests_createPlaylist_playlistCreated()[pri:0, instance:pageObjectsTests.PlaylistTests@5af3a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pageObjectsTests.PlaylistTests -->
+    </test> <!-- Main tests -->
+  </suite> <!-- Master Suite -->
+</testng-results>
