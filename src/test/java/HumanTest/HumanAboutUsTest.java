@@ -1,12 +1,12 @@
-package MyPageOpjectTest;
+package HumanTest;
 
-import MyPageObject.HumanAboutUsPage;
-import MyPageObject.HumanMainPage;
-import MyPageObject.HumanPlayAboutUsPage;
+import HumanPage.HumanAboutUsPage;
+import HumanPage.HumanMainPage;
+import HumanPage.HumanPlayAboutUsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class HumanAboutUsTest extends HumanBaseTest{
+public class HumanAboutUsTest extends HumanBaseTest {
     @Test
     public void aboutUsHumans()throws InterruptedException{
         HumanMainPage humanMainPage = new HumanMainPage(driver);

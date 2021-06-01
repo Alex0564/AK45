@@ -1,4 +1,4 @@
-package MyPageObject;
+package HumanPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Instant;
-
-public class HumanMainPage extends HumansBasePage{
+public class HumanMainPage extends HumansBasePage {
 
 //    private static Instant wait;
 

@@ -1,4 +1,4 @@
-package MyPageObject;
+package HumanPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;

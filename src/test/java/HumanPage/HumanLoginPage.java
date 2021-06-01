@@ -1,11 +1,11 @@
-package MyPageObject;
+package HumanPage;
 
+import HumanPage.HumanLoggedPage;
+import HumanPage.HumansBasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HumanLoginPage extends HumansBasePage{
+public class HumanLoginPage extends HumansBasePage {
 
     public HumanLoginPage(WebDriver driver) {
         super(driver);

@@ -1,17 +1,12 @@
-package MyPageOpjectTest;
+package HumanTest;
 
-import MyPageObject.HumanLoggedPage;
-import MyPageObject.HumanLoginPage;
-import MyPageObject.HumanMainPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import HumanPage.HumanLoggedPage;
+import HumanPage.HumanLoginPage;
+import HumanPage.HumanMainPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class HumanLoginTest extends HumanBaseTest{
+public class HumanLoginTest extends HumanBaseTest {
 //     перенесли все в BaseTest
 //    private WebDriver driver;
 //    private WebDriverWait wait;

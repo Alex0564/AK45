@@ -1,15 +1,15 @@
-package MyPageObject;
+package HumanPage;
 
+import HumanPage.HumanMainPage;
+import HumanPage.HumansBasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HumanLoggedPage extends HumansBasePage{
+public class HumanLoggedPage extends HumansBasePage {
 
 
     public HumanLoggedPage(WebDriver driver) {

@@ -1,13 +1,13 @@
-package MyPageObject;
+package HumanPage;
 
+import HumanPage.HumanAboutUsPage;
+import HumanPage.HumansBasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HumanPlayAboutUsPage extends HumansBasePage{
+public class HumanPlayAboutUsPage extends HumansBasePage {
 
 
     public HumanPlayAboutUsPage(WebDriver driver) {
