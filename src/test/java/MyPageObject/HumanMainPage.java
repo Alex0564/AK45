@@ -4,22 +4,27 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Instant;
 
 public class HumanMainPage extends HumansBasePage{
+
+//    private static Instant wait;
 
     public HumanMainPage(WebDriver driver) {super(driver);}
 
     public void open(){driver.get("https://humans.net/");}
 
     public WebElement getLoginField ()throws InterruptedException{
-        System.out.println("get Login field");
-        Thread.sleep(5000); // Stale element here
+//        System.out.println("get Login field");
         By loginBy = By.xpath("//*[@class='f-B f-s f-v']");
+//        System.out.println("get Login field 2");
+//        Thread.sleep(5000); // Stale element here
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginBy));
         WebElement login = driver.findElement(loginBy);
+//        System.out.println("get Login field 3");
         return login;
     }
 
@@ -27,9 +32,23 @@ public class HumanMainPage extends HumansBasePage{
         getLoginField().click();
         return new HumanLoginPage(driver);
     }
+    public void humburger() {
+        By humburgerBy = By.xpath("//*[@class='hamburger-box']");
+        WebElement humburger = driver.findElement(humburgerBy);
+        Actions action = new Actions(driver);
+        action.moveToElement(humburger);
+        action.perform(); }
 
-    public boolean isHumanMainPage(){
-        By humansBy = By.xpath("//*[@class='y-0w']");
+
+    public HumanAboutUsPage gotoAboutUsPage() {
+        humburger();
+        By aboutBy = By.xpath("//*[@href='/about-us']");
+        driver.findElement(aboutBy).click();
+        return new HumanAboutUsPage(driver);
+    }
+
+    public static boolean isHumanMainPage(){
+        By humansBy = By.xpath("//*[text()='Welcome to the future of human interaction']");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(humansBy));
             return true;
