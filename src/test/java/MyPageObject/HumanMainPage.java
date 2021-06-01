@@ -48,7 +48,8 @@ public class HumanMainPage extends HumansBasePage{
     }
 
     public static boolean isHumanMainPage(){
-        By humansBy = By.xpath("//*[text()='Welcome to the future of human interaction']");
+        By humansBy = By.xpath("//*[@class='w-0t']");
+//        System.out.println("-------------- is Human Main Page -------------");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(humansBy));
             return true;

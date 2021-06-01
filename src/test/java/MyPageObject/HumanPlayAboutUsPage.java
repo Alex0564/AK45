@@ -22,7 +22,7 @@ public class HumanPlayAboutUsPage extends HumansBasePage{
             wait.until(ExpectedConditions.visibilityOfElementLocated(playAboutUs));
             return true;
         }catch (TimeoutException ppp){
-            System.out.println("====== no play ======");
+//            System.out.println("====== no play ======");
             return false;}
 //        Thread.sleep(4000);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(playAboutUs));

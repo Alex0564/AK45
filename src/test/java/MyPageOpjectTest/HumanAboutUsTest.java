@@ -20,13 +20,11 @@ public class HumanAboutUsTest extends HumanBaseTest{
 
         humanAboutUsPage = humanPlayAboutUsPage.returnToUboutUs();
         Assert.assertTrue(humanAboutUsPage.isUboutUsPage());
-
+        System.out.println("+++++++++ About Us Page +++++++++++++++");
+//        Thread.sleep(2000);
         humanMainPage = humanAboutUsPage.backToMainPage();
+        System.out.println("____________ Human Main Page ____________");
 //        Thread.sleep(5000);
         Assert.assertTrue(HumanMainPage.isHumanMainPage());
-
-
-
-
     }
 }

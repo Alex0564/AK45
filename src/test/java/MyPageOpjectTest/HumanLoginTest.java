@@ -41,11 +41,15 @@ public class HumanLoginTest extends HumanBaseTest{
 
         HumanLoggedPage humanLoggedPage = humanLoginPage.loginToApp("oleksiy27@yandex.ru","batumi4me");
         Assert.assertTrue(humanLoggedPage.isLoggedPage());
-
+//        Thread.sleep(5000);
         humanLoggedPage.humburger();
-        humanLoggedPage.logout();
-        Assert.assertTrue(humanMainPage.isHumanMainPage());
+        humanMainPage = humanLoggedPage.logout();
+//        Thread.sleep(2000);
+//        System.out.println("======== log out ===========");
+        Assert.assertTrue(HumanMainPage.isHumanMainPage());
     }
+
+
 
     @Test
     public void loginToHumans_wrongCredentials_unsuccessful() throws InterruptedException {

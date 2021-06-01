@@ -31,7 +31,7 @@ public class HumanAboutUsPage {
     }
     public HumanMainPage backToMainPage (){
         By humansBy = By.xpath("//*[contains(@d, '34.4018C16.8121')]");
-        driver.findElement(humansBy);
+        driver.findElement(humansBy).click();
         return new HumanMainPage(driver);
     }
 }
