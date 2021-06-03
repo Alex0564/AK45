@@ -34,5 +34,6 @@ public class UnitTest {
         Tickets adult = new Tickets(78,1000);
         double result = adult.getPrice();
         Assert.assertEquals(result,800.0);
+
     }
 }
