@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "c17ea4d4-b4b4-4ed8-bc1c-81d26a483cb4",
+		"name": "KoelApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login to app",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert status code',()=>{\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"const respBody = pm.response.json();\r",
+							"pm.test('Assert response has key token',()=>{\r",
+							"    pm.expect(respBody).to.have.keys('token')\r",
+							"});\r",
+							"\r",
+							"pm.environment.set('theToken',respBody.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"koeluser06@testpro.io\",\r\n    \"password\": \"te$t$tudent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}api/me",
+					"host": [
+						"{{baseUrl}}api"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var Header = require('postman-collection').Header\r",
+							"pm.request.headers.add(new Header(\"Authorization: Bearer \" + pm.environment.get('theToken')))"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert status code',()=>{\r",
+							"    pm.response.to.have.status(200)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{theToken}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}api/data",
+					"host": [
+						"{{baseUrl}}api"
+					],
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
