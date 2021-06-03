@@ -51,17 +51,21 @@ public class HumanLoginTest extends HumanBaseTest {
         HumanMainPage humanMainPage = new HumanMainPage(driver);
         humanMainPage.open();
         System.out.println("Open page");
+        Thread.sleep(5000);
         HumanLoginPage humanLoginPage = humanMainPage.gotoLoginPage();
+        System.out.println("go to Login Page");
+        Thread.sleep(5000);
         humanLoginPage.loginInvalid();
         Assert.assertTrue(humanLoginPage.isInvalid());
         System.out.println("Invalid test");
-//        Thread.sleep(5000);
+        Thread.sleep(5000);
         humanLoginPage.clearEmail();
-//        Thread.sleep(5000);
+        Thread.sleep(5000);
         System.out.println("Clear email");
 
         humanLoginPage.loginToApp("oleksiy27@yandex.ru", "wrong");
         System.out.println("wrong password");
+        Thread.sleep(5000);
         Assert.assertTrue(humanLoginPage.isIncorrect());
         System.out.println("exit");
     }

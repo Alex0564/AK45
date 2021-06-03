@@ -58,9 +58,11 @@ public class HumanLoginPage extends HumansBasePage {
     }
 
     public void loginInvalid() throws InterruptedException{
+        System.out.println("login Invalid");
+        Thread.sleep(5000);
         getEmailField().sendKeys("username");
         getPassword().sendKeys("wrongpassword");
-//        Thread.sleep(5000);
+        Thread.sleep(5000);
 //        getGoon().click();
         }
 

@@ -1,5 +1,6 @@
 package pageObjectsTests;
 
+import Enoms.BrowserTypes;
 import enums.BrowserType;
 import helpers.BrowserFactory;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class BaseTest {
         username = email;
         this.password = password;
         BrowserType browserType = browser.equals("chrome") ? BrowserType.CHROME : BrowserType.FIREFOX;
-        driver = BrowserFactory.getDriver(browserType);
+        driver = BrowserFactory.getDriver(BrowserTypes.FIREFOX);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
