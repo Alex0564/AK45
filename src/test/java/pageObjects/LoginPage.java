@@ -8,7 +8,7 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
-//    private WebElement getEmailField(){
+    //    private WebElement getEmailField(){
 //        By emailBy = By.xpath("//*[@type='email']");
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
 //        return driver.findElement(emailBy);
