@@ -8,7 +8,7 @@ import pageObjects.MainPage;
 
 public class PlaylistTests extends BaseTest{
     @Test
-    public void playlistTests_createPlaylist_playlistCreated0(){
+    public void playlistTests_createPlaylist_playlistCreated4(){
         Faker faker = new Faker();
 //        String playlistName = TestDataGenerator.getString(7);
         String playlistName = faker.funnyName().name();
