@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "efecd65b-17ec-4603-bdd1-f3545ef1f344",
+		"name": "KoelApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Loggint to app",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert status code',()=>{\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"const respBody=pm.response.json();\r",
+							"pm.test('Assert response has key token',()=>{\r",
+							"pm.expect(respBody).to.have.keys('token')\r",
+							"});\r",
+							"\r",
+							"// сохроняем токен в переменной\r",
+							"pm.environment.set('theToken',respBody.token);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEzOCwiaXNzIjoiaHR0cHM6Ly9iYmIudGVzdHByby5pby9hcGkvbWUiLCJpYXQiOjE2MjI2MDY3NDksImV4cCI6MTYyMzIxMTU0OSwibmJmIjoxNjIyNjA2NzQ5LCJqdGkiOiI1NFlXOG1KaTlZVWhDSzNpIn0.zyom2Wfqo1JvlJ8EgaRJAA0s3Vm9OIAUrdIlbpittaM",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Base K204}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"academic198405@gmail.com\",\r\n    \"password\": \"te$t$tudent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}api/me",
+					"host": [
+						"{{baseURL}}api"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Assert status code',()=>{\r",
+							"    pm.response.to.have.status(200)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEzOCwiaXNzIjoiaHR0cHM6Ly9iYmIudGVzdHByby5pby9hcGkvbWUiLCJpYXQiOjE2MjI3NTk0NzksImV4cCI6MTYyMzM2NDI3OSwibmJmIjoxNjIyNzU5NDc5LCJqdGkiOiJwVTlaR1RkVkh6NHlPMVVnIn0.5RqVi9vaT1SOydCC3b9Dr4fMBdSDWrYeE4pVa1k5_kY",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Base K204}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "Bearer {{theToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}api/data",
+					"host": [
+						"{{baseURL}}api"
+					],
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
