@@ -53,7 +53,6 @@ public class KoelLogin {
         password.sendKeys("te$t$tudent");
         loginButton.click();
 
-
         By homeBy = By.cssSelector(".home");
         wait.until(ExpectedConditions.visibilityOfElementLocated(homeBy));
         WebElement home = driver.findElement(homeBy); //*[@class = 'home active']
