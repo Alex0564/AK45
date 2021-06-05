@@ -34,7 +34,7 @@ public class AO_KoelLogin {
     @Test
     public void ao_loginToKoel_correctCredentials() {
         By emailBy = By.xpath("//*[@type='email']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(emailBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
         WebElement emailField = driver.findElement(emailBy);
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement submitButton = driver.findElement(By.xpath("//*[@type='submit']"));
@@ -43,14 +43,14 @@ public class AO_KoelLogin {
         submitButton.click();
 
         By resultBy = By.xpath("//*[@class='music']/h1");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(resultBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(resultBy));
         Assert.assertEquals(driver.findElement(resultBy).getText(), "YOUR MUSIC");
     }
 
     @Test
     public void ao_loginToKoel_incorrectCredentials() {
         By emailBy = By.xpath("//*[@type='email']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(emailBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
         WebElement emailField = driver.findElement(emailBy);
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement submitButton = driver.findElement(By.xpath("//*[@type='submit']"));
@@ -59,7 +59,7 @@ public class AO_KoelLogin {
         submitButton.click();
 
         By errorBy = By.xpath("//*[@class='error']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(errorBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(errorBy));
         Assert.assertTrue(driver.findElement(errorBy).isDisplayed());
 
     }
@@ -67,7 +67,7 @@ public class AO_KoelLogin {
     @Test
     public void ao_createPlaylistKoel_playlistCreated() {
         By emailBy = By.xpath("//*[@type='email']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(emailBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
         WebElement emailField = driver.findElement(emailBy);
         WebElement passwordField = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement submitButton = driver.findElement(By.xpath("//*[@type='submit']"));
@@ -76,8 +76,8 @@ public class AO_KoelLogin {
         submitButton.click();
 
         By createPlaylistButtonBy = By.xpath("//i[@title='Create a new playlist']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(createPlaylistButtonBy));
-        WebElement createPlaylistButton = driver.findElement(By.xpath("//i[@title='Create a new playlist']"));
+        wait.until(ExpectedConditions.elementToBeClickable(createPlaylistButtonBy));
+        WebElement createPlaylistButton = driver.findElement(createPlaylistButtonBy);
         createPlaylistButton.click();
         WebElement newPlaylistButton = driver.findElement(By.xpath("//*[text()='New Playlist']"));
         newPlaylistButton.click();
@@ -86,7 +86,7 @@ public class AO_KoelLogin {
         newPlaylistInputField.sendKeys(Keys.ENTER);
 
         By successFieldBy = By.xpath("//div[@class='success show']");
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(successFieldBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(successFieldBy));
         Assert.assertTrue(driver.findElement(successFieldBy).isDisplayed());
 
 

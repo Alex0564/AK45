@@ -3,8 +3,6 @@ package hw11;
 // Create 2 computers
 // Get CPU Brand from computer
 
-import lesson10.Subjects;
-
 public class App {
 
     public static void main(String[] args) {
