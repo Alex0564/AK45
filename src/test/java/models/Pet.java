@@ -8,6 +8,14 @@ public class Pet {
     private Tag[] tags;
     private Status status;
 
+    public Pet(String name, Category category, String[] photoUrls, Tag[] tags, Status status) {
+        this.name = name;
+        this.category = category;
+        this.photoUrls = photoUrls;
+        this.tags = tags;
+        this.status = status;
+    }
+
     public long getId() {
         return id;
     }
@@ -30,5 +38,9 @@ public class Pet {
 
     public Status getStatus() {
         return status;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
