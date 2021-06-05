@@ -43,6 +43,7 @@
                     <include name="playlistTests_renamePlaylist_playlistRenamed2"/>
                     <include name="playlistTests_createPlaylist_playlistCreated3"/>
                     <include name="playlistTests_renamePlaylist_playlistRenamed3"/>
+                    <include name="playlistTests_createPlaylist_playlistCreated0"/>
                 </methods>
             </class>
         </classes>
