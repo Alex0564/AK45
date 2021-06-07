@@ -80,7 +80,7 @@ public class KoelLoginA {
         Assert.assertTrue(home.isDisplayed());
     }
     @Test
-    public void loginToKoel_createPlaylist() {
+    public void loginToKoel_createPlaylist() throws InterruptedException {
         By emailBy = By.xpath("//*[@type='email']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
 
@@ -95,13 +95,17 @@ public class KoelLoginA {
 
        By plusButtonBy = By.xpath("//*[@class='fa fa-plus-circle control create']");
        wait.until(ExpectedConditions.elementToBeClickable(plusButtonBy));
-
         WebElement plusButton = driver.findElement(plusButtonBy);
+        Thread.sleep(5000);
         plusButton.click();
 
 
-        WebElement newPlaylist = driver.findElement(By.xpath("//*[text()='New Playlist']"));
+
+        By newPlaylistBy = By.xpath("//*[text()='New Playlist']");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(newPlaylistBy));
+        WebElement newPlaylist = driver.findElement(newPlaylistBy);
         newPlaylist.click();
+
         WebElement textField = driver.findElement(By.xpath("//*[@class='create']/input"));
         textField.sendKeys("XXXX");
         textField.sendKeys(Keys.RETURN);
