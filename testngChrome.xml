@@ -3,6 +3,9 @@
     <parameter name="username" value="koeluser06@testpro.io"/>
     <parameter name="password" value="te$t$tudent"/>
     <parameter name="browser" value="chrome"/>
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
     <test name="Main tests">
         <classes>
             <class name="pageObjectsTests.LoginToAppFactory">
@@ -19,6 +22,7 @@
             </class>
             <class name="pageObjectsTests.LoginToApp">
                 <methods>
+                    <include name="flakyTest"/>
                     <include name="loginToApp_correctCredentials_successfulLogin"/>
                     <include name="loginToApp_incorrectCredentials_failedLogin"/>
                     <include name="loginToApp_correctCredentials_successfulLogin1"/>
@@ -31,6 +35,7 @@
             </class>
             <class name="pageObjectsTests.PlaylistTests">
                 <methods>
+                    <include name="playlistTests_createPlaylist_playlistCreated0"/>
                     <include name="playlistTests_createPlaylist_playlistCreated"/>
                     <include name="playlistTests_renamePlaylist_playlistRenamed"/>
                     <include name="playlistTests_createPlaylist_playlistCreated1"/>
