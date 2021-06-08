@@ -10,7 +10,7 @@
         <classes>
             <class name="pageObjectsTests.PlaylistTests">
                 <methods>
-                    <include name="playlistTests_renamePlaylist_playlistRenamed"/>
+                    <include name="playlistTests_renamePlaylist_playlistRenamed2"/>
                 </methods>
             </class>
         </classes>

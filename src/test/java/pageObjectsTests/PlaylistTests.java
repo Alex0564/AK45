@@ -104,7 +104,7 @@ public class PlaylistTests extends BaseTest{
         String newPlaylistName = faker.artist().name();
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
-        Assert.assertTrue(mainPage.checkPlaylist(playlistId,newPlaylistName));
+        Assert.assertFalse(mainPage.checkPlaylist(playlistId,newPlaylistName));
     }
     @Test
     public void playlistTests_createPlaylist_playlistCreated3(){
