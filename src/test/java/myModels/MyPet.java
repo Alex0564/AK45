@@ -35,6 +35,15 @@ public class MyPet {
         return status;
     }
 
+    public MyPet(String name, Category category, String[] photoUrls, Tag[] tags, Status status) {
+//        this.id = id; id приходит в ответе, не надо создавать
+        this.name = name;
+        this.category = category;
+        this.photoUrls = photoUrls;
+        this.tags = tags;
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "MyPet{" +
