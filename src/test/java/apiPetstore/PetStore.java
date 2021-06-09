@@ -38,7 +38,7 @@ public class PetStore {
     public void tearDown(){
                 given()
                         .baseUri("https://petstore.swagger.io/v2")
-                        .basePath("/pet/"+petId)
+                        .basePath("/pet/"+petId+"1")
                         .when()
                         .delete();
                 given()

@@ -6,4 +6,9 @@ public class CreatePlaylistRequest {
     public CreatePlaylistRequest(String name) {
         this.name = name;
     }
+
 }
+
+
+
+

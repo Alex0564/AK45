@@ -30,6 +30,7 @@ public class TestDataGenerator {
     }
 
     public static String getToken() {
+        //Credentials credentials = new Credentials("koeluser06@testpro.io","te$t$tudent");
         Credentials credentials = new Credentials("koeluser06@testpro.io","te$t$tudent");
         Response response =
                 given()
