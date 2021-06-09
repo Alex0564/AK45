@@ -3,7 +3,9 @@ package pageObjectsTests;
 import Enoms.BrowserTypes;
 import enums.BrowserType;
 import helpers.BrowserFactory;
+import listeners.GetScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -20,9 +22,11 @@ public class BaseTest {
         BrowserType browserType = browser.equals("chrome") ? BrowserType.CHROME : BrowserType.FIREFOX;
         driver = BrowserFactory.getDriver(BrowserTypes.FIREFOX);
     }
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
+    @AfterMethod()
+    public void tearDown(ITestResult iTestResult){
+        if(iTestResult.getStatus()==iTestResult.FAILURE){
+            GetScreenshot.capture(driver, iTestResult.getName());
+        }
         driver.quit();
     }
 }
