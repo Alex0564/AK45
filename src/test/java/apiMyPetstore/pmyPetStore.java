@@ -3,22 +3,25 @@ package apiMyPetstore;
 import helpers.TestDataGenerator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import models.Pet;
 import myModels.MyCategory;
 import myModels.MyPet;
-import org.junit.Test;
+//import org.junit.Test;
+//import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
 public class pmyPetStore {
-    private MyPet myPet;
+    private Pet myPet;
     private long petId;
     @BeforeMethod
     public void startUp (){
         System.out.println("inside of Before Method");
-        myPet = TestDataGenerator.myGenerateRandomPet();// создаем случайное животное
-
-//        Создаем колл типа Пост  - создаем животное в магазине
+        myPet = TestDataGenerator.generateRandomPet();// создаем случайное животное
+//        Создаем Пост  - создаем животное в магазине
         Response response =
                 given()
                     .baseUri("https://petstore.swagger.io/v2")
@@ -40,22 +43,20 @@ public class pmyPetStore {
     public void getPetById (){
         Response response = given()
                 .baseUri("https://petstore.swagger.io/v2")
-                .basePath("/pet/564")
+                .basePath("/pet/"+petId)
                 .when()
                 .get()
                 .then()
-                .statusCode(200)
+
                 .extract().response();
-
 //        response.print();
-
         JsonPath jsonPath = response.jsonPath();
         MyPet responsePet = jsonPath.getObject("$", MyPet.class);
         System.out.println(responsePet.toString());
 
         MyCategory responseCategory = jsonPath.getObject("category", MyCategory.class);
 
-        System.out.println(responseCategory.toString());
+//        System.out.println(responseCategory.toString());
 
         System.out.println(responsePet.getName());
         System.out.println(responseCategory.getName());

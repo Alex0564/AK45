@@ -4,6 +4,8 @@ import com.github.javafaker.Faker;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.*;
+import myModels.MyCategory;
+import myModels.MyPet;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.Random;
@@ -28,6 +30,8 @@ public class TestDataGenerator {
 
         return new Pet(name,category,photoUrls,tags, Status.pending);
     }
+
+
 
     public static String getToken() {
         Credentials credentials = new Credentials("koeluser06@testpro.io","te$t$tudent");

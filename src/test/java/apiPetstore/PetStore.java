@@ -17,6 +17,7 @@ public class PetStore {
     private long petId;
     @BeforeMethod
     public void startUp(){
+        System.out.println("inside of Before Method");
         pet= TestDataGenerator.generateRandomPet();
         Response response =
                       given()
