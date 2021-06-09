@@ -7,7 +7,3 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Set;
 
-public class loginPage {
-    WebDriver driver = new WebDriver() {
-
-}
