@@ -1,10 +1,10 @@
 package myModels;
 
-public class Category {
+public class MyCategory {
     private long id;
     private String name;
 
-    public Category(long id, String name) {
+    public MyCategory(long id, String name) {
         this.id = id;
         this.name = name;
     }

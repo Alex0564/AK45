@@ -3,7 +3,7 @@ package apiMyPetstore;
 import helpers.TestDataGenerator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import myModels.Category;
+import myModels.MyCategory;
 import myModels.MyPet;
 import org.junit.Test;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +15,8 @@ public class pmyPetStore {
     private long petId;
     @BeforeMethod
     public void startUp (){
-        myPet = TestDataGenerator.generateRandomPet();// создаем случайное животное
+        System.out.println("inside of Before Method");
+        myPet = TestDataGenerator.myGenerateRandomPet();// создаем случайное животное
 
 //        Создаем колл типа Пост  - создаем животное в магазине
         Response response =
@@ -52,7 +53,7 @@ public class pmyPetStore {
         MyPet responsePet = jsonPath.getObject("$", MyPet.class);
         System.out.println(responsePet.toString());
 
-        Category responseCategory = jsonPath.getObject("category", Category.class);
+        MyCategory responseCategory = jsonPath.getObject("category", MyCategory.class);
 
         System.out.println(responseCategory.toString());
 

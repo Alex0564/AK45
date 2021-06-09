@@ -1,7 +1,7 @@
 package helpers;
 
 import com.github.javafaker.Faker;
-import myModels.Category;
+import myModels.MyCategory;
 import myModels.MyPet;
 import myModels.Status;
 import myModels.Tag;
@@ -15,15 +15,15 @@ public class TestDataGenerator {
         boolean useNumbers = false;
         return RandomStringUtils.random(length, useLetters, useNumbers);
     }
-    public static MyPet generateRandomPet (){
+    public static MyPet myGenerateRandomPet (){
         Faker faker = new Faker();
         Random random = new Random();
         String name = faker.cat().name();
-        Category category = new Category (random.nextInt(), faker.cat().breed());
+        MyCategory myCategory = new MyCategory(random.nextInt(), faker.cat().breed());
         String [] photoUrls = {faker.internet().image()};
         Tag tag = new Tag (random.nextInt(), faker.animal().name());
         Tag[] tags = {tag};
 
-        return new MyPet(name, category, photoUrls, tags, Status.pending);
+        return new MyPet(name, myCategory, photoUrls, tags, Status.pending);
     };
 }

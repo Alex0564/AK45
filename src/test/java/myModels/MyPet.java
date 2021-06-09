@@ -1,12 +1,11 @@
 package myModels;
 
 import java.util.Arrays;
-import java.util.SplittableRandom;
 
 public class MyPet {
     private long id;
     private String name;
-    private Category category;
+    private MyCategory category;
     private String [] photoUrls;
     private Tag[] tags;
     private Status status;
@@ -19,7 +18,7 @@ public class MyPet {
         return name;
     }
 
-    public Category getCategory() {
+    public MyCategory getCategory() {
         return category;
     }
 
@@ -35,7 +34,7 @@ public class MyPet {
         return status;
     }
 
-    public MyPet(String name, Category category, String[] photoUrls, Tag[] tags, Status status) {
+    public MyPet(String name, MyCategory category, String[] photoUrls, Tag[] tags, Status status) {
 //        this.id = id; id приходит в ответе, не надо создавать
         this.name = name;
         this.category = category;
