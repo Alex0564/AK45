@@ -67,6 +67,7 @@ public class MainPage extends BasePage{
         logger.debug("New playlist name = "+newPlaylistName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         By playlistBy = getPlaylistBy(playlistId);
+        wait.until(ExpectedConditions.elementToBeClickable(playlistBy));
         WebElement playlist = driver.findElement(playlistBy);
         js.executeScript("arguments[0].scrollIntoView();", playlist);
 

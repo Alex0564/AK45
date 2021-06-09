@@ -15,7 +15,7 @@ public class Listeners implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println(iTestResult.getName() + " finished");
+//        System.out.println(iTestResult.getName() + " finished");
 
     }
 
