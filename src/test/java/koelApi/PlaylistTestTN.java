@@ -13,10 +13,11 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PlaylistTest {
+public class PlaylistTestTN {
     private int playlistId;
     private String token;
     private String plName;
+    private String newPlName;
     @BeforeMethod
     public void createNewPlaylist(){
         token = TestDataGenerator.getToken();
@@ -74,4 +75,36 @@ public class PlaylistTest {
         }
         Assert.assertEquals(count,1);
     }
+    @Test
+    public void RenamePlaylist(){
+        Faker faker = new Faker();
+        CreatePlaylistRequest nPn = new CreatePlaylistRequest(newPlName);
+        newPlName = faker.music().genre();
+        nPn.setName(newPlName);
+        nPn.setId(playlistId);
+
+
+        Response response =
+                given()
+                        .baseUri("https://bbb.testpro.io/")
+                        .basePath("api/playlist/"+playlistId)
+                        .header("Content-Type","application/json")
+                        .header("Authorization",token)
+                        .body(nPn)
+                        .when()
+                        .put()
+                        .then()
+                        .statusCode(200)
+                        .extract()
+                        .response();
+        JsonPath jsonPath = response.jsonPath();
+        CreatePlaylistRequest responsePl = jsonPath.getObject("$", CreatePlaylistRequest.class);
+
+        Assert.assertEquals(responsePl.getName(), nPn.getName());
+        Assert.assertEquals(responsePl.getId(), nPn.getId());
+
+
+
+    }
+
 }

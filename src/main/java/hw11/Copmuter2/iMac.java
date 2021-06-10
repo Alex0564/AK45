@@ -1,8 +1,6 @@
 //package hw11.Copmuter2;
 //
 //
-//
-//
 //public class iMac {
 //    private Display display;
 //    private Processor processor;
