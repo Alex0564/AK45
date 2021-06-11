@@ -8,7 +8,7 @@
     <parameter name="browser" value="chrome"/>
     <test name="Main tests">
         <classes>
-            <class name="pageObjectsTests.HybridTest1">
+            <class name="pageObjectsTests.HybridTest2">
                 <methods>
                     <include name="renamePlaylist"/>
                 </methods>
