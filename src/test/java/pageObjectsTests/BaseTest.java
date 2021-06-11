@@ -13,7 +13,8 @@ public class BaseTest {
     protected WebDriver driver;
     protected String username;
     protected String password;
-    @Parameters({"username","password","browser"})
+
+    @Parameters({"username", "password", "browser"})
     @BeforeMethod
     public void starUp(String email, String password, String browser) {
         username = email;
@@ -21,9 +22,10 @@ public class BaseTest {
         BrowserType browserType = browser.equals("chrome") ? BrowserType.CHROME : BrowserType.FIREFOX;
         driver = BrowserFactory.getDriver(browserType);
     }
+
     @AfterMethod()
-    public void tearDown(ITestResult iTestResult){
-        if(iTestResult.getStatus()==iTestResult.FAILURE){
+    public void tearDown(ITestResult iTestResult) {
+        if (iTestResult.getStatus() == iTestResult.FAILURE) {
             GetScreenshot.capture(driver, iTestResult.getName());
         }
         driver.quit();
