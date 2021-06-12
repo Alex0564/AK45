@@ -1,4 +1,4 @@
-package simpleTest;
+package SimpleTestOld;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class KoelLogin {
     private WebDriver driver;
