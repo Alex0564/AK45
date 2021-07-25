@@ -7,4 +7,9 @@ public class Person {
     public void printInfo(){
         System.out.println("Name = "+this.name+"\nLast Name = "+this.lastName+"\nYear = "+this.year);
     }
+    public String nameOfPerson(){
+        return name + " => " + lastName;
+    }
+
+
 }
